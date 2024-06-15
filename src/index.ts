@@ -1,4 +1,4 @@
-import { add } from '~/math.ts';
+import { add } from '~/lib/math.ts';
 
 const twoPlusTwo = add(2, 2);
 

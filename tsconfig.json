@@ -14,7 +14,7 @@
     "moduleResolution": "NodeNext",
     "noEmit": true,
     "outDir": "dist",
-    "paths": { "~/*": ["./src/*"] },
+    "paths": { "~/*": ["./src/*"], "#/*": ["./tests/*"] },
     "preserveSymlinks": true,
     "removeComments": true,
     "resolveJsonModule": true,
@@ -24,7 +24,14 @@
     "target": "esnext"
   },
 
-  "exclude": ["node_modules"],
+  "exclude": ["node_modules", "dist"],
 
-  "include": ["./src/**/*.*", "*.d.ts", "**/*.d.ts", "*.js", "*.ts"]
+  "include": [
+    "./src/**/*.*",
+    "./tests/**/*.*",
+    "*.d.ts",
+    "**/*.d.ts",
+    "*.js",
+    "*.ts"
+  ]
 }
