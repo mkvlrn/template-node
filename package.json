@@ -33,7 +33,7 @@
     "@mkvlrn/prettier-config": "^24.6.4",
     "@swc-node/register": "^1.9.2",
     "@swc/cli": "^0.3.12",
-    "@swc/core": "^1.5.29",
+    "@swc/core": "^1.6.1",
     "@swc/plugin-transform-imports": "^2.0.5",
     "@swc/types": "^0.1.8",
     "@types/node": "^20.14.2",
