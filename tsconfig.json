@@ -26,12 +26,5 @@
 
   "exclude": ["node_modules", "dist"],
 
-  "include": [
-    "./src/**/*.*",
-    "./tests/**/*.*",
-    "*.d.ts",
-    "**/*.d.ts",
-    "*.js",
-    "*.ts"
-  ]
+  "include": ["./src/**/*.*", "./tests/**/*.*", "*.d.ts", "**/*.d.ts", "*.js", "*.ts"]
 }
