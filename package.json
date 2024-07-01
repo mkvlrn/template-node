@@ -34,7 +34,7 @@
     "@swc-node/register": "^1.10.0",
     "@swc/cli": "^0.4.0",
     "@swc/core": "^1.6.6",
-    "@swc/plugin-transform-imports": "^2.0.6",
+    "@swc/plugin-transform-imports": "^2.0.7",
     "@swc/types": "^0.1.9",
     "@types/node": "^20.14.9",
     "@vitest/coverage-v8": "^1.6.0",
