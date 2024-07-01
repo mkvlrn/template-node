@@ -4758,19 +4758,19 @@ unicorn-magic@^0.1.0:
   resolved "https://registry.yarnpkg.com/unicorn-magic/-/unicorn-magic-0.1.0.tgz#1bb9a51c823aaf9d73a8bfcd3d1a23dde94b0ce4"
   integrity sha512-lRfVq8fE8gz6QMBuDM6a+LO3IAzTi05H6gCVaUpir2E1Rwpo4ZUog45KpNXKC/Mn3Yb9UDuHumeFTo9iV/D9FQ==
 
-unplugin-swc@^1.4.5:
-  version "1.4.5"
-  resolved "https://registry.yarnpkg.com/unplugin-swc/-/unplugin-swc-1.4.5.tgz#e33a7af23d325eb61f745b7cde76a65c02209dc6"
-  integrity sha512-ltkJ70kjL53onJrypaMmKDiOvhghNUCbCxjxT6Ir0eAMIBsOfRhPt6vQtxB8R/6wYk/TfIJ2gCgdx2uKNPJRHA==
+unplugin-swc@^1.5.0:
+  version "1.5.0"
+  resolved "https://registry.yarnpkg.com/unplugin-swc/-/unplugin-swc-1.5.0.tgz#f316ba9507953c5dc7c931d5bc9f151c4a5627b5"
+  integrity sha512-pm6ChUa8qTJVm02cXQwiFhYIonSeYhp/58WKwz8hHYcaZxU4CsF5Z8y4kRUFQIHVC2GqVZp4Jt5mQ7UC2lgQEQ==
   dependencies:
     "@rollup/pluginutils" "^5.1.0"
     load-tsconfig "^0.2.5"
-    unplugin "^1.10.1"
+    unplugin "^1.11.0"
 
-unplugin@^1.10.1:
-  version "1.10.1"
-  resolved "https://registry.yarnpkg.com/unplugin/-/unplugin-1.10.1.tgz#8ceda065dc71bc67d923dea0920f05c67f2cd68c"
-  integrity sha512-d6Mhq8RJeGA8UfKCu54Um4lFA0eSaRa3XxdAJg8tIdxbu1ubW0hBCZUL7yI2uGyYCRndvbK8FLHzqy2XKfeMsg==
+unplugin@^1.11.0:
+  version "1.11.0"
+  resolved "https://registry.yarnpkg.com/unplugin/-/unplugin-1.11.0.tgz#09237b4011075e65c8f4d0ae06e221dee12750e3"
+  integrity sha512-3r7VWZ/webh0SGgJScpWl2/MRCZK5d3ZYFcNaeci/GQ7Teop7zf0Nl2pUuz7G21BwPd9pcUPOC5KmJ2L3WgC5g==
   dependencies:
     acorn "^8.11.3"
     chokidar "^3.6.0"
