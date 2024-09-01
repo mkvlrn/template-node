@@ -1,9 +1,8 @@
 {
   "compilerOptions": {
-    "allowImportingTsExtensions": true,
     "allowJs": true,
     "allowSyntheticDefaultImports": true,
-    "baseUrl": ".",
+    "baseUrl": "./",
     "declaration": false,
     "emitDecoratorMetadata": true,
     "esModuleInterop": true,
@@ -13,18 +12,14 @@
     "module": "NodeNext",
     "moduleResolution": "NodeNext",
     "noEmit": true,
-    "outDir": "dist",
+    "outDir": "./dist",
     "paths": { "~/*": ["./src/*"], "#/*": ["./tests/*"] },
     "preserveSymlinks": true,
     "removeComments": true,
     "resolveJsonModule": true,
-    "rootDir": ".",
+    "rootDir": "./",
     "skipLibCheck": true,
     "strict": true,
     "target": "esnext"
-  },
-
-  "exclude": ["node_modules", "dist"],
-
-  "include": ["./src/**/*.*", "./tests/**/*.*", "*.d.ts", "**/*.d.ts", "*.js", "*.ts"]
+  }
 }

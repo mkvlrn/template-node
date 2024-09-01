@@ -1,4 +1,4 @@
-import { add } from "~/lib/basic-math.ts";
+import { add } from "~/lib/basic-math.js";
 
 const twoPlusTwo = add(2, 2);
 

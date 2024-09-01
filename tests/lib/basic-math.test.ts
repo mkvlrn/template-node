@@ -1,5 +1,5 @@
 import { describe, expect, test } from "vitest";
-import { add, subtract } from "~/lib/basic-math.ts";
+import { add, subtract } from "~/lib/basic-math.js";
 
 describe("basic math", () => {
   test("add", () => {
