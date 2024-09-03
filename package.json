@@ -15,13 +15,14 @@
     "template"
   ],
   "scripts": {
+    "types": "tsc --noEmit",
     "test": "vitest --run",
-    "test:cov": "rimraf coverage && vitest run --coverage",
+    "test:cov": "rm -rf coverage && vitest run --coverage",
     "prepare": "husky",
     "dev": "node --import tsx watch src/main.ts",
     "lint": "eslint --fix src tests",
     "format": "prettier --write src tests",
-    "build": "rimraf dist && node --import tsx esbuild.config.ts",
+    "build": "rm -rf dist && node --import tsx esbuild.config.ts",
     "start": "node dist/main.js"
   },
   "devDependencies": {
@@ -38,7 +39,6 @@
     "husky": "^9.1.5",
     "lint-staged": "^15.2.10",
     "prettier": "^3.3.3",
-    "rimraf": "^6.0.1",
     "tsc-alias": "^1.8.10",
     "tsx": "^4.19.0",
     "typescript": "^5.5.4",
