@@ -1,1 +1,1 @@
-npx lint-staged -c lint-staged.pre-commit.config.js
+npx lint-staged

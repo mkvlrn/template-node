@@ -1,1 +1,1 @@
-npx lint-staged -c lint-staged.pre-push.config.mjs
+npx vitest --run
