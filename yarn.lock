@@ -660,10 +660,10 @@
     "@trivago/prettier-plugin-sort-imports" "^4.3.0"
     prettier-plugin-tailwindcss "^0.6.6"
 
-"@mkvlrn/tsconfig@^0.0.1":
-  version "0.0.1"
-  resolved "https://registry.yarnpkg.com/@mkvlrn/tsconfig/-/tsconfig-0.0.1.tgz#76e3e02efda9258182b121e855e56b0aa4f188e0"
-  integrity sha512-qtPriSqCLBC0iZNY1tRoFcTyPG2uk03k/KRDL2wgMu+aRIA7HgoWN2vi8uyfxQm3SuT4pcFeYcgKeNQwlon7ag==
+"@mkvlrn/tsconfig@^0.0.2":
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/@mkvlrn/tsconfig/-/tsconfig-0.0.2.tgz#df1b87715faeb52af6ec29b698ed960c902c1884"
+  integrity sha512-82kUGap90K84oLV/oEE6pfHbOfxeZocFFfH2LFLacP0ssxnodZOAqso9NvMYePkDd1C9qKm3gZEK+2Bk0fEt0A==
 
 "@next/eslint-plugin-next@^14.2.7":
   version "14.2.7"
@@ -817,10 +817,17 @@
   resolved "https://registry.yarnpkg.com/@types/json5/-/json5-0.0.29.tgz#ee28707ae94e11d2b827bcbe5270bcea7f3e71ee"
   integrity sha512-dRLjCWHYg4oaA77cxO64oO+7JwCwnIzkZPdrrC71jQmQtlhM556pwKo5bUzqvZndkVbeFLIIi+9TC40JNF5hNQ==
 
-"@types/node@*", "@types/node@^22.5.2":
+"@types/node@*":
   version "22.5.2"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-22.5.2.tgz#e42344429702e69e28c839a7e16a8262a8086793"
   integrity sha512-acJsPTEqYqulZS/Yp/S3GgeE6GZ0qYODUR8aVr/DkhHQ8l9nd4j5x1/ZJy9/gHrRlFMqkO6i0I3E27Alu4jjPg==
+  dependencies:
+    undici-types "~6.19.2"
+
+"@types/node@^22.5.3":
+  version "22.5.3"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-22.5.3.tgz#91a374e42c6e7ccb5893a87f1775f36ce1671d65"
+  integrity sha512-njripolh85IA9SQGTAqbmnNZTdxv7X/4OYGPz8tgy5JDr8MP+uDBa921GpYEoDDnwm0Hmn5ZPeJgiiSTPoOzkQ==
   dependencies:
     undici-types "~6.19.2"
 
