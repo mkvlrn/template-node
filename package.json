@@ -22,7 +22,7 @@
     "dev": "tsx watch src/main.ts",
     "lint": "eslint --fix src tests",
     "format": "prettier --write src tests",
-    "build": "tsx esbuild.ts",
+    "build": "tsx esbuild.config.ts",
     "start": "node dist/main.js"
   },
   "devDependencies": {
