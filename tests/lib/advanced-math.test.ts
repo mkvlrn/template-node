@@ -1,5 +1,5 @@
 import { describe, expect, test } from "vitest";
-import { divide, multiply } from "~/lib/advanced-math.js";
+import { divide, multiply } from "~/lib/advanced-math";
 
 describe("advanced math", () => {
   test("multiply", () => {
