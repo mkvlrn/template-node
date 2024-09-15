@@ -15,7 +15,6 @@
     "template"
   ],
   "scripts": {
-    "types": "tsc --noEmit",
     "test": "vitest --run",
     "test:cov": "vitest run --coverage",
     "prepare": "husky",
@@ -28,9 +27,7 @@
   "devDependencies": {
     "@commitlint/cli": "^19.5.0",
     "@commitlint/config-conventional": "^19.5.0",
-    "@mkvlrn/eslint": "^0.1.6",
-    "@mkvlrn/prettier": "^0.0.5",
-    "@mkvlrn/tsconfig": "^0.1.0",
+    "@mkvlrn/configurations": "^1.0.1",
     "@types/node": "^22.5.5",
     "@vitest/coverage-v8": "^2.1.1",
     "esbuild": "^0.23.1",
