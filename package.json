@@ -12,6 +12,7 @@
   },
   "keywords": [
     "node",
+    "esm",
     "template"
   ],
   "scripts": {
