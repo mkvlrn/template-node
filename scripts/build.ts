@@ -1,40 +1,46 @@
-import fs from "node:fs/promises";
-import swc from "@swc/core";
+// TODO: revisit whenever swc passes flags to node
+// https://github.com/swc-project/swc-node/issues/890
 
-const out = "./dist";
+// import fs from "node:fs/promises";
+// import swc from "@swc/core";
 
-// clean up old output
-await fs.rm(out, { recursive: true, force: true });
+// const REGEX_SRC = /^src\//;
+// const REGEX_TS = /\.ts$/;
+// const REGEX_OUTPUT_PATH = /\/[^/]+$/;
+// const OUT = "./dist";
 
-// get all entry points
-const files: string[] = [];
-for await (const file of fs.glob("src/**/*.ts")) {
-  files.push(file);
-}
+// // clean up old output
+// await fs.rm(OUT, { recursive: true, force: true });
 
-// transform files
-await Promise.all(
-  files.map(async (file) => {
-    const { code } = await swc.transformFile(file, {
-      jsc: {
-        parser: {
-          syntax: "typescript",
-          decorators: true,
-          dynamicImport: true,
-        },
-        target: "esnext",
-        transform: {
-          decoratorMetadata: true,
-        },
-      },
-      module: {
-        type: "es6",
-        strict: true,
-      },
-    });
+// // get all entry points
+// const files: string[] = [];
+// for await (const file of fs.glob("src/**/*.ts")) {
+//   files.push(file);
+// }
 
-    const outputPath = `${out}/${file.replace(/^src\//, "").replace(/\.ts$/, ".js")}`;
-    await fs.mkdir(outputPath.replace(/\/[^/]+$/, ""), { recursive: true });
-    await fs.writeFile(outputPath, code);
-  }),
-);
+// // transform files
+// await Promise.all(
+//   files.map(async (file) => {
+//     const { code } = await swc.transformFile(file, {
+//       jsc: {
+//         parser: {
+//           syntax: "typescript",
+//           decorators: true,
+//           dynamicImport: true,
+//         },
+//         target: "esnext",
+//         transform: {
+//           decoratorMetadata: true,
+//         },
+//       },
+//       module: {
+//         type: "es6",
+//         strict: true,
+//       },
+//     });
+
+//     const outputPath = `${OUT}/${file.replace(REGEX_SRC, "").replace(REGEX_TS, ".js")}`;
+//     await fs.mkdir(outputPath.replace(REGEX_OUTPUT_PATH, ""), { recursive: true });
+//     await fs.writeFile(outputPath, code);
+//   }),
+// );
