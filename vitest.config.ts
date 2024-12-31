@@ -1,8 +1,9 @@
-import tsconfigPaths from "vite-tsconfig-paths";
 import { defineConfig } from "vitest/config";
 
 export default defineConfig({
-  plugins: [tsconfigPaths()],
+  resolve: {
+    conditions: ["development"],
+  },
   test: {
     coverage: {
       all: true,
@@ -15,6 +16,6 @@ export default defineConfig({
     env: { NODE_ENV: "test" },
     environment: "node",
     passWithNoTests: true,
-    setupFiles: ["./test/_setup/vitest.setup.ts"],
+    setupFiles: ["./vitest.setup.ts"],
   },
 });

@@ -1,11 +1,7 @@
-import child_process from "node:child_process";
 import fs from "node:fs/promises";
-import util from "node:util";
 import swc from "@swc/core";
-import tscAlias from "tsc-alias";
 
 const out = "./dist";
-const execAsync = util.promisify(child_process.exec);
 
 // clean up old output
 await fs.rm(out, { recursive: true, force: true });
@@ -42,17 +38,3 @@ await Promise.all(
     await fs.writeFile(outputPath, code);
   }),
 );
-
-// create full temp config because tsc-alias doesn't like extended configs
-// https://github.com/justkey007/tsc-alias/issues/230
-await execAsync("tsc --showConfig > tsconfig.temp.json");
-
-// replace aliases with actual paths and add .js extensions
-await tscAlias.replaceTscAliasPaths({
-  outDir: out,
-  resolveFullPaths: true,
-  configFile: "tsconfig.temp.json",
-});
-
-// clean up temp config
-await fs.rm("tsconfig.temp.json");

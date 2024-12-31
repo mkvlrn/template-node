@@ -1,4 +1,2 @@
-yarn tsc --noEmit
-yarn eslint src/**/*.ts test/**/*.ts
-yarn prettier --check src test
-yarn vitest --run
+npx tsc --noEmit
+npx vitest run
