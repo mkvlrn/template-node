@@ -1,3 +1,4 @@
+import tsconfigPaths from "vite-tsconfig-paths";
 import { defineConfig } from "vitest/config";
 import { createVitest } from "vitest/node";
 
@@ -7,15 +8,13 @@ const availableArgs = ["--coverage", "--watch"];
 if (args.some((arg) => !availableArgs.includes(arg))) {
   // biome-ignore lint/suspicious/noConsole: this is a cli script
   console.error("This script only accepts the following arguments:");
-  // biome-ignore lint/suspicious/noConsole:
+  // biome-ignore lint/suspicious/noConsole: this is a cli script
   console.error(availableArgs.join(", "));
   process.exit(1);
 }
 
 const config = defineConfig({
-  resolve: {
-    conditions: ["development"],
-  },
+  plugins: [tsconfigPaths()],
   test: {
     watch: args.includes("--watch"),
     reporters: ["verbose"],

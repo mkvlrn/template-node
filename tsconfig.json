@@ -2,7 +2,7 @@
   "$schema": "https://json.schemastore.org/tsconfig",
   "compilerOptions": {
     "allowJs": true,
-    "customConditions": ["development"],
+    "baseUrl": ".",
     "declaration": false,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
@@ -12,6 +12,7 @@
     "moduleDetection": "force",
     "moduleResolution": "nodenext",
     "noEmit": true,
+    "paths": { "~/*": ["./src/*"] },
     "preserveSymlinks": true,
     "removeComments": true,
     "resolveJsonModule": true,

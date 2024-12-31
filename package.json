@@ -10,36 +10,37 @@
     "type": "git",
     "url": "git@github.com:mkvlrn/template-node"
   },
-  "keywords": ["node", "esm", "template"],
-  "imports": {
-    "#*": {
-      "development": "./src/*",
-      "default": "./build/*"
-    }
-  },
+  "keywords": [
+    "node",
+    "esm",
+    "template"
+  ],
   "scripts": {
-    "prebuild": "rm -rf build",
-    "build": "npx tsc -p tsconfig.build.json",
-    "dev": "node --conditions development --import tsx --watch src/main.ts",
+    "build": "node --import @swc-node/register/esm-register scripts/build.ts",
+    "dev": "node --import @swc-node/register/esm-register --watch src/main.ts",
     "start": "node build/main.js",
-    "test": "node --import tsx scripts/test.ts",
-    "test:cov": "node --import tsx scripts/test.ts --coverage",
+    "test": "node --import @swc-node/register/esm-register scripts/test.ts",
+    "test:cov": "node --import @swc-node/register/esm-register scripts/test.ts --coverage",
     "tidy": "npx @biomejs/biome check --write scripts src test",
     "typecheck": "npx tsc --noEmit",
-    "prepare": "husky"
+    "prepare": "npx husky"
   },
   "devDependencies": {
     "@biomejs/biome": "^1.9.4",
     "@commitlint/cli": "^19.6.1",
     "@commitlint/config-conventional": "^19.6.0",
+    "@swc-node/register": "^1.10.9",
+    "@swc/core": "^1.10.4",
     "@types/node": "^22.10.2",
     "@vitest/coverage-v8": "^2.1.8",
     "husky": "^9.1.7",
-    "tsx": "^4.19.2",
     "typescript": "^5.7.2",
+    "vite-tsconfig-paths": "^5.1.4",
     "vitest": "^2.1.8"
   },
   "commitlint": {
-    "extends": ["@commitlint/config-conventional"]
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
   }
 }
