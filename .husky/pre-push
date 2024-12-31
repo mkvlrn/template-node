@@ -1,2 +1,3 @@
-npx tsc --noEmit
-npx vitest run
+npm run typecheck
+npm run tidy
+npm run test
