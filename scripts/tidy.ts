@@ -1,20 +1,19 @@
 /**
- * This script is used to tidy up project files using biome.
- * It runs both linter and formatter.
+ * This script is used to tidy (lint and format) up project files using biome.
  * It accepts the following arguments:
  * - --verbose: enables verbose output
  */
 
 // biome-ignore lint/correctness/noNodejsModules: cli script
-import { spawnSync } from "node:child_process";
+import childProcess from "node:child_process";
 // biome-ignore lint/correctness/noNodejsModules: cli script
-import { readdir } from "node:fs/promises";
+import fs from "node:fs/promises";
 // biome-ignore lint/correctness/noNodejsModules: cli script
 import path from "node:path";
 
-// this will add all known file times living in the root of the project
+// this will add all known files living in the root of the project
 const extensions = [".ts", ".js", ".json", ".jsonc"];
-let rootFiles = await readdir(process.cwd(), { withFileTypes: true });
+let rootFiles = await fs.readdir(process.cwd(), { withFileTypes: true });
 rootFiles = rootFiles
   .filter((file) => file.isFile())
   .filter((file) => extensions.includes(path.extname(file.name)));
@@ -43,4 +42,4 @@ if (tidyArgs[0] === "--verbose") {
   args.push("--verbose");
 }
 
-spawnSync(command, args, { shell: true, stdio: "inherit", cwd: process.cwd() });
+childProcess.spawnSync(command, args, { shell: true, stdio: "inherit", cwd: process.cwd() });

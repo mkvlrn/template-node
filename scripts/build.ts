@@ -1,11 +1,12 @@
 /**
  * This script is used to build the project using swc.
+ * It accepts no arguments.
  */
 
 // biome-ignore lint/correctness/noNodejsModules: this is a backend script
 import fs from "node:fs/promises";
 // biome-ignore lint/correctness/noNodejsModules: this is a backend script
-import { resolve } from "node:path";
+import path from "node:path";
 import swc from "@swc/core";
 import tsConfig from "../tsconfig.json" assert { type: "json" };
 
@@ -15,7 +16,7 @@ const REGEX_OUTPUT_PATH = /\/[^/]+$/;
 const OUT = "./build";
 
 const { paths } = tsConfig.compilerOptions;
-const baseUrl = resolve(process.cwd(), tsConfig.compilerOptions.baseUrl);
+const baseUrl = path.resolve(process.cwd(), tsConfig.compilerOptions.baseUrl);
 
 // clean up old output
 await fs.rm(OUT, { recursive: true, force: true });

@@ -1,6 +1,6 @@
 {
   "name": "template-node",
-  "description": "A template for Node.js projects",
+  "description": "A template for esm Node.js projects using typescript",
   "version": "1.0.0",
   "license": "MIT",
   "private": true,
@@ -10,7 +10,7 @@
     "type": "git",
     "url": "git@github.com:mkvlrn/template-node"
   },
-  "keywords": ["node", "esm", "template"],
+  "keywords": ["node", "typescript", "esm", "template"],
   "scripts": {
     "swc": "node --import @swc-node/register/esm-register",
     "build": "npm run swc -- scripts/build.ts",
