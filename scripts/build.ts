@@ -1,3 +1,7 @@
+/**
+ * This script is used to build the project using swc.
+ */
+
 // biome-ignore lint/correctness/noNodejsModules: this is a backend script
 import fs from "node:fs/promises";
 // biome-ignore lint/correctness/noNodejsModules: this is a backend script
@@ -23,6 +27,7 @@ for await (const file of fs.glob("src/**/*.ts")) {
 }
 
 // transform files
+const startTime = performance.now();
 await Promise.all(
   files.map(async (file) => {
     const { code } = await swc.transformFile(file, {
@@ -46,3 +51,9 @@ await Promise.all(
     await fs.writeFile(outputPath, code);
   }),
 );
+const endTime = performance.now();
+const ellapsedTime = Math.floor((endTime - startTime) * 100) / 100;
+
+// summary
+// biome-ignore lint/suspicious/noConsole: cli script
+console.info(`Successfully compiled: ${files.length} files with swc (${ellapsedTime}ms)`);

@@ -10,18 +10,15 @@
     "type": "git",
     "url": "git@github.com:mkvlrn/template-node"
   },
-  "keywords": [
-    "node",
-    "esm",
-    "template"
-  ],
+  "keywords": ["node", "esm", "template"],
   "scripts": {
-    "build": "node --import @swc-node/register/esm-register scripts/build.ts",
-    "dev": "node --import @swc-node/register/esm-register --watch src/main.ts",
+    "swc": "node --import @swc-node/register/esm-register",
+    "build": "npm run swc -- scripts/build.ts",
+    "dev": "npm run swc -- --watch src/main.ts",
     "start": "node build/main.js",
-    "test": "node --import @swc-node/register/esm-register scripts/test.ts",
-    "test:cov": "node --import @swc-node/register/esm-register scripts/test.ts --coverage",
-    "tidy": "npx @biomejs/biome check --write scripts src test",
+    "test": "npm run swc -- scripts/test.ts",
+    "test:cov": "npm run swc -- scripts/test.ts --coverage",
+    "tidy": "npm run swc -- scripts/tidy.ts",
     "typecheck": "npx tsc --noEmit",
     "prepare": "npx husky"
   },
@@ -31,7 +28,7 @@
     "@commitlint/config-conventional": "^19.6.0",
     "@swc-node/register": "^1.10.9",
     "@swc/core": "^1.10.4",
-    "@types/node": "^22.10.2",
+    "@types/node": "^22.10.3",
     "@vitest/coverage-v8": "^2.1.8",
     "husky": "^9.1.7",
     "typescript": "^5.7.2",
@@ -39,8 +36,6 @@
     "vitest": "^2.1.8"
   },
   "commitlint": {
-    "extends": [
-      "@commitlint/config-conventional"
-    ]
+    "extends": ["@commitlint/config-conventional"]
   }
 }
