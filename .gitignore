@@ -64,6 +64,3 @@ override.tf.json
 *_override.tf.json
 .terraformrc
 terraform.rc
-
-# tidy
-.tidy-files
