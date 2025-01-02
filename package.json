@@ -12,14 +12,14 @@
   },
   "keywords": ["node", "typescript", "esm", "template"],
   "scripts": {
-    "swc": "node --import @swc-node/register/esm-register",
     "prebuild": "rm -rf build",
     "build": "npx swc src -d ./build --strip-leading-paths",
-    "dev": "npm run swc -- --watch src/main.ts",
+    "postbuild": "npx tsc-alias -f",
+    "dev": "node --import @swc-node/register/esm-register --watch src/main.ts",
+    "prestart": "npm run build",
     "start": "node build/main.js",
-    "test": "npm run swc -- scripts/test.ts",
-    "test:cov": "npm run swc -- scripts/test.ts --coverage",
-    "tidy": "npm run swc -- scripts/tidy.ts",
+    "test": "npx vitest run",
+    "tidy": "npx biome check --write --no-errors-on-unmatched",
     "typecheck": "npx tsc --noEmit",
     "prepare": "npx husky"
   },
@@ -30,14 +30,12 @@
     "@swc-node/register": "^1.10.9",
     "@swc/cli": "^0.5.2",
     "@swc/core": "^1.10.4",
-    "@types/node": "^22.10.3",
+    "@types/node": "^22.10.4",
     "@vitest/coverage-v8": "^2.1.8",
     "husky": "^9.1.7",
+    "tsc-alias": "^1.8.10",
     "typescript": "^5.7.2",
     "vite-tsconfig-paths": "^5.1.4",
     "vitest": "^2.1.8"
-  },
-  "commitlint": {
-    "extends": ["@commitlint/config-conventional"]
   }
 }

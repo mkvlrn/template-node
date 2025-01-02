@@ -49,7 +49,7 @@ tmp
 *.launch
 .settings
 *.sublime-workspace
-.vscode
+.vscode/*
 !.vscode/extensions.json
 
 # terraform
@@ -64,3 +64,6 @@ override.tf.json
 *_override.tf.json
 .terraformrc
 terraform.rc
+
+# tidy
+.tidy-files

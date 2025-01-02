@@ -7,11 +7,21 @@
   },
   "files": {
     "ignoreUnknown": true,
+    "include": [
+      "**/*.ts",
+      "**/*.tsx",
+      "**/*.js",
+      "**/*.jsx",
+      "**/*.json",
+      "**/*.jsonc",
+      "**/*.css"
+    ],
     "ignore": []
   },
   "formatter": {
     "enabled": true,
-    "useEditorconfig": true
+    "indentStyle": "space",
+    "formatWithErrors": true
   },
   "organizeImports": {
     "enabled": true
