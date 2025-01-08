@@ -23,6 +23,7 @@ describe("advanced math", () => {
 
     it("should throw when dividing by zero", () => {
       const divideByZero = () => divide(10, 0);
+
       expect(divideByZero).toThrow("Division by zero");
     });
   });

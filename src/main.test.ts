@@ -5,7 +5,9 @@ describe("main", () => {
     const consoleLogSpy = vi
       .spyOn(console, "log")
       .mockImplementation(() => ({}));
+
     await import("~/main");
+
     expect(consoleLogSpy).toHaveBeenCalledWith(4);
   });
 });
