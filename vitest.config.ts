@@ -5,6 +5,7 @@ import { defineConfig } from "vitest/config";
 export default defineConfig({
   plugins: [tsconfigPaths()],
   test: {
+    include: ["src/**/*.test.{ts,tsx}"],
     reporters: ["verbose"],
     coverage: {
       all: true,
