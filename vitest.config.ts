@@ -5,7 +5,7 @@ import { defineConfig } from "vitest/config";
 export default defineConfig({
   plugins: [tsconfigPaths()],
   test: {
-    include: ["src/**/*.test.{ts,tsx}"],
+    include: ["./src/**/*.test.{ts,tsx}"],
     reporters: ["verbose"],
     coverage: {
       all: true,
@@ -14,6 +14,7 @@ export default defineConfig({
       reportsDirectory: "coverage",
       reporter: ["lcov", "html", "text"],
       include: ["src"],
+      exclude: ["**/*.test.{ts,tsx}", "src/main.ts"],
     },
     // biome-ignore lint/style/useNamingConvention: needed for vitest
     env: { NODE_ENV: "test" },
