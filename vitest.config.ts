@@ -11,6 +11,7 @@ const validTestScripts = ["test", "test:integration", "test:e2e"];
 // defaults to "test" if no script was called
 // (e.g. when running vitest directly or vitest extension in vscode)
 let testScript = process.env["npm_lifecycle_event"] ?? "test";
+testScript = testScript === "npx" ? "test" : testScript;
 if (testScript && !validTestScripts.includes(testScript)) {
   let errorMessage = `Invalid test script "${testScript}".`;
   errorMessage += "\nValid test scripts are: ";
