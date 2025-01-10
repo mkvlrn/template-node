@@ -1,1 +1,3 @@
-npm run typecheck && biome check --no-errors-on-unmatched && npm run test --bail
+npm run typecheck
+biome check --no-errors-on-unmatched
+npm run test --run --bail=1
