@@ -7,8 +7,8 @@ describe("basic math", () => {
       const twoPlusTwo = add(2, 2);
       const twoPlusThree = add(2, 3);
 
-      expect(twoPlusTwo).toBe(4);
-      expect(twoPlusThree).not.toBe(4);
+      expect(twoPlusTwo).toStrictEqual(4);
+      expect(twoPlusThree).not.toStrictEqual(4);
     });
   });
 
@@ -17,8 +17,8 @@ describe("basic math", () => {
       const twoMinusTwo = subtract(2, 2);
       const twoMinusThree = subtract(2, 3);
 
-      expect(twoMinusTwo).toBe(0);
-      expect(twoMinusThree).not.toBe(0);
+      expect(twoMinusTwo).toStrictEqual(0);
+      expect(twoMinusThree).not.toStrictEqual(0);
     });
   });
 });

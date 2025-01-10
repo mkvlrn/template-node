@@ -2,7 +2,7 @@
   "$schema": "https://swc.rs/schema.json",
   "jsc": {
     "baseUrl": ".",
-    "paths": { "~/*": ["./src/*"] },
+    "paths": { "~/*": ["./src/*"], "🧪/*": ["./test/*"] },
     "minify": { "format": { "comments": false } },
     "parser": {
       "syntax": "typescript",
@@ -12,6 +12,5 @@
     "target": "esnext",
     "transform": { "decoratorMetadata": true }
   },
-  "module": { "type": "es6", "strict": true },
-  "exclude": [".test.ts", ".test.tsx"]
+  "module": { "type": "es6", "strict": true }
 }

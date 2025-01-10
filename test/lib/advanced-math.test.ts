@@ -7,8 +7,8 @@ describe("advanced math", () => {
       const twoTimesTwo = multiply(2, 2);
       const twoTimesThree = multiply(2, 3);
 
-      expect(twoTimesTwo).toBe(4);
-      expect(twoTimesThree).not.toBe(4);
+      expect(twoTimesTwo).toStrictEqual(4);
+      expect(twoTimesThree).not.toStrictEqual(4);
     });
   });
 
@@ -17,8 +17,8 @@ describe("advanced math", () => {
       const twoDividedByTwo = divide(2, 2);
       const twoDividedByThree = divide(2, 3);
 
-      expect(twoDividedByTwo).toBe(1);
-      expect(twoDividedByThree).not.toBe(1);
+      expect(twoDividedByTwo).toStrictEqual(1);
+      expect(twoDividedByThree).not.toStrictEqual(1);
     });
 
     it("should throw when dividing by zero", () => {

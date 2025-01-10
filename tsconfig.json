@@ -1,25 +1,40 @@
 {
   "$schema": "https://json.schemastore.org/tsconfig",
   "compilerOptions": {
-    "allowJs": true,
-    "baseUrl": ".",
-    "declaration": false,
-    "emitDecoratorMetadata": true,
-    "experimentalDecorators": true,
-    "isolatedModules": true,
-    "lib": ["Dom", "DOM.Iterable", "ESNext", "ESNext.Decorators"],
+    // always strict
+    // if you use "any" you'll be sent to the gulag
+    "strict": true,
+    "noUncheckedIndexedAccess": true,
+
+    // esm
     "module": "ESNext",
+    "target": "esnext",
+    "lib": ["Dom", "DOM.Iterable", "ESNext", "ESNext.Decorators"],
+
+    // not using tsc to compile
+    // follow esm conventions
+    "allowJs": false,
+    "isolatedModules": true,
     "moduleDetection": "force",
     "moduleResolution": "bundler",
     "noEmit": true,
-    "outDir": "./build",
+
+    // paths for imports
+    "baseUrl": ".",
     "paths": { "~/*": ["./src/*"], "🧪/*": ["./test/*"] },
-    "preserveSymlinks": true,
-    "removeComments": true,
     "rootDir": ".",
+
+    // pnpm compatibility
+    "preserveSymlinks": true,
+
+    // importing json happens more often than you think
     "resolveJsonModule": true,
-    "skipLibCheck": true,
-    "strict": true,
-    "target": "esnext"
-  }
+
+    // the weird typescript decorators that should already be
+    // replaced by the tc39 proposal, but tc39 is S.L.O.W.
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true
+  },
+
+  "exclude": ["node_modules", "build", "coverage", "dist"]
 }
