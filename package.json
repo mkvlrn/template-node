@@ -20,8 +20,7 @@
     "test": "vitest",
     "test:integration": "vitest",
     "test:e2e": "vitest",
-    "tidy": "biome check --write --no-errors-on-unmatched",
-    "typecheck": "tsc --noEmit",
+    "tidy": "biome check --fix --no-errors-on-unmatched",
     "prepare": " husky"
   },
   "devDependencies": {
