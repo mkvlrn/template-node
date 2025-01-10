@@ -26,7 +26,7 @@ testScript = testScript.replace(":", "-");
 // must be typescript (*.ts) files in ./test/<test-type>/.setup
 const setupFiles: string[] = [];
 try {
-  const setupDir = resolve(testScript, ".setup");
+  const setupDir = resolve(testScript, "_setup");
   const files = await readdir(setupDir, { withFileTypes: true });
   const filteredFiles = files
     .filter((file) => file.isFile())

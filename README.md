@@ -44,9 +44,9 @@ Three directories laid out in the root of the project:
 - `./test-integration` for integration tests
 - `./test-e2e` for end-to-end tests
 
-Within each of these directories, the `.mocks`, `.setup`, and `.utils` directories should hold any mocks, vitest setup files (those are used automatically by the vitest config), and general utilities for the tests.
+Within each of these directories, the `_mocks`, `_setup`, and `_utils` directories should hold any mocks, vitest setup files (those are used automatically by the vitest config), and general utilities for the tests.
 
-Since the folder directories are path aliased, any mocks or utilities needed by the tests can be imported from the 🧪 alias, such as `🧪/.utils/my-util.ts`. You can change the alias in the `tsconfig.json` file if you find it difficult to use emojis and you _hate fun_.
+Since the folder directories are path aliased, any mocks or utilities needed by the tests can be imported from the 🧪 alias, such as `🧪/_utils/my-util.ts`. You can change the alias in the `tsconfig.json` file if you find it difficult to use emojis and you _hate fun_.
 
 The tests are run with vitest, which is configured in `./vitest.config.ts`. This config depends on this directory structure, and will automatically find all the tests in the `./test` directory.
 
@@ -74,10 +74,7 @@ I suggest using this configuration (YMMV):
   "editor.codeActionsOnSave": {
     "quickfix.biome": "explicit",
     "source.fixAll": "never",
-    "source.fixAll.sortJSON": "never",
-    "source.organizeImports": "never",
-    "source.organizeImports.biome": "explicit",
-    "source.sortImports": "never"
+    "source.organizeImports.biome": "never"
   },
   "eslint.enable": false
 }
