@@ -26,10 +26,6 @@ Vitest is configured to work in 3 different types of tests, indicated by the scr
 
 This will run biome in fix mode (only [safe fixes](https://biomejs.dev/linter/#safe-fixes)) to lint and format the project. Directories `./src` and `./test`, along with all "loose" compatible files in the root of the project (js, ts, json, jsonc) will be processed.
 
-### `yarn typecheck`
-
-Check for typescript type errors with `tsc`. No transpilation is done.
-
 ## that tsconfig.json seems very strict and opinionated
 
 Yup.
