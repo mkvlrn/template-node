@@ -4,8 +4,9 @@
   "files": { "ignoreUnknown": true, "include": ["**/*"], "ignore": [] },
   "formatter": {
     "enabled": true,
+    "formatWithErrors": true,
     "indentStyle": "space",
-    "formatWithErrors": true
+    "lineWidth": 100
   },
   "organizeImports": { "enabled": false },
   "linter": {

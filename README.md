@@ -2,6 +2,14 @@
 
 A sane, opinionated template for esm node projects written in typescript.
 
+Uses:
+
+- [biome](https://github.com/biomejs/biome) for linting and formatting
+- [tsx](https://github.com/privatenumber/tsx) for running typescript code without transpiling
+- [vitest](https://github.com/vitest-dev/vitest) for tests
+- [commitlint](https://github.com/conventional-changelog/commitlint) for linting commit messages
+- [husky](https://github.com/typicode/husky) for git hooks
+
 ## running
 
 ### `yarn dev`
