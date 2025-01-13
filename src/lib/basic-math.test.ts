@@ -1,5 +1,4 @@
-import assert from "node:assert/strict";
-import { describe, test } from "node:test";
+import { describe, expect, test } from "vitest";
 import { add, subtract } from "~/lib/basic-math";
 
 describe("basic math", () => {
@@ -8,8 +7,8 @@ describe("basic math", () => {
       const twoPlusTwo = add(2, 2);
       const twoPlusThree = add(2, 3);
 
-      assert.equal(twoPlusTwo, 4);
-      assert.notEqual(twoPlusThree, 4);
+      expect(twoPlusTwo).toEqual(4);
+      expect(twoPlusThree).toEqual(5);
     });
   });
 
@@ -18,8 +17,8 @@ describe("basic math", () => {
       const twoMinusTwo = subtract(2, 2);
       const twoMinusThree = subtract(2, 3);
 
-      assert.equal(twoMinusTwo, 0);
-      assert.notEqual(twoMinusThree, 0);
+      expect(twoMinusTwo).toEqual(0);
+      expect(twoMinusThree).toEqual(-1);
     });
   });
 });

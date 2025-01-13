@@ -18,6 +18,11 @@
   },
   "overrides": [
     {
+      // some/most config files on root export defaults from them
+      "include": ["./*.config.ts", "./*.config.js"],
+      "linter": { "rules": { "style": { "noDefaultExport": "off" } } }
+    },
+    {
       // node test runner
       "include": ["**/*.test.ts"],
       "linter": { "rules": { "correctness": { "noNodejsModules": "off" } } }

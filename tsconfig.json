@@ -35,6 +35,7 @@
 
     // pnpm compatibility
     "preserveSymlinks": true,
+    "typeRoots": ["./node_modules/@types"],
 
     // importing json happens more often than you think
     "resolveJsonModule": true,

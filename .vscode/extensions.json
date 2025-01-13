@@ -1,7 +1,7 @@
 {
   "recommendations": [
     "biomejs.biome",
-    "connor4312.nodejs-testing",
-    "ms-vscode.test-adapter-converter"
+    "ms-vscode.test-adapter-converter",
+    "vitest.explorer"
   ]
 }

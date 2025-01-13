@@ -13,12 +13,5 @@
   },
   "editor.formatOnPaste": true,
   "editor.formatOnSave": true,
-  "editor.formatOnType": true,
-  "eslint.enable": false,
-  "nodejs-testing.extensions": [
-    {
-      "extensions": ["ts", "tsx"],
-      "parameters": ["--import", "tsx"]
-    }
-  ]
+  "editor.formatOnType": true
 }
