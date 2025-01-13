@@ -11,5 +11,11 @@
     "source.fixAll": "never",
     "source.organizeImports.biome": "never"
   },
-  "eslint.enable": false
+  "eslint.enable": false,
+  "nodejs-testing.extensions": [
+    {
+      "extensions": ["ts", "tsx"],
+      "parameters": ["--import", "tsx"]
+    }
+  ]
 }
