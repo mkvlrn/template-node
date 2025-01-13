@@ -18,7 +18,7 @@ Runs the built project.
 
 ### `yarn test`
 
-Runs tests using the [node test runner](https://nodejs.org/api/test.html).
+Runs unit tests using the [node test runner](https://nodejs.org/api/test.html).
 
 ### `yarn tidy`
 

@@ -11,6 +11,9 @@
     "source.fixAll": "never",
     "source.organizeImports.biome": "never"
   },
+  "editor.formatOnPaste": true,
+  "editor.formatOnSave": true,
+  "editor.formatOnType": true,
   "eslint.enable": false,
   "nodejs-testing.extensions": [
     {
