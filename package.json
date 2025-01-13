@@ -18,14 +18,15 @@
     "dev": "node --import=tsx --watch src/main.ts",
     "start": "node build/main.js",
     "test": "vitest",
-    "tidy": "biome check --fix --no-errors-on-unmatched",
+    "tidy": "biome check --fix --no-errors-on-unmatched --verbose",
+    "typecheck": "tsc --noEmit && echo 'tsc passed'",
     "prepare": "husky"
   },
   "devDependencies": {
     "@biomejs/biome": "^1.9.4",
     "@commitlint/cli": "^19.6.1",
     "@commitlint/config-conventional": "^19.6.0",
-    "@types/node": "^22.10.5",
+    "@types/node": "^22.10.6",
     "@vitest/coverage-v8": "^2.1.8",
     "husky": "^9.1.7",
     "tsc-alias": "^1.8.10",

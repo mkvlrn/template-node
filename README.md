@@ -24,6 +24,10 @@ Runs unit tests using vitest.
 
 Runs biome in fix mode (only [safe fixes](https://biomejs.dev/linter/#safe-fixes)) to lint and format the project. Not only `./src` but all "loose" config files around root (js, ts, json, jsonc) or other directories.
 
+### `yarn typecheck`
+
+Runs typechecking using tsc and the `tsconfig.json` file, which is not the one used to build the project.
+
 ## that tsconfig.json seems very strict and opinionated
 
 Yup.
