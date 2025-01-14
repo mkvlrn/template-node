@@ -9,7 +9,7 @@ export default defineConfig({
     coverage: {},
     // biome-ignore lint/style/useNamingConvention: needed for vitest
     env: { NODE_ENV: "test" },
-    environment: "jsdom",
+    environment: "node",
     passWithNoTests: true,
     setupFiles: [],
   },
