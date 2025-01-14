@@ -30,7 +30,7 @@ Runs unit tests using vitest.
 
 ### `yarn tidy`
 
-Runs biome in fix mode (only [safe fixes](https://biomejs.dev/linter/#safe-fixes)) to lint and format the project. Not only `./src` but all "loose" config files around root (js, ts, json, jsonc) or other directories.
+Runs biome in fix mode (only [safe fixes](https://biomejs.dev/linter/#safe-fixes)) to lint and format the project. Not only `./src`, but also all "loose" config files around root (js, ts, json, jsonc) or other directories.
 
 ### `yarn typecheck`
 
