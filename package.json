@@ -18,7 +18,6 @@
     "dev": "node --import=tsx --watch src/main.ts",
     "start": "node build/main.js",
     "test": "vitest",
-    "test:integration": "vitest --config test/integration/vitest.config.ts",
     "test:e2e": "vitest --config test/e2e/vitest.config.ts",
     "tidy:ci": "biome check --no-errors-on-unmatched",
     "tidy": "yarn tidy:ci --fix",
