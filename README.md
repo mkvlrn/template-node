@@ -24,7 +24,7 @@ Builds/transpiles the code to `./build`.
 
 Runs the built project.
 
-### `yarn test`
+### `yarn test`, `yarn test:e2e`
 
 Runs tests with vitest.
 
