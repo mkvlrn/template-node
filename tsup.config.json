@@ -5,10 +5,11 @@
   "format": ["esm"],
   "target": "esnext",
   "platform": "node",
+  "bundle": true,
   "dts": false,
-  "sourcemap": false,
+  "sourcemap": true,
   "splitting": false,
   "cjsInterop": false,
-  "minify": true,
+  "minify": false,
   "noExternal": []
 }

@@ -11,9 +11,16 @@
     "url": "git@github.com:mkvlrn/template-node"
   },
   "keywords": ["node", "typescript", "esm", "template"],
+  "engines": {
+    "node": ">=23.6.0"
+  },
+  "imports": {
+    "#*": "./src/*"
+  },
   "scripts": {
     "prebuild": "rm -rf build",
     "build": "tsup",
+    "dev": "node --watch src/main.ts",
     "start": "node build/main.js",
     "test:ci": "yarn test --bail=1 --reporter=default && yarn test:e2e --bail=1 --reporter=default",
     "test": "vitest",
@@ -27,13 +34,14 @@
     "@biomejs/biome": "^1.9.4",
     "@commitlint/cli": "^19.6.1",
     "@commitlint/config-conventional": "^19.6.0",
-    "@types/node": "^22.10.10",
+    "@types/node": "^22.12.0",
     "@vitest/coverage-v8": "^3.0.4",
     "husky": "^9.1.7",
     "tsup": "^8.3.6",
-    "tsx": "^4.19.2",
     "typescript": "^5.7.3",
-    "vite-tsconfig-paths": "^5.1.4",
     "vitest": "^3.0.4"
+  },
+  "dependencies": {
+    "zod": "^3.24.1"
   }
 }

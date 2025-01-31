@@ -5,17 +5,16 @@ A sane, opinionated template for esm node projects written in typescript.
 Uses:
 
 - [biome](https://github.com/biomejs/biome) for linting and formatting
-- [tsx](https://github.com/privatenumber/tsx) for running typescript code without transpiling
-- [vitest](https://github.com/vitest-dev/vitest) for tests
 - [commitlint](https://github.com/conventional-changelog/commitlint) for linting commit messages
 - [husky](https://github.com/typicode/husky) for git hooks
-- [tsup](https://github.com/egoist/tsup) for building
+- [vitest](https://github.com/vitest-dev/vitest) for tests
+- [vite](https://github.com/vitejs/vite) for building
 
 ## running
 
 ### `yarn dev`
 
-Runs the project in watch mode, automatically restarting on changes. Uses [tsx](https://github.com/privatenumber/tsx) to run the typescript code without transpiling to `./build`.
+Runs the project in watch mode.
 
 ### `yarn build`
 
@@ -35,7 +34,7 @@ Runs biome in fix mode (only [safe fixes](https://biomejs.dev/linter/#safe-fixes
 
 ### `yarn typecheck`
 
-Runs type checking using tsc and the `tsconfig.json` file, which is not the one used to build the project.
+Checks types without transpiling.
 
 ## that tsconfig.json seems very strict and opinionated
 
