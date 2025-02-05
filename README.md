@@ -2,7 +2,7 @@
 
 A sane, opinionated template for esm node projects written in typescript.
 
-For new, node 23.6+ projects.
+For new, node 22.6+ projects, with node stripping types.
 
 Uses:
 
