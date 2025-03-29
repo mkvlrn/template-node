@@ -1,5 +1,5 @@
 import { divide, multiply } from "#lib/advanced-math.ts";
-import { describe, expect, test } from "vitest";
+import { assert, describe, expect, test } from "vitest";
 
 describe("multiply", () => {
   test("should multiply two numbers", () => {
@@ -16,15 +16,21 @@ describe("divide", () => {
     const twoDividedByTwo = divide(2, 2);
     const twoDividedByThree = divide(2, 4);
 
-    expect(twoDividedByTwo).toEqual(1);
-    expect(twoDividedByThree).toEqual(0.5);
+    expect(twoDividedByTwo.ok).toBe(true);
+    assert(twoDividedByTwo.ok === true);
+    expect(twoDividedByTwo.value).toEqual(1);
+
+    expect(twoDividedByThree.ok).toBe(true);
+    assert(twoDividedByThree.ok === true);
+    expect(twoDividedByThree.value).toEqual(0.5);
   });
 
-  test("should throw when dividing by zero", () => {
-    const divideByZero = () => divide(10, 0);
+  test("should return an error when dividing by zero", () => {
+    const divideByZero = divide(2, 0);
 
-    const act = () => divideByZero();
-
-    expect(act).toThrow("cannot divide by zero");
+    expect(divideByZero.ok).toBe(false);
+    assert(divideByZero.ok === false);
+    expect(divideByZero.error).toBeInstanceOf(Error);
+    expect(divideByZero.error?.message).toBe("Division by zero is not allowed");
   });
 });
