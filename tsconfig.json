@@ -3,9 +3,6 @@
     // type checking only
     "noEmit": true,
 
-    // importing ts files
-    "allowImportingTsExtensions": true,
-
     // no funny business
     "erasableSyntaxOnly": true,
 
@@ -23,8 +20,8 @@
     "isolatedModules": true,
     "lib": ["ESNext"],
     "module": "NodeNext",
-    "moduleDetection": "force",
     "moduleResolution": "nodenext",
+    "moduleDetection": "force",
     "target": "esnext",
     "verbatimModuleSyntax": true,
 
@@ -35,7 +32,10 @@
     "resolveJsonModule": true,
 
     // don't try to check for errors on imported libs
-    "skipLibCheck": true
+    "skipLibCheck": true,
+
+    // imports from src as defined in package.json subpath
+    "customConditions": ["dev"]
   },
 
   "exclude": ["node_modules", "build", "coverage", "dist"]

@@ -15,18 +15,19 @@
     "node": ">=23.6"
   },
   "imports": {
-    "#*": "./src/*"
+    "#*": {
+      "dev": "./src/*.ts",
+      "default": "./build/*.js"
+    }
   },
   "scripts": {
     "prebuild": "rm -rf build",
-    "build": "tsup",
-    "dev": "node --watch src/main.ts",
+    "build": "tsc -p tsconfig.build.json",
+    "dev": "node -C dev --watch src/main.ts",
     "start": "node build/main.js",
-    "test:ci": "yarn test --bail=1 --reporter=default && yarn test:e2e --bail=1 --reporter=default",
-    "test": "vitest",
-    "test:e2e": "vitest --config e2e/vitest.config.ts",
-    "tidy:ci": "biome check --no-errors-on-unmatched",
-    "tidy": "yarn tidy:ci --fix",
+    "test": "node -C dev --test --test-reporter spec src/**/*.test.ts",
+    "tidy-check": "biome check --no-errors-on-unmatched",
+    "tidy-fix": "yarn tidy:ci --fix",
     "typecheck": "tsc --noEmit",
     "prepare": "husky"
   },
@@ -35,11 +36,8 @@
     "@commitlint/cli": "^19.8.0",
     "@commitlint/config-conventional": "^19.8.0",
     "@types/node": "^22.13.14",
-    "@vitest/coverage-v8": "^3.0.9",
     "husky": "^9.1.7",
-    "tsup": "^8.4.0",
-    "typescript": "^5.8.2",
-    "vitest": "^3.0.9"
+    "typescript": "^5.8.2"
   },
   "dependencies": {
     "@mkvlrn/result": "npm:@jsr/mkvlrn__result@^0.1.2"

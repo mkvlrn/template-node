@@ -40,6 +40,17 @@
           }
         }
       }
+    },
+    {
+      // test files can use node:modules
+      "include": ["**/*.test.ts", "**/*.test.js"],
+      "linter": {
+        "rules": {
+          "correctness": {
+            "noNodejsModules": "off"
+          }
+        }
+      }
     }
   ]
 }

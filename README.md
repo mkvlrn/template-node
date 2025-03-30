@@ -7,10 +7,9 @@ For new, node 23.6+ projects, with node stripping types.
 Uses:
 
 - [biome](https://github.com/biomejs/biome) for linting and formatting
-- [vitest](https://github.com/vitest-dev/vitest) for tests
+- [node test runner](https://nodejs.org/api/test.html) for tests
 - [commitlint](https://github.com/conventional-changelog/commitlint) for linting commit messages
 - [husky](https://github.com/typicode/husky) for git hooks
-- [tsup](https://github.com/egoist/tsup) for building
 
 ## running
 
@@ -26,11 +25,11 @@ Builds/transpiles the code to `./build`.
 
 Runs the built project.
 
-### `yarn test`, `yarn test:e2e`
+### `yarn test`
 
 Runs tests with vitest.
 
-### `yarn tidy`
+### `yarn tidy-fix`
 
 Runs biome in fix mode (only [safe fixes](https://biomejs.dev/linter/#safe-fixes)) to lint and format the project.
 

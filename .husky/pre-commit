@@ -1,1 +1,1 @@
-yarn tidy:ci --staged
+yarn tidy-check --staged
