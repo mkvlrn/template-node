@@ -1,5 +1,11 @@
+import { divide } from "#lib/advanced-math";
 import { add } from "#lib/basic-math";
 
-// biome-ignore lint/suspicious/noConsole: just a simple example
-// biome-ignore lint/suspicious/noConsoleLog: just a simple example
 console.log(`2 + 2 = ${add(2, 2)}`);
+
+const div = divide(4, 0);
+if (div.ok) {
+  console.log(`4 / 2 = ${div.value}`);
+} else {
+  console.error(div.error.message);
+}

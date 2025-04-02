@@ -1,10 +1,14 @@
 {
   "compilerOptions": {
+    // imports from src as defined in package.json subpath
+    "customConditions": ["dev"],
+
     // type checking only
     "noEmit": true,
 
     // no funny business
     "erasableSyntaxOnly": true,
+    "verbatimModuleSyntax": true,
 
     // hella strict
     // https://whatislove.dev/articles/the-strictest-typescript-config/
@@ -21,9 +25,7 @@
     "lib": ["ESNext"],
     "module": "NodeNext",
     "moduleResolution": "nodenext",
-    "moduleDetection": "force",
     "target": "esnext",
-    "verbatimModuleSyntax": true,
 
     // pnpm compatibility
     "preserveSymlinks": true,
@@ -32,10 +34,7 @@
     "resolveJsonModule": true,
 
     // don't try to check for errors on imported libs
-    "skipLibCheck": true,
-
-    // imports from src as defined in package.json subpath
-    "customConditions": ["dev"]
+    "skipLibCheck": true
   },
 
   "exclude": ["node_modules", "build", "coverage", "dist"]

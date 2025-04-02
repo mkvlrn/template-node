@@ -10,7 +10,12 @@
     "type": "git",
     "url": "git@github.com:mkvlrn/template-node"
   },
-  "keywords": ["node", "typescript", "esm", "template"],
+  "keywords": [
+    "node",
+    "typescript",
+    "esm",
+    "template"
+  ],
   "engines": {
     "node": ">=23.6"
   },
@@ -21,25 +26,25 @@
     }
   },
   "scripts": {
-    "prebuild": "rm -rf build",
-    "build": "tsc -p tsconfig.build.json",
+    "build": "node scripts/build.ts",
     "dev": "node -C dev --watch src/main.ts",
     "start": "node build/main.js",
-    "test": "node -C dev --test --test-reporter spec src/**/*.test.ts",
-    "tidy-check": "biome check --no-errors-on-unmatched",
-    "tidy-fix": "yarn tidy:ci --fix",
+    "test": "node -C dev --test src/**/*.test.ts",
+    "biome-check": "biome check --no-errors-on-unmatched",
+    "biome-fix": "yarn biome-check --write",
     "typecheck": "tsc --noEmit",
     "prepare": "husky"
   },
   "devDependencies": {
-    "@biomejs/biome": "^1.9.4",
+    "@biomejs/biome": "https://pkg.pr.new/biomejs/biome/@biomejs/biome@241a440",
     "@commitlint/cli": "^19.8.0",
     "@commitlint/config-conventional": "^19.8.0",
-    "@types/node": "^22.13.14",
+    "@types/node": "^22.13.17",
     "husky": "^9.1.7",
+    "tsup": "^8.4.0",
     "typescript": "^5.8.2"
   },
   "dependencies": {
-    "@mkvlrn/result": "npm:@jsr/mkvlrn__result@^0.1.2"
+    "@mkvlrn/result": "^1.1.0"
   }
 }

@@ -1,6 +1,6 @@
-import { divide, multiply } from "#lib/advanced-math";
 import assert from "node:assert/strict";
 import { describe, it } from "node:test";
+import { divide, multiply } from "#lib/advanced-math";
 
 describe("advanced-math", () => {
   describe("multiply", () => {

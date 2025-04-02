@@ -10,6 +10,7 @@ Uses:
 - [node test runner](https://nodejs.org/api/test.html) for tests
 - [commitlint](https://github.com/conventional-changelog/commitlint) for linting commit messages
 - [husky](https://github.com/typicode/husky) for git hooks
+- [tsup](https://github.com/egoist/tsup) for building
 
 ## running
 
@@ -29,7 +30,7 @@ Runs the built project.
 
 Runs tests with vitest.
 
-### `yarn tidy-fix`
+### `yarn biome-fix`
 
 Runs biome in fix mode (only [safe fixes](https://biomejs.dev/linter/#safe-fixes)) to lint and format the project.
 
