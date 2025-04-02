@@ -1,48 +1,9 @@
 {
   "$schema": "node_modules/@biomejs/biome/configuration_schema.json",
-  "vcs": {
-    "clientKind": "git",
-    "enabled": true,
-    "useIgnoreFile": true
-  },
-  "files": {
-    "ignoreUnknown": true,
-    "includes": ["**/*", "!build/**", "!node_modules/**", "!dist/**", "!coverage/**"]
-  },
-  "assist": {
-    "actions": {
-      "source": {
-        "organizeImports": "on",
-        "useSortedAttributes": "on",
-        "useSortedKeys": "on",
-        "useSortedProperties": "on"
-      }
-    }
-  },
-  "formatter": {
-    "enabled": true,
-    "formatWithErrors": true,
-    "lineWidth": 100,
-    "useEditorconfig": true
-  },
-  "linter": {
-    "domains": {
-      "test": "all"
-    },
-    "enabled": true,
-    "rules": {
-      "a11y": "on",
-      "complexity": "on",
-      "correctness": "on",
-      "nursery": "on",
-      "performance": "on",
-      "security": "on",
-      "style": "on",
-      "suspicious": "on"
-    }
-  },
+  "extends": ["@mkvlrn/config/biome"],
   "overrides": [
     {
+      // dont sort keys in these because they're usually in a specific order for readability
       "includes": ["**/biome.json", "**/biome.jsonc", "**/package.json", "**/tsconfig.json"],
       "assist": {
         "actions": {

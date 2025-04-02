@@ -2,22 +2,22 @@ import { rm } from "node:fs/promises";
 import { build, type Options } from "tsup";
 
 const options: Options = {
-  bundle: true,
+  entry: ["src/**/*.ts", "!src/**/*.test.ts"],
+  outDir: "build",
+  format: ["esm"],
+  target: "esnext",
+  platform: "node",
+  bundle: false,
+  minify: false,
+  sourcemap: false,
+  splitting: false,
   cjsInterop: false,
   dts: false,
-  entry: ["src/main.ts"],
   esbuildOptions: (options) => {
     options.conditions = ["dev"];
   },
   external: [],
-  format: ["esm"],
-  minify: false,
   noExternal: [],
-  outDir: "build",
-  platform: "node",
-  sourcemap: false,
-  splitting: false,
-  target: "esnext",
 };
 
 await rm("build", { force: true, recursive: true });
