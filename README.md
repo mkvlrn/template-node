@@ -28,7 +28,7 @@ Runs the built project.
 
 ### `yarn test`
 
-Runs tests with vitest.
+Runs tests.
 
 ### `yarn biome-fix`
 

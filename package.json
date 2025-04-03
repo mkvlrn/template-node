@@ -29,7 +29,7 @@
     "build": "node scripts/build.ts",
     "dev": "node -C dev --watch src/main.ts",
     "start": "node build/main.js",
-    "test": "node -C dev --test src/**/*.test.ts",
+    "test": "node -C dev --test 'src/**/*.test.ts'",
     "biome-check": "biome check --no-errors-on-unmatched",
     "biome-fix": "yarn biome-check --write",
     "typecheck": "tsc --noEmit",
