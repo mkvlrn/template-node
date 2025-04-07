@@ -36,13 +36,13 @@
     "prepare": "husky"
   },
   "devDependencies": {
-    "@biomejs/biome": "https://pkg.pr.new/biomejs/biome/@biomejs/biome@241a440",
+    "@biomejs/biome": "https://pkg.pr.new/biomejs/biome/@biomejs/biome@19ecf30",
     "@commitlint/cli": "^19.8.0",
     "@mkvlrn/config": "^2.0.3",
     "@types/node": "^22.14.0",
     "husky": "^9.1.7",
     "tsup": "^8.4.0",
-    "typescript": "^5.8.2"
+    "typescript": "^5.8.3"
   },
   "dependencies": {
     "@mkvlrn/result": "^1.1.0"
