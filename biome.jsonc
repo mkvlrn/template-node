@@ -1,6 +1,15 @@
 {
   "$schema": "node_modules/@biomejs/biome/configuration_schema.json",
   "extends": ["@mkvlrn/config/biome"],
+  "linter": {
+    "rules": {
+      "nursery": {
+        // temporary because of subpath imports
+        // might be fixed, discussed: https://github.com/biomejs/biome/discussions/5603
+        "noUnresolvedImports": "off"
+      }
+    }
+  },
   "overrides": [
     {
       // dont sort keys in these because they're usually in a specific order for readability
