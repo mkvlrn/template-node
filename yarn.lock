@@ -377,10 +377,10 @@
     "@jridgewell/resolve-uri" "^3.1.0"
     "@jridgewell/sourcemap-codec" "^1.4.14"
 
-"@mkvlrn/config@^2.0.3":
-  version "2.0.3"
-  resolved "https://registry.yarnpkg.com/@mkvlrn/config/-/config-2.0.3.tgz#c6cf0c2f7b1ed8e460c5b2370cebed0b50fa0e8d"
-  integrity sha512-Wpjn0FyQhEzZz7SRl8OfUDRSzWFoqKotzzCltS4zdOiJlt63IqehU4lByGQmMedUVYbPeFQ3GFe+C/ksB9e0Fw==
+"@mkvlrn/config@^2.0.5":
+  version "2.0.5"
+  resolved "https://registry.yarnpkg.com/@mkvlrn/config/-/config-2.0.5.tgz#856b7b2cac43c6acc36f69ee4e9e4cfa5c8ea3b2"
+  integrity sha512-OWsInA5vyA/RlC2NsYxjDCGkvQaAklt0kjmaEOuK1knYQSoX0nT1+jZ9gbCGWHdkcRfEwotAKGLX1lUzdww1kQ==
 
 "@mkvlrn/result@^1.1.0":
   version "1.1.0"

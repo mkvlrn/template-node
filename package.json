@@ -32,7 +32,7 @@
   "devDependencies": {
     "@biomejs/biome": "https://pkg.pr.new/biomejs/biome/@biomejs/biome@2d699e3",
     "@commitlint/cli": "^19.8.0",
-    "@mkvlrn/config": "^2.0.3",
+    "@mkvlrn/config": "^2.0.5",
     "@types/node": "^22.14.0",
     "husky": "^9.1.7",
     "tsc-alias": "^1.8.15",
