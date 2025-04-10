@@ -2,7 +2,7 @@
 
 A sane, opinionated template for esm node projects written in typescript.
 
-For new, node 23.6+ projects, with node stripping types.
+For new, node 23.8+ projects.
 
 Uses:
 
@@ -11,6 +11,7 @@ Uses:
 - [commitlint](https://github.com/conventional-changelog/commitlint) for linting commit messages
 - [husky](https://github.com/typicode/husky) for git hooks
 - [tsup](https://github.com/egoist/tsup) for building
+- [tsx](https://github.com/privatenumber/tsx) for dev time typescript
 
 ## running
 

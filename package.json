@@ -17,19 +17,13 @@
     "template"
   ],
   "engines": {
-    "node": ">=23.6"
-  },
-  "imports": {
-    "#*": {
-      "dev": "./src/*.ts",
-      "default": "./build/*.js"
-    }
+    "node": ">=23.8"
   },
   "scripts": {
-    "build": "node scripts/build.ts",
-    "dev": "node -C dev --watch src/main.ts",
+    "build": "tsx scripts/build.ts",
+    "dev": "tsx --watch src/main.ts",
     "start": "node build/main.js",
-    "test": "node -C dev --test 'src/**/*.test.ts'",
+    "test": "tsx --test",
     "biome-check": "biome check --no-errors-on-unmatched",
     "biome-fix": "yarn biome-check --write",
     "typecheck": "tsc --noEmit",
@@ -41,7 +35,9 @@
     "@mkvlrn/config": "^2.0.3",
     "@types/node": "^22.14.0",
     "husky": "^9.1.7",
+    "tsc-alias": "^1.8.15",
     "tsup": "^8.4.0",
+    "tsx": "^4.19.3",
     "typescript": "^5.8.3"
   },
   "dependencies": {

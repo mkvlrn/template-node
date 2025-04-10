@@ -1,5 +1,5 @@
-import { divide } from "#lib/advanced-math";
-import { add } from "#lib/basic-math";
+import { divide } from "~/lib/advanced-math.js";
+import { add } from "~/lib/basic-math.js";
 
 console.log(`2 + 2 = ${add(2, 2)}`);
 

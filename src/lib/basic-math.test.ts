@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import { describe, it } from "node:test";
-import { add, subtract } from "#lib/basic-math";
+import { add, subtract } from "~/lib/basic-math.js";
 
 describe("basic-math", () => {
   describe("add", () => {
