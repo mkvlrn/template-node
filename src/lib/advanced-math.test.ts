@@ -20,7 +20,6 @@ describe("advanced-math", () => {
 
       assert.strictEqual(twoDividedByTwo.ok, true);
       assert.strictEqual(twoDividedByTwo.value, 1);
-
       assert.strictEqual(twoDividedByThree.ok, true);
       assert.strictEqual(twoDividedByThree.value, 0.5);
     });
