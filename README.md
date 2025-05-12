@@ -2,7 +2,7 @@
 
 A sane, opinionated template for esm node projects written in typescript.
 
-For new, node 23.8+ projects.
+For new, node 24+ projects.
 
 Uses:
 
