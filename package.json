@@ -30,13 +30,13 @@
     "prepare": "husky"
   },
   "devDependencies": {
-    "@biomejs/biome": "^2.0.0-beta.3",
+    "@biomejs/biome": "https://pkg.pr.new/biomejs/biome/@biomejs/biome@3e8fbee",
     "@commitlint/cli": "^19.8.1",
     "@commitlint/config-conventional": "^19.8.1",
-    "@types/node": "^22.15.17",
+    "@types/node": "^22.15.19",
     "husky": "^9.1.7",
     "tsc-alias": "^1.8.16",
-    "tsup": "^8.4.0",
+    "tsup": "^8.5.0",
     "tsx": "^4.19.4",
     "typescript": "^5.8.3"
   },
