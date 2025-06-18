@@ -1,6 +1,7 @@
 import { glob } from "node:fs/promises";
 import { fileURLToPath } from "node:url";
 import { defineConfig } from "vite";
+import pkg from "./package.json" with { type: "json" };
 
 const entryFiles: string[] = [];
 for await (const file of glob("src/**/*.ts")) {
@@ -41,6 +42,11 @@ export default defineConfig({
         const internals = ["@mkvlrn/result"];
         if (internals.includes(id)) {
           return false;
+        }
+
+        // external dependencies
+        if (Object.keys(pkg.dependencies ?? {}).some((dep) => id.startsWith(dep))) {
+          return true;
         }
       },
       output: {
