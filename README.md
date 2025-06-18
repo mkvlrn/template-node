@@ -10,32 +10,32 @@ Uses:
 - [node test runner](https://nodejs.org/api/test.html) for tests
 - [commitlint](https://github.com/conventional-changelog/commitlint) for linting commit messages
 - [husky](https://github.com/typicode/husky) for git hooks
-- [tsup](https://github.com/egoist/tsup) for building
+- [vite](https://github.com/vitejs/vite) for building
 - [tsx](https://github.com/privatenumber/tsx) for dev time typescript
 
 ## running
 
-### `yarn dev`
+### `npm run dev`
 
 Runs the project in watch mode.
 
-### `yarn build`
+### `npm run build`
 
 Builds/transpiles the code to `./build`.
 
-### `yarn start`
+### `npm start`
 
 Runs the built project.
 
-### `yarn test`
+### `npm test`
 
 Runs tests.
 
-### `yarn biome-fix`
+### `npm run biome-fix`
 
 Runs biome in fix mode (only [safe fixes](https://biomejs.dev/linter/#safe-fixes)) to lint and format the project.
 
-### `yarn typecheck`
+### `npm run typecheck`
 
 Runs type checking using tsc.
 

@@ -29,7 +29,11 @@
   },
   "linter": {
     "domains": {
-      "test": "all"
+      "project": "all",
+      "test": "all",
+      "react": "none",
+      "next": "none",
+      "solid": "none"
     },
     "enabled": true,
     "rules": {
@@ -44,20 +48,20 @@
     }
   },
   "overrides": [
-    {
-      // TODO: check later
-      // noUnresolvedImports not working properly, flags stuff from node_modules as unresolved
-      // useExplicitType breaking type inference
-      "includes": ["**/*"],
-      "linter": {
-        "rules": {
-          "nursery": {
-            "noUnresolvedImports": "off",
-            "useExplicitType": "off"
-          }
-        }
-      }
-    },
+    // {
+    //   // TODO: check later
+    //   // noUnresolvedImports not working properly, flags stuff from node_modules as unresolved
+    //   // useExplicitType breaking type inference
+    //   "includes": ["**/*"],
+    //   "linter": {
+    //     "rules": {
+    //       "nursery": {
+    //         "noUnresolvedImports": "off",
+    //         "useExplicitType": "off"
+    //       }
+    //     }
+    //   }
+    // },
 
     {
       // test files, config files, and some scripts
@@ -70,18 +74,6 @@
           },
           "style": {
             "noDefaultExport": "off"
-          }
-        }
-      }
-    },
-
-    {
-      // main.ts
-      "includes": ["src/main.ts"],
-      "linter": {
-        "rules": {
-          "suspicious": {
-            "noConsole": "off"
           }
         }
       }
