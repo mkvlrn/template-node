@@ -10,7 +10,7 @@
 
     // hella strict
     // https://whatislove.dev/articles/the-strictest-typescript-config/
-    "allowJs": true,
+    "allowJs": false,
     "exactOptionalPropertyTypes": true,
     // "noPropertyAccessFromIndexSignature": true,
     "noUncheckedIndexedAccess": true,
