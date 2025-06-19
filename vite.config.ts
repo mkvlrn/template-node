@@ -6,7 +6,7 @@ import { defineConfig } from "vite";
 const entryFiles: string[] = [];
 for await (const file of glob("src/**/*.ts")) {
   // no need to bundle test files
-  if (!file.endsWith(".test.ts")) {
+  if (!(file.endsWith(".test.ts") || file.endsWith(".spec.ts"))) {
     entryFiles.push(file);
   }
 }
