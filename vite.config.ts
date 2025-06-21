@@ -1,28 +1,29 @@
 import { glob } from "node:fs/promises";
-import { fileURLToPath } from "node:url";
 import { nodeExternals } from "rollup-plugin-node-externals";
 import { defineConfig } from "vite";
+import tsconfigPaths from "vite-tsconfig-paths";
 
+// all files except test files
 const entryFiles: string[] = [];
 for await (const file of glob("src/**/*.ts")) {
-  // no need to bundle test files
   if (!(file.endsWith(".test.ts") || file.endsWith(".spec.ts"))) {
     entryFiles.push(file);
   }
 }
 
 export default defineConfig({
-  resolve: {
-    alias: {
-      "~": fileURLToPath(new URL("./src", import.meta.url)),
-    },
-  },
-
   plugins: [
+    // externalize node builtins and configure dependencies to be externalized (or not)
     nodeExternals({
-      // packages to be set as internal
+      // externalize dependencies in package.json
+      deps: true,
+      // devDependencies in package.json
+      devDeps: false,
+      // dependencies to be made bundled
       exclude: ["@mkvlrn/result"],
     }),
+    // resolve tsconfig path aliases
+    tsconfigPaths(),
   ],
 
   build: {
