@@ -1,7 +1,7 @@
 /** biome-ignore-all lint/suspicious/noConsole: needed, yo */
 
-import { divide } from "~/lib/advanced-math.ts";
-import { add } from "~/lib/basic-math.ts";
+import { divide } from "~/math/advanced-math.ts";
+import { add } from "~/math/basic-math.ts";
 
 function main(): void {
   const sum = add(1, 2);
