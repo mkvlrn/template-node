@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import { describe, it } from "node:test";
-import { add, subtract } from "~/math/basic-math.ts";
+import { add, subtract } from "#/math/basic-math.ts";
 
 describe("basic-math", () => {
   describe("add", () => {
