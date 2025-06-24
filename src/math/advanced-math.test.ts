@@ -1,5 +1,4 @@
-import assert from "node:assert/strict";
-import { describe, it } from "node:test";
+import { assert, describe, expect, it } from "vitest";
 import { divide, multiply } from "#/math/advanced-math.ts";
 
 describe("advanced-math", () => {
@@ -8,8 +7,8 @@ describe("advanced-math", () => {
       const twoTimesTwo = multiply(2, 2);
       const twoTimesThree = multiply(2, 3);
 
-      assert.strictEqual(twoTimesTwo, 4);
-      assert.strictEqual(twoTimesThree, 6);
+      expect(twoTimesTwo).toBe(4);
+      expect(twoTimesThree).toBe(6);
     });
   });
 
@@ -18,18 +17,17 @@ describe("advanced-math", () => {
       const twoDividedByTwo = divide(2, 2);
       const twoDividedByThree = divide(2, 4);
 
-      assert.strictEqual(twoDividedByTwo.ok, true);
-      assert.strictEqual(twoDividedByTwo.value, 1);
-      assert.strictEqual(twoDividedByThree.ok, true);
-      assert.strictEqual(twoDividedByThree.value, 0.5);
+      assert.isTrue(twoDividedByTwo.ok);
+      expect(twoDividedByTwo.value).toBe(1);
+      assert.isTrue(twoDividedByThree.ok);
+      expect(twoDividedByThree.value).toBe(0.5);
     });
 
     it("should return an error when dividing by zero", () => {
       const divideByZero = divide(2, 0);
 
-      assert.strictEqual(divideByZero.ok, false);
-      assert.ok(divideByZero.error instanceof Error);
-      assert.strictEqual(divideByZero.error.message, "Division by zero is not allowed");
+      assert.isFalse(divideByZero.ok);
+      expect(divideByZero.error.message).toBe("Division by zero is not allowed");
     });
   });
 });
