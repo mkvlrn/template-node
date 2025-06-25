@@ -18,12 +18,6 @@ export function getBuild(entryFiles: string[]): BuildEnvironmentOptions {
         entryFileNames: ({ name }) => `${name.replace("node_modules/", "_internal/")}.js`,
       },
     },
-    minify: "terser",
-    terserOptions: {
-      compress: false,
-      format: {
-        comments: false,
-      },
-    },
+    minify: false,
   };
 }
