@@ -1,6 +1,6 @@
-import type { ViteUserConfig } from "vitest/config";
+import type { InlineConfig } from "vitest/node";
 
-export function getTest(): ViteUserConfig["test"] {
+export function getTest(): InlineConfig {
   return {
     include: ["src/**/*.test.{ts,tsx}"],
     reporters: ["verbose"],
