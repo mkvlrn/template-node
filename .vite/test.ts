@@ -14,7 +14,7 @@ export function getTest(): InlineConfig {
     },
     // biome-ignore lint/style/useNamingConvention: needed for vitest
     env: { NODE_ENV: "test" },
-    environment: "jsdom",
+    environment: "node",
     passWithNoTests: true,
     setupFiles: ["./.vite/vitest.setup.ts"],
   };
