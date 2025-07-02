@@ -25,6 +25,7 @@ export default defineConfig({
     lib: {
       entry,
       formats: ["es"],
+      fileName: "bundle.js",
     },
     sourcemap: true,
     outDir: "./build",
