@@ -9,5 +9,5 @@ export function divide(a: number, b: number): Result<number> {
     return Result.error(new Error("Division by zero is not allowed"));
   }
 
-  return Result.success(a / b);
+  return Result.ok(a / b);
 }

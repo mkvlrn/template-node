@@ -8,10 +8,10 @@ function main() {
   console.log(`1 + 2 = ${sum}`);
 
   const div = divide(4, 0);
-  if (div.ok) {
-    console.log(`4 / 2 = ${div.value}`);
-  } else {
+  if (div.error !== undefined) {
     console.error(div.error.message);
+  } else {
+    console.log(`4 / 2 = ${div.value}`);
   }
 }
 
