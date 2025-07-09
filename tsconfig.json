@@ -16,6 +16,7 @@
     "noUncheckedIndexedAccess": true,
     "strict": true,
     "strictNullChecks": true,
+    "noUncheckedSideEffectImports": true,
 
     // esm, the node way
     "esModuleInterop": true,
