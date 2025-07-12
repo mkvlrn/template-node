@@ -33,16 +33,16 @@
     "@biomejs/biome": "^2.1.1",
     "@commitlint/cli": "^19.8.1",
     "@commitlint/config-conventional": "^19.8.1",
-    "@types/node": "^24.0.12",
+    "@types/node": "^24.0.13",
     "husky": "^9.1.7",
     "rollup-plugin-node-externals": "^8.0.1",
     "tsx": "^4.20.3",
     "typescript": "^5.8.3",
-    "vite": "^7.0.3",
+    "vite": "^7.0.4",
     "vite-tsconfig-paths": "^5.1.4",
     "vitest": "^3.2.4"
   },
   "dependencies": {
-    "@mkvlrn/result": "^2.0.0"
+    "@mkvlrn/result": "^3.0.0"
   }
 }
