@@ -1,5 +1,5 @@
 import { assert, describe, it } from "vitest";
-import { add, subtract } from "#/math/basic-math.ts";
+import { add, subtract } from "#/math/basic-math";
 
 describe("basic-math", () => {
   describe("add", () => {

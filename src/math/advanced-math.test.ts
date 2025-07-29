@@ -1,5 +1,5 @@
 import { assert, describe, it } from "vitest";
-import { divide, multiply } from "#/math/advanced-math.ts";
+import { divide, multiply } from "#/math/advanced-math";
 
 describe("advanced-math", () => {
   describe("multiply", () => {
