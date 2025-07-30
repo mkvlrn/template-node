@@ -6,9 +6,12 @@ import { defineConfig } from "vitest/config";
 
 // application entry point
 const entry = globSync("./src/**/*.ts").filter((f) => !f.endsWith("test.ts"));
+const entryRoot = "src";
 
 // emits declarations only if there is no src/main.ts file
-const dtsPlugin = existsSync("./src/main.ts") ? null : dts({ include: entry, logLevel: "error" });
+const dtsPlugin = existsSync("./src/main.ts")
+  ? null
+  : dts({ include: entry, logLevel: "error", entryRoot: entryRoot });
 
 export default defineConfig({
   plugins: [
@@ -29,7 +32,7 @@ export default defineConfig({
     sourcemap: true,
     outDir: "./build",
     emptyOutDir: true,
-    rollupOptions: { output: { preserveModules: true } },
+    rollupOptions: { output: { preserveModules: true, preserveModulesRoot: entryRoot } },
   },
 
   test: {
