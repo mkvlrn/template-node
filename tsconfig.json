@@ -3,15 +3,12 @@
     // no transpiling
     "noEmit": true,
 
-    // no funny business
+    // very strict
+    "allowJs": false,
     "erasableSyntaxOnly": true,
     "verbatimModuleSyntax": true,
-
-    // very strict
-    // https://whatislove.dev/articles/the-strictest-typescript-config/
-    "allowJs": false,
     "exactOptionalPropertyTypes": true,
-    // "noPropertyAccessFromIndexSignature": true,
+    "noPropertyAccessFromIndexSignature": true,
     "noUncheckedIndexedAccess": true,
     "strict": true,
     "strictNullChecks": true,
@@ -23,6 +20,7 @@
     "lib": ["ESNext"],
     "module": "esnext",
     "moduleResolution": "bundler",
+    "moduleDetection": "force",
     "target": "esnext",
 
     // pnpm compatibility
