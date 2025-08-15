@@ -1,3 +1,4 @@
+/** biome-ignore-all lint/style/noMagicNumbers: fine for these tests */
 import { assert, describe, it } from "vitest";
 import { divide, multiply } from "#/math/advanced-math";
 
