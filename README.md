@@ -16,33 +16,29 @@ Uses:
 
 ## running
 
-### `npm run dev`
+### `yarn dev`
 
 Runs the project in watch mode.
 
-### `npm run build`
+### `yarn build`
 
 Builds/transpiles the code to `./build`.
 
-### `npm start`
+### `yarn start`
 
 Runs the built project.
 
-### `npm test`
+### `yarn test`
 
 Runs tests.
 
-### `npm run biome-fix`
+### `yarn biome-fix`
 
 Runs biome in fix mode (only [safe fixes](https://biomejs.dev/linter/#safe-fixes)) to lint and format the project.
 
-### `npm run typecheck`
+### `yarn typecheck`
 
 Runs type checking using tsc.
-
-## that tsconfig.json seems very strict and opinionated
-
-Yup.
 
 ## vscode
 
