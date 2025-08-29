@@ -48,6 +48,6 @@
     "vitest": "^3.2.4"
   },
   "dependencies": {
-    "@mkvlrn/result": "^4.0.13"
+    "@mkvlrn/result": "^4.0.14"
   }
 }
