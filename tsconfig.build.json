@@ -3,8 +3,8 @@
   "compilerOptions": {
     "noEmit": false,
     "outDir": "./build",
-    "declaration": false,
-    "removeComments": true
+    "removeComments": true,
+    "declaration": false
   },
 
   "include": ["./src"],
