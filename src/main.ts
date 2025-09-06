@@ -2,8 +2,8 @@
 /** biome-ignore-all lint/correctness/noNodejsModules: backend */
 
 import process from "node:process";
-import { divide } from "#/math/advanced-math";
-import { add } from "#/math/basic-math";
+import { divide } from "./math/advanced-math.ts";
+import { add } from "./math/basic-math.ts";
 
 const sum = add(1, 2);
 console.log(`1 + 2 = ${sum}`);

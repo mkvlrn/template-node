@@ -1,6 +1,6 @@
 /** biome-ignore-all lint/style/noMagicNumbers: fine for these tests */
 import { assert, describe, it } from "vitest";
-import { divide, multiply } from "#/math/advanced-math";
+import { divide, multiply } from "./advanced-math.ts";
 
 describe("advanced-math", () => {
   describe("multiply", () => {

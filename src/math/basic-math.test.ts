@@ -1,6 +1,6 @@
 /** biome-ignore-all lint/style/noMagicNumbers: fine for these tests */
 import { assert, describe, it } from "vitest";
-import { add, subtract } from "#/math/basic-math";
+import { add, subtract } from "./basic-math.ts";
 
 describe("basic-math", () => {
   describe("add", () => {
