@@ -443,10 +443,10 @@
     "@jridgewell/resolve-uri" "^3.1.0"
     "@jridgewell/sourcemap-codec" "^1.4.14"
 
-"@mkvlrn/config@^2.0.16":
-  version "2.0.16"
-  resolved "https://registry.yarnpkg.com/@mkvlrn/config/-/config-2.0.16.tgz#059ece09a2d8a55b06d3d775f73fba3f4cebb849"
-  integrity sha512-ElbgCN7uF26ti1RURW0+Gl1Il84uc8Q0TC3rAuuRcHGHS8BBj6k9uuAO/zfR8Tvf2a7dwgxJnEAKU0jcDpiP5w==
+"@mkvlrn/config@^2.0.17":
+  version "2.0.17"
+  resolved "https://registry.yarnpkg.com/@mkvlrn/config/-/config-2.0.17.tgz#ceacbe0ec4bb2667598cf60923340d3f60bdb353"
+  integrity sha512-Ujaz02YQR5sg5InoaxUiFcpFIFOM8mycz7M8Pyn6TTbJPn5aasPgkS2GMmGPVVCerLdDER5HxNVWnbVoKPBtDw==
 
 "@mkvlrn/result@^4.0.15":
   version "4.0.15"
