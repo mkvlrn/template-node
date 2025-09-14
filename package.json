@@ -25,7 +25,7 @@
     "start": "node build/main.js",
     "test": "vitest",
     "biome-check": "biome check --no-errors-on-unmatched",
-    "biome-fix": "yarn biome-check --write",
+    "biome-fix": "pnpm biome-check --write",
     "typecheck": "tsc",
     "prepare": "husky"
   },
@@ -33,8 +33,8 @@
     "@biomejs/biome": "^2.2.4",
     "@commitlint/cli": "^19.8.1",
     "@commitlint/config-conventional": "^19.8.1",
-    "@mkvlrn/config": "^2.0.19",
-    "@types/node": "^24.3.1",
+    "@mkvlrn/config": "^2.0.20",
+    "@types/node": "^24.4.0",
     "@vitest/coverage-v8": "^3.2.4",
     "husky": "^9.1.7",
     "lint-staged": "^16.1.6",
@@ -45,6 +45,6 @@
     "vitest": "^3.2.4"
   },
   "dependencies": {
-    "@mkvlrn/result": "^4.0.16"
+    "@mkvlrn/result": "^4.0.17"
   }
 }
