@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@mkvlrn/result':
-        specifier: ^4.0.17
-        version: 4.0.17
+        specifier: ^4.0.18
+        version: 4.0.18(@types/node@24.5.2)(jiti@2.5.1)(tsx@4.20.5)(yaml@2.8.1)
     devDependencies:
       '@biomejs/biome':
         specifier: ^2.2.4
@@ -22,8 +22,8 @@ importers:
         specifier: ^19.8.1
         version: 19.8.1
       '@mkvlrn/config':
-        specifier: ^2.0.21
-        version: 2.0.21
+        specifier: ^2.0.23
+        version: 2.0.23
       '@types/node':
         specifier: ^24.5.2
         version: 24.5.2
@@ -396,12 +396,12 @@ packages:
   '@jridgewell/trace-mapping@0.3.31':
     resolution: {integrity: sha512-zzNR+SdQSDJzc8joaeP8QQoCQr8NuYx2dIIytl1QeBEZHJ9uW6hebsrYgbz8hJwUQao3TWCMtmfV8Nu1twOLAw==}
 
-  '@mkvlrn/config@2.0.21':
-    resolution: {integrity: sha512-ex59LYyx9hrwogAb8qeO6y5WmLkQUoUGagMQHT5a/zDhJB8e1LzL+Ks7u87BzTfCZjM7+aRj8vRLBWHDZyMWTQ==}
+  '@mkvlrn/config@2.0.23':
+    resolution: {integrity: sha512-m3kM8BW6rzWOZHPVdfsdaldvpIHU8UqbPgoYEINYNpEw2CTcxm5QMImMfBiFsEZWY60ofdFmCxMb5VNaYHth9w==}
     engines: {node: 24.x}
 
-  '@mkvlrn/result@4.0.17':
-    resolution: {integrity: sha512-4n0XsLMZVa7/t2HruR58rTnnQvpdYkzhiVM72//m9hHdclvE/oSyrQ/+jjeioIZZY7mSDglcH9Z8OdwNbUKeFA==}
+  '@mkvlrn/result@4.0.18':
+    resolution: {integrity: sha512-RHmaUjL/E400kpw6m3KJEzGx+cTmob6lR+SX2mEtwlHJJprLyWdkDWPSX34oK2oMTOJ8h0GE6dVx+/9cmrJAQA==}
     engines: {node: 24.x}
 
   '@pkgjs/parseargs@0.11.0':
@@ -1679,9 +1679,31 @@ snapshots:
       '@jridgewell/resolve-uri': 3.1.2
       '@jridgewell/sourcemap-codec': 1.5.5
 
-  '@mkvlrn/config@2.0.21': {}
+  '@mkvlrn/config@2.0.23': {}
 
-  '@mkvlrn/result@4.0.17': {}
+  '@mkvlrn/result@4.0.18(@types/node@24.5.2)(jiti@2.5.1)(tsx@4.20.5)(yaml@2.8.1)':
+    dependencies:
+      vitest: 3.2.4(@types/node@24.5.2)(jiti@2.5.1)(tsx@4.20.5)(yaml@2.8.1)
+    transitivePeerDependencies:
+      - '@edge-runtime/vm'
+      - '@types/debug'
+      - '@types/node'
+      - '@vitest/browser'
+      - '@vitest/ui'
+      - happy-dom
+      - jiti
+      - jsdom
+      - less
+      - lightningcss
+      - msw
+      - sass
+      - sass-embedded
+      - stylus
+      - sugarss
+      - supports-color
+      - terser
+      - tsx
+      - yaml
 
   '@pkgjs/parseargs@0.11.0':
     optional: true

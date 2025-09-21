@@ -6,7 +6,7 @@ export function multiply(a: number, b: number): number {
 
 export function divide(a: number, b: number): Result<number, Error> {
   if (b === 0) {
-    return R.error(new Error("Division by zero is not allowed"));
+    return R.error(new Error("cannot divide by zero"));
   }
 
   return R.ok(a / b);

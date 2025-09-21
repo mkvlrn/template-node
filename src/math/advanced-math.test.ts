@@ -1,35 +1,28 @@
-/** biome-ignore-all lint/style/noMagicNumbers: fine for these tests */
-import { assert, describe, it } from "vitest";
+import { assert, expect, test } from "vitest";
 import { divide, multiply } from "./advanced-math.ts";
 
-describe("advanced-math", () => {
-  describe("multiply", () => {
-    it("should multiply two numbers", () => {
-      const twoTimesTwo = multiply(2, 2);
-      const twoTimesThree = multiply(2, 3);
+test("should multiply two numbers", () => {
+  const twoTimesTwo = multiply(2, 2);
+  const twoTimesThree = multiply(2, 3);
 
-      assert.strictEqual(twoTimesTwo, 4);
-      assert.strictEqual(twoTimesThree, 6);
-    });
-  });
+  expect(twoTimesTwo).toStrictEqual(4);
+  expect(twoTimesThree).toStrictEqual(6);
+});
 
-  describe("divide", () => {
-    it("should divide two numbers", () => {
-      const twoDividedByTwo = divide(2, 2);
-      const twoDividedByFour = divide(2, 4);
+test("should divide two numbers", () => {
+  const twoDividedByTwo = divide(2, 2);
+  const twoDividedByFour = divide(2, 4);
 
-      assert.isUndefined(twoDividedByTwo.error);
-      assert.strictEqual(twoDividedByTwo.value, 1);
-      assert.isUndefined(twoDividedByFour.error);
-      assert.strictEqual(twoDividedByFour.value, 0.5);
-    });
+  assert.isTrue(twoDividedByFour.isOk);
+  expect(twoDividedByFour.value).toStrictEqual(0.5);
+  assert.isTrue(twoDividedByTwo.isOk);
+  expect(twoDividedByTwo.value).toStrictEqual(1);
+});
 
-    it("should return an error when dividing by zero", () => {
-      const divideByZero = divide(2, 0);
+test("should return an error when dividing by zero", () => {
+  const divideByZero = divide(2, 0);
 
-      assert.isDefined(divideByZero.error);
-      assert.instanceOf(divideByZero.error, Error);
-      assert.strictEqual(divideByZero.error.message, "Division by zero is not allowed");
-    });
-  });
+  assert.isTrue(divideByZero.isError);
+  expect(divideByZero.error).toBeInstanceOf(Error);
+  expect(divideByZero.error.message).toStrictEqual("cannot divide by zero");
 });

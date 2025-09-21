@@ -8,12 +8,9 @@ import { add } from "./math/basic-math.ts";
 const sum = add(1, 2);
 console.log(`1 + 2 = ${sum}`);
 
-const value = 4;
-const divBy = 0;
-const div = divide(value, divBy);
-if (div.error) {
+const div = divide(4, 2);
+if (div.isError) {
   console.error(div.error.message);
   process.exit(1);
 }
-
-console.log(`4 / ${divBy} = ${div.value}`);
+console.log(`4 / 2 = ${div.value}`);

@@ -1,25 +1,18 @@
-/** biome-ignore-all lint/style/noMagicNumbers: fine for these tests */
-import { assert, describe, it } from "vitest";
+import { expect, test } from "vitest";
 import { add, subtract } from "./basic-math.ts";
 
-describe("basic-math", () => {
-  describe("add", () => {
-    it("should add two numbers", () => {
-      const twoPlusTwo = add(2, 2);
-      const twoPlusThree = add(2, 3);
+test("should add two numbers", () => {
+  const twoPlusTwo = add(2, 2);
+  const twoPlusThree = add(2, 3);
 
-      assert.strictEqual(twoPlusTwo, 4);
-      assert.strictEqual(twoPlusThree, 5);
-    });
-  });
+  expect(twoPlusTwo).toStrictEqual(4);
+  expect(twoPlusThree).toStrictEqual(5);
+});
 
-  describe("subtract", () => {
-    it("should subtract two numbers", () => {
-      const twoMinusTwo = subtract(2, 2);
-      const twoMinusThree = subtract(2, 3);
+test("should subtract two numbers", () => {
+  const twoMinusTwo = subtract(2, 2);
+  const twoMinusThree = subtract(2, 3);
 
-      assert.strictEqual(twoMinusTwo, 0);
-      assert.strictEqual(twoMinusThree, -1);
-    });
-  });
+  expect(twoMinusTwo).toStrictEqual(0);
+  expect(twoMinusThree).toStrictEqual(-1);
 });
