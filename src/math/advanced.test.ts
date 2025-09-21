@@ -1,5 +1,5 @@
 import { assert, expect, test } from "vitest";
-import { divide, multiply } from "./advanced-math.ts";
+import { divide, multiply } from "./advanced.ts";
 
 test("should multiply two numbers", () => {
   const twoTimesTwo = multiply(2, 2);

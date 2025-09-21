@@ -1,5 +1,5 @@
 import { expect, test } from "vitest";
-import { add, subtract } from "./basic-math.ts";
+import { add, subtract } from "./basic.ts";
 
 test("should add two numbers", () => {
   const twoPlusTwo = add(2, 2);
