@@ -22,8 +22,8 @@ importers:
         specifier: ^20.0.0
         version: 20.0.0
       '@mkvlrn/config':
-        specifier: ^2.0.23
-        version: 2.0.23
+        specifier: ^2.0.24
+        version: 2.0.24
       '@types/node':
         specifier: ^24.6.2
         version: 24.6.2
@@ -396,8 +396,8 @@ packages:
   '@jridgewell/trace-mapping@0.3.31':
     resolution: {integrity: sha512-zzNR+SdQSDJzc8joaeP8QQoCQr8NuYx2dIIytl1QeBEZHJ9uW6hebsrYgbz8hJwUQao3TWCMtmfV8Nu1twOLAw==}
 
-  '@mkvlrn/config@2.0.23':
-    resolution: {integrity: sha512-m3kM8BW6rzWOZHPVdfsdaldvpIHU8UqbPgoYEINYNpEw2CTcxm5QMImMfBiFsEZWY60ofdFmCxMb5VNaYHth9w==}
+  '@mkvlrn/config@2.0.24':
+    resolution: {integrity: sha512-xEDnGTVP7JiFMdAHQ8JQ3U1r3efrYXL7LNnPewR4uncWY7jk+gP9uAQ9VlUxab4ErdKn5nMqy+DxuPq7OkpBXQ==}
     engines: {node: 24.x}
 
   '@mkvlrn/result@4.0.18':
@@ -1671,7 +1671,7 @@ snapshots:
       '@jridgewell/resolve-uri': 3.1.2
       '@jridgewell/sourcemap-codec': 1.5.5
 
-  '@mkvlrn/config@2.0.23': {}
+  '@mkvlrn/config@2.0.24': {}
 
   '@mkvlrn/result@4.0.18(@types/node@24.6.2)(jiti@2.5.1)(tsx@4.20.6)(yaml@2.8.1)':
     dependencies:
