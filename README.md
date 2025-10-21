@@ -12,6 +12,7 @@ Uses:
 - [lint-staged](https://github.com/lint-staged/lint-staged) for checks on commit
 - [vitest](https://github.com/vitest-dev/vitest) for testing
 - [tsx](https://github.com/privatenumber/tsx) for dev time typescript
+- [tsdown](https://github.com/rolldown/tsdown) for building
 
 ## running
 

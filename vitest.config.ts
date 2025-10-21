@@ -1,15 +1,11 @@
-import process from "node:process";
+import tsconfigPaths from "vite-tsconfig-paths";
 import { defineConfig } from "vitest/config";
 
 export default defineConfig(() => {
-  const testFiles = ["./src/**/*.{test,spec}.{ts,tsx}"];
-  if (process.env["E2E"] === "true") {
-    testFiles.push("./e2e/**/*.{test,spec}.{ts,tsx}");
-  }
-
   return {
+    plugins: [tsconfigPaths()],
     test: {
-      include: testFiles,
+      include: ["./src/**/*.{test,spec}.ts"],
       reporters: ["verbose"],
       watch: false,
       coverage: {
@@ -17,7 +13,7 @@ export default defineConfig(() => {
         clean: true,
         cleanOnRerun: true,
         include: ["src"],
-        exclude: ["**/*.{test,spec}.{ts,tsx}"],
+        exclude: ["**/*.{test,spec}.ts", "src/main.ts"],
       },
       // biome-ignore lint/style/useNamingConvention: needed for vitest
       env: { NODE_ENV: "test" },

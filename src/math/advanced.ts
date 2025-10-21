@@ -1,4 +1,4 @@
-import { R, type Result } from "@mkvlrn/result";
+import { err, ok, type Result } from "neverthrow";
 
 export function multiply(a: number, b: number): number {
   return a * b;
@@ -6,8 +6,8 @@ export function multiply(a: number, b: number): number {
 
 export function divide(a: number, b: number): Result<number, Error> {
   if (b === 0) {
-    return R.error(new Error("cannot divide by zero"));
+    return err(new Error("cannot divide by zero"));
   }
 
-  return R.ok(a / b);
+  return ok(a / b);
 }
