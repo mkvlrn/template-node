@@ -17,7 +17,7 @@
     "template"
   ],
   "engines": {
-    "node": "22.20"
+    "node": "22"
   },
   "scripts": {
     "build": "tsdown",
