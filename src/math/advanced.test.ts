@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import { expect, test } from "vitest";
-import { divide, multiply } from "#/math/advanced.ts";
+import { divide, multiply } from "#/math/advanced";
 
 test("should multiply two numbers", () => {
   const twoTimesTwo = multiply(2, 2);
