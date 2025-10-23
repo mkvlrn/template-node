@@ -11,6 +11,5 @@
     "source.organizeImports": "never",
     "source.sortImports": "never"
   },
-  "eslint.enable": false,
-  "typescript.preferences.importModuleSpecifierEnding": "auto"
+  "eslint.enable": false
 }
