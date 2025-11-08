@@ -1,4 +1,4 @@
-import { err, ok, type Result } from "neverthrow";
+import { err, ok, type Result } from "@mkvlrn/result";
 
 export function multiply(a: number, b: number): number {
   return a * b;
