@@ -9,7 +9,7 @@ const sum = add(1, 2);
 console.log(`1 + 2 = ${sum}`);
 
 const div = divide(4, 2);
-if (div.isErr()) {
+if (div.isError) {
   console.error(div.error.message);
   process.exit(1);
 }
