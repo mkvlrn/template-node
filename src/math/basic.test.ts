@@ -1,18 +1,36 @@
-import { expect, test } from "vitest";
+import { describe, expect, test } from "vitest";
 import { add, subtract } from "#/math/basic";
 
-test("should add two numbers", () => {
-  const twoPlusTwo = add(2, 2);
-  const twoPlusThree = add(2, 3);
+interface TestCase {
+  a: number;
+  b: number;
+  expected: number;
+}
 
-  expect(twoPlusTwo).toStrictEqual(4);
-  expect(twoPlusThree).toStrictEqual(5);
+describe("should add two numbers", () => {
+  const testCases: TestCase[] = [
+    { a: 2, b: 2, expected: 4 },
+    { a: 2, b: 3, expected: 5 },
+    { a: 1000, b: 2000, expected: 3000 },
+  ];
+
+  test.each(testCases)("$a + $b = $expected", ({ a, b, expected }) => {
+    const result = add(a, b);
+
+    expect(result).toStrictEqual(expected);
+  });
 });
 
-test("should subtract two numbers", () => {
-  const twoMinusTwo = subtract(2, 2);
-  const twoMinusThree = subtract(2, 3);
+describe("should subtract two numbers", () => {
+  const testCases: TestCase[] = [
+    { a: 2, b: 2, expected: 0 },
+    { a: 2, b: 3, expected: -1 },
+    { a: 1000, b: 2000, expected: -1000 },
+  ];
 
-  expect(twoMinusTwo).toStrictEqual(0);
-  expect(twoMinusThree).toStrictEqual(-1);
+  test.each(testCases)("$a - $b = $expected", ({ a, b, expected }) => {
+    const result = subtract(a, b);
+
+    expect(result).toStrictEqual(expected);
+  });
 });
