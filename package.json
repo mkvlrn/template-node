@@ -34,7 +34,7 @@
     "@commitlint/cli": "^20.1.0",
     "@commitlint/config-conventional": "^20.0.0",
     "@types/node": "^24.10.1",
-    "@vitest/coverage-v8": "^4.0.8",
+    "@vitest/coverage-v8": "^4.0.9",
     "husky": "^9.1.7",
     "lint-staged": "^16.2.6",
     "tsc-files": "^1.1.4",
@@ -42,7 +42,7 @@
     "tsx": "^4.20.6",
     "typescript": "^5.9.3",
     "vite-tsconfig-paths": "^5.1.4",
-    "vitest": "^4.0.8"
+    "vitest": "^4.0.9"
   },
   "dependencies": {
     "@mkvlrn/result": "^5.0.1"
