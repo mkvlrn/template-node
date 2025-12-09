@@ -4,7 +4,7 @@ interface TestCase<T> {
   a: number;
   b: number;
   expected: T;
-  display?: string;
+  display?: string | number;
 }
 
 export const addTestCases: TestCase<number>[] = [
@@ -26,9 +26,9 @@ export const multiplyTestCases: TestCase<number>[] = [
 ];
 
 export const divideTestCases: TestCase<Result<number, Error>>[] = [
-  { a: 2, b: 2, expected: ok(1), display: "1" },
-  { a: 2, b: 4, expected: ok(0.5), display: "0.5" },
-  { a: 999, b: 333, expected: ok(3), display: "3" },
+  { a: 2, b: 2, expected: ok(1), display: 1 },
+  { a: 2, b: 4, expected: ok(0.5), display: 0.5 },
+  { a: 999, b: 333, expected: ok(3), display: 3 },
   {
     a: 2,
     b: 0,
