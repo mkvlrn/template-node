@@ -6,8 +6,7 @@
       "type": "node",
       "request": "launch",
       "runtimeExecutable": "tsx",
-      "runtimeArgs": ["--inspect-brk"],
-      "args": ["src/main.ts"],
+      "program": "${workspaceFolder}/src/main.ts",
       "console": "internalConsole",
       "internalConsoleOptions": "openOnSessionStart",
       "skipFiles": ["<node_internals>/**", "${workspaceFolder}/node_modules/**"]
