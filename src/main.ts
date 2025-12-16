@@ -1,5 +1,4 @@
 /** biome-ignore-all lint/suspicious/noConsole: needed, yo */
-/** biome-ignore-all lint/correctness/noNodejsModules: backend */
 
 import process from "node:process";
 import { divide } from "#/math/advanced";
