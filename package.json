@@ -26,7 +26,7 @@
     }
   },
   "scripts": {
-    "build": "rm -rf build && tsgo --project tsconfig.build.json --listEmittedFiles",
+    "build": "rm -rf build && tsc --project tsconfig.build.json --listEmittedFiles",
     "dev": "tsx --watch src/main.ts",
     "start": "node build/main.js",
     "test": "vitest",
@@ -41,7 +41,6 @@
     "@commitlint/config-conventional": "^20.2.0",
     "@mkvlrn/config": "^3.0.4",
     "@types/node": "^25.0.3",
-    "@typescript/native-preview": "7.0.0-dev.20251227.1",
     "@vitest/coverage-v8": "^4.0.16",
     "husky": "^9.1.7",
     "lint-staged": "^16.2.7",
