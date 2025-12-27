@@ -1,11 +1,10 @@
-import tsconfigPaths from "vite-tsconfig-paths";
 import { defineConfig } from "vitest/config";
 
 export default defineConfig(() => {
   return {
-    plugins: [tsconfigPaths()],
+    ssr: { resolve: { conditions: ["dev"] } },
     test: {
-      include: ["**/**/*.{test,spec}.ts"],
+      include: ["**/*.{test,spec}.ts"],
       exclude: ["node_modules"],
       reporters: ["tree"],
       watch: false,

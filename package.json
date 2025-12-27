@@ -19,27 +19,33 @@
   "engines": {
     "node": "24"
   },
+  "imports": {
+    "#*": {
+      "dev": "./src/*.ts",
+      "default": "./build/*.js"
+    }
+  },
   "scripts": {
-    "build": "tsdown",
+    "build": "rm -rf build && tsgo --project tsconfig.build.json --listEmittedFiles",
     "dev": "tsx --watch src/main.ts",
     "start": "node build/main.js",
     "test": "vitest",
     "biome-check": "biome check --diagnostic-level=warn --no-errors-on-unmatched",
     "biome-fix": "pnpm biome-check --write",
-    "typecheck": "tsc",
+    "typecheck": "tsc --noEmit",
     "prepare": "husky"
   },
   "devDependencies": {
     "@biomejs/biome": "^2.3.10",
     "@commitlint/cli": "^20.2.0",
     "@commitlint/config-conventional": "^20.2.0",
-    "@mkvlrn/config": "^3.0.0",
+    "@mkvlrn/config": "^3.0.4",
     "@types/node": "^25.0.3",
+    "@typescript/native-preview": "7.0.0-dev.20251227.1",
     "@vitest/coverage-v8": "^4.0.16",
     "husky": "^9.1.7",
     "lint-staged": "^16.2.7",
     "tsc-files": "^1.1.4",
-    "tsdown": "^0.18.3",
     "tsx": "^4.21.0",
     "typescript": "^5.9.3",
     "vite-tsconfig-paths": "^6.0.3",
