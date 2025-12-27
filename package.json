@@ -27,7 +27,7 @@
   },
   "scripts": {
     "build": "rm -rf build && tsc --project tsconfig.build.json --listEmittedFiles",
-    "dev": "tsx --watch src/main.ts",
+    "dev": "tsx -C dev --watch src/main.ts",
     "start": "node build/main.js",
     "test": "vitest",
     "biome-check": "biome check --diagnostic-level=warn --no-errors-on-unmatched",
