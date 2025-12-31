@@ -19,15 +19,9 @@
   "engines": {
     "node": "24"
   },
-  "imports": {
-    "#*": {
-      "dev": "./src/*.ts",
-      "default": "./build/*.js"
-    }
-  },
   "scripts": {
-    "build": "rm -rf build && tsc --project tsconfig.build.json --listEmittedFiles",
-    "dev": "tsx -C dev --watch src/main.ts",
+    "build": "tsdown",
+    "dev": "tsx --watch src/main.ts",
     "start": "node build/main.js",
     "test": "vitest",
     "biome-check": "biome check --diagnostic-level=warn --no-errors-on-unmatched",
@@ -51,6 +45,7 @@
     "vitest": "^4.0.16"
   },
   "dependencies": {
-    "@mkvlrn/result": "^5.0.4"
+    "@mkvlrn/result": "^5.0.4",
+    "tsdown": "^0.18.4"
   }
 }
