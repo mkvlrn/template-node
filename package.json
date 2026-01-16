@@ -23,7 +23,6 @@
     "#*": "./src/*.ts"
   },
   "scripts": {
-    "build": "tsdown",
     "dev": "node --watch src/main.ts",
     "start": "node src/main.ts",
     "test": "vitest",

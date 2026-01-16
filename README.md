@@ -1,6 +1,6 @@
 # template-node
 
-A sane, opinionated template for esm node projects written in typescript.
+A sane, opinionated template for esm node projects written in typescript that doesn't rely on transpilation - typescritp is ran directly by node.
 
 For new, node lts (currently v24) projects.
 
@@ -11,8 +11,6 @@ Uses:
 - [husky](https://github.com/typicode/husky) for git hooks
 - [lint-staged](https://github.com/lint-staged/lint-staged) for checks on commit
 - [vitest](https://github.com/vitest-dev/vitest) for testing
-- [tsx](https://github.com/privatenumber/tsx) for dev time typescript
-- [tsdown](https://github.com/rolldown/tsdown) for building
 
 ## running
 
@@ -20,13 +18,9 @@ Uses:
 
 Runs the project in watch mode.
 
-### `pnpm build`
-
-Builds/transpiles the code to `./build`.
-
 ### `pnpm start`
 
-Runs the built project.
+Runs the project.
 
 ### `pnpm test`
 
