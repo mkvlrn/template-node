@@ -19,10 +19,13 @@
   "engines": {
     "node": "24"
   },
+  "imports": {
+    "#*": "./src/*.ts"
+  },
   "scripts": {
     "build": "tsdown",
-    "dev": "tsx --watch src/main.ts",
-    "start": "node build/main.js",
+    "dev": "node --watch src/main.ts",
+    "start": "node src/main.ts",
     "test": "vitest",
     "biome-check": "biome check --diagnostic-level=warn --no-errors-on-unmatched",
     "biome-fix": "pnpm biome-check --write",
@@ -39,13 +42,10 @@
     "husky": "^9.1.7",
     "lint-staged": "^16.2.7",
     "tsc-files": "^1.1.4",
-    "tsx": "^4.21.0",
     "typescript": "^5.9.3",
-    "vite-tsconfig-paths": "^6.0.4",
     "vitest": "^4.0.17"
   },
   "dependencies": {
-    "@mkvlrn/result": "^5.0.4",
-    "tsdown": "^0.19.0"
+    "@mkvlrn/result": "^5.0.4"
   }
 }
