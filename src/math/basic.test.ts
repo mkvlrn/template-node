@@ -3,19 +3,23 @@ import { addTestCases, subtractTestCases } from "#math/__fixtures__/test-cases";
 import { add, subtract } from "#math/basic";
 
 describe("should add two numbers", () => {
-  test.each(addTestCases)("$a + $b = $expected", ({ a, b, expected }) => {
-    // act
-    const result = add(a, b);
-    // assert
-    expect(result).toStrictEqual(expected);
-  });
+  for (const tc of addTestCases) {
+    test(`${tc.a} + ${tc.b} = ${tc.expected}`, () => {
+      // act
+      const result = add(tc.a, tc.b);
+      // assert
+      expect(result).toStrictEqual(tc.expected);
+    });
+  }
 });
 
 describe("should subtract two numbers", () => {
-  test.each(subtractTestCases)("$a - $b = $expected", ({ a, b, expected }) => {
-    // act
-    const result = subtract(a, b);
-    // assert
-    expect(result).toStrictEqual(expected);
-  });
+  for (const tc of subtractTestCases) {
+    test(`${tc.a} - ${tc.b} = ${tc.expected}`, () => {
+      // act
+      const result = subtract(tc.a, tc.b);
+      // assert
+      expect(result).toStrictEqual(tc.expected);
+    });
+  }
 });

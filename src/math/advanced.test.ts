@@ -3,19 +3,23 @@ import { divideTestCases, multiplyTestCases } from "#math/__fixtures__/test-case
 import { divide, multiply } from "#math/advanced";
 
 describe("should multiply two numbers", () => {
-  test.each(multiplyTestCases)("$a x $b = $expected", ({ a, b, expected }) => {
-    // act
-    const result = multiply(a, b);
-    // assert
-    expect(result).toStrictEqual(expected);
-  });
+  for (const tc of multiplyTestCases) {
+    test(`${tc.a} x ${tc.b} = ${tc.expected}`, () => {
+      // act
+      const result = multiply(tc.a, tc.b);
+      // assert
+      expect(result).toStrictEqual(tc.expected);
+    });
+  }
 });
 
 describe("should divide two numbers", () => {
-  test.each(divideTestCases)("$a / $b = $display", ({ a, b, expected }) => {
-    // act
-    const result = divide(a, b);
-    // assert
-    expect(result).toStrictEqual(expected);
-  });
+  for (const tc of divideTestCases) {
+    test(`${tc.a} ÷ ${tc.b} = ${tc.display}`, () => {
+      // act
+      const result = divide(tc.a, tc.b);
+      // assert
+      expect(result).toStrictEqual(tc.expected);
+    });
+  }
 });

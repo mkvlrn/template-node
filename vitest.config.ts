@@ -12,7 +12,7 @@ export default defineConfig(() => {
         clean: true,
         cleanOnRerun: true,
         include: ["src"],
-        exclude: ["**/*.{test,spec}.ts", "src/main.ts"],
+        exclude: ["**/*.{test,spec}.ts", "**/__fixtures__/*", "src/main.ts"],
       },
       // biome-ignore lint/style/useNamingConvention: needed for vitest
       env: { NODE_ENV: "test" },
