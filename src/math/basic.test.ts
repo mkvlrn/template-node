@@ -1,6 +1,6 @@
 import { describe, expect, test } from "vitest";
-import { addTestCases, subtractTestCases } from "#math/__fixtures__/test-cases";
-import { add, subtract } from "#math/basic";
+import { addTestCases, subtractTestCases } from "#/math/__fixtures__/test-cases";
+import { add, subtract } from "#/math/basic";
 
 describe("should add two numbers", () => {
   for (const tc of addTestCases) {

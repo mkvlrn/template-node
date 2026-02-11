@@ -1,6 +1,6 @@
 import { describe, expect, test } from "vitest";
-import { divideTestCases, multiplyTestCases } from "#math/__fixtures__/test-cases";
-import { divide, multiply } from "#math/advanced";
+import { divideTestCases, multiplyTestCases } from "#/math/__fixtures__/test-cases";
+import { divide, multiply } from "#/math/advanced";
 
 describe("should multiply two numbers", () => {
   for (const tc of multiplyTestCases) {

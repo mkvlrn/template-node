@@ -20,7 +20,7 @@
     "node": "24"
   },
   "imports": {
-    "#*": "./src/*.ts"
+    "#/*": "./src/*.ts"
   },
   "scripts": {
     "dev": "node --watch src/main.ts",
@@ -41,7 +41,7 @@
     "husky": "^9.1.7",
     "lint-staged": "^16.2.7",
     "tsc-files": "^1.1.4",
-    "typescript": "^5.9.3",
+    "typescript": "6.0.0-beta",
     "vitest": "^4.0.18"
   },
   "dependencies": {
