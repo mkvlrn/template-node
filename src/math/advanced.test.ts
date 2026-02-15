@@ -1,25 +1,25 @@
-import { describe, expect, test } from "vitest";
+import { assert, describe, test } from "vitest";
 import { divideTestCases, multiplyTestCases } from "#/math/__fixtures__/test-cases";
 import { divide, multiply } from "#/math/advanced";
 
 describe("should multiply two numbers", () => {
-  for (const tc of multiplyTestCases) {
-    test(`${tc.a} x ${tc.b} = ${tc.expected}`, () => {
+  for (const { a, b, expected } of multiplyTestCases) {
+    test(`${a} x ${b} = ${expected}`, () => {
       // act
-      const result = multiply(tc.a, tc.b);
+      const result = multiply(a, b);
       // assert
-      expect(result).toStrictEqual(tc.expected);
+      assert.deepEqual(result, expected);
     });
   }
 });
 
 describe("should divide two numbers", () => {
-  for (const tc of divideTestCases) {
-    test(`${tc.a} ÷ ${tc.b} = ${tc.display}`, () => {
+  for (const { a, b, expected, display } of divideTestCases) {
+    test(`${a} ÷ ${b} = ${display}`, () => {
       // act
-      const result = divide(tc.a, tc.b);
+      const result = divide(a, b);
       // assert
-      expect(result).toStrictEqual(tc.expected);
+      assert.deepEqual(result, expected);
     });
   }
 });

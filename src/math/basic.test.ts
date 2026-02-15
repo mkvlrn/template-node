@@ -1,25 +1,25 @@
-import { describe, expect, test } from "vitest";
+import { assert, describe, test } from "vitest";
 import { addTestCases, subtractTestCases } from "#/math/__fixtures__/test-cases";
 import { add, subtract } from "#/math/basic";
 
 describe("should add two numbers", () => {
-  for (const tc of addTestCases) {
-    test(`${tc.a} + ${tc.b} = ${tc.expected}`, () => {
+  for (const { a, b, expected } of addTestCases) {
+    test(`${a} + ${b} = ${expected}`, () => {
       // act
-      const result = add(tc.a, tc.b);
+      const result = add(a, b);
       // assert
-      expect(result).toStrictEqual(tc.expected);
+      assert.strictEqual(result, expected);
     });
   }
 });
 
 describe("should subtract two numbers", () => {
-  for (const tc of subtractTestCases) {
-    test(`${tc.a} - ${tc.b} = ${tc.expected}`, () => {
+  for (const { a, b, expected } of subtractTestCases) {
+    test(`${a} - ${b} = ${expected}`, () => {
       // act
-      const result = subtract(tc.a, tc.b);
+      const result = subtract(a, b);
       // assert
-      expect(result).toStrictEqual(tc.expected);
+      assert.strictEqual(result, expected);
     });
   }
 });

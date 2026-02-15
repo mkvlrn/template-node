@@ -23,4 +23,4 @@ jobs:
       - run: pnpm install --frozen-lockfile
       - run: pnpm typecheck
       - run: pnpm biome-check
-      - run: pnpm test --bail=1
+      - run: pnpm test --bail=1 --reporter=github-actions

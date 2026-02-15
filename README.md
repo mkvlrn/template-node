@@ -2,7 +2,7 @@
 
 A sane, opinionated template for esm node projects written in typescript that doesn't rely on transpilation - typescritp is ran directly by node.
 
-For new, node lts (currently v24) projects.
+For new, current (v25) node projects.
 
 Uses:
 
@@ -10,7 +10,6 @@ Uses:
 - [commitlint](https://github.com/conventional-changelog/commitlint) for linting commit messages
 - [husky](https://github.com/typicode/husky) for git hooks
 - [lint-staged](https://github.com/lint-staged/lint-staged) for checks on commit
-- [vitest](https://github.com/vitest-dev/vitest) for testing
 
 ## running
 
