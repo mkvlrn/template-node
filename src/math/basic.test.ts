@@ -1,4 +1,4 @@
-import { assert, describe, test } from "vitest";
+import { describe, expect, test } from "vitest";
 import { addTestCases, subtractTestCases } from "#/math/__fixtures__/test-cases";
 import { add, subtract } from "#/math/basic";
 
@@ -8,7 +8,7 @@ describe("should add two numbers", () => {
       // act
       const result = add(a, b);
       // assert
-      assert.strictEqual(result, expected);
+      expect(result).toStrictEqual(expected);
     });
   }
 });
@@ -19,7 +19,7 @@ describe("should subtract two numbers", () => {
       // act
       const result = subtract(a, b);
       // assert
-      assert.strictEqual(result, expected);
+      expect(result).toStrictEqual(expected);
     });
   }
 });

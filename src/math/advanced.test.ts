@@ -1,4 +1,4 @@
-import { assert, describe, test } from "vitest";
+import { describe, expect, test } from "vitest";
 import { divideTestCases, multiplyTestCases } from "#/math/__fixtures__/test-cases";
 import { divide, multiply } from "#/math/advanced";
 
@@ -8,7 +8,7 @@ describe("should multiply two numbers", () => {
       // act
       const result = multiply(a, b);
       // assert
-      assert.deepEqual(result, expected);
+      expect(result).toStrictEqual(expected);
     });
   }
 });
@@ -19,7 +19,7 @@ describe("should divide two numbers", () => {
       // act
       const result = divide(a, b);
       // assert
-      assert.deepEqual(result, expected);
+      expect(result).toStrictEqual(expected);
     });
   }
 });
