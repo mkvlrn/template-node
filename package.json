@@ -26,9 +26,11 @@
     "dev": "node --watch src/main.ts",
     "start": "node src/main.ts",
     "test": "vitest",
+    "test-staged": "vitest related --bail=1 --reporter=github-actions",
+    "test-ci": "vitest --bail=1 --reporter=github-actions",
     "biome-check": "biome check --diagnostic-level=warn --no-errors-on-unmatched",
     "biome-fix": "pnpm biome-check --write",
-    "typecheck": "tsc --noEmit",
+    "typecheck": "tsc-files",
     "prepare": "husky"
   },
   "devDependencies": {
