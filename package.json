@@ -43,7 +43,7 @@
     "husky": "^9.1.7",
     "lint-staged": "^16.2.7",
     "tsc-files": "^1.1.4",
-    "typescript": "6.0.0-beta",
+    "typescript": "6.0.0-dev.20260225",
     "vitest": "^4.0.18"
   },
   "dependencies": {
