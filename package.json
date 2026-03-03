@@ -34,14 +34,14 @@
     "prepare": "husky"
   },
   "devDependencies": {
-    "@biomejs/biome": "^2.4.4",
+    "@biomejs/biome": "^2.4.5",
     "@commitlint/cli": "^20.4.2",
     "@commitlint/config-conventional": "^20.4.2",
-    "@mkvlrn/config": "^3.1.1",
-    "@types/node": "^25.3.0",
+    "@mkvlrn/config": "^3.1.2",
+    "@types/node": "^25.3.3",
     "@vitest/coverage-v8": "^4.0.18",
     "husky": "^9.1.7",
-    "lint-staged": "^16.2.7",
+    "lint-staged": "^16.3.1",
     "tsc-files": "^1.1.4",
     "typescript": "6.0.0-dev.20260225",
     "vitest": "^4.0.18"
