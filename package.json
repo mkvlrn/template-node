@@ -17,7 +17,8 @@
     "template"
   ],
   "engines": {
-    "node": ">=24.14"
+    "node": "24",
+    "pnpm": "10"
   },
   "imports": {
     "#/*": "./src/*.ts"
@@ -37,7 +38,7 @@
     "@biomejs/biome": "^2.4.6",
     "@commitlint/cli": "^20.4.3",
     "@commitlint/config-conventional": "^20.4.3",
-    "@mkvlrn/config": "^3.1.4",
+    "@mkvlrn/config": "^3.1.5",
     "@types/node": "^25.3.5",
     "@vitest/coverage-v8": "^4.0.18",
     "husky": "^9.1.7",
