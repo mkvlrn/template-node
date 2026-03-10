@@ -1,8 +1,11 @@
 # template-node
 
-A sane, opinionated template for esm node projects written in typescript that doesn't rely on transpilation - typescritp is ran directly by node.
+A sane, opinionated template for esm node projects written in typescript that doesn't rely on transpilation - typescript is ran directly by node.
 
-For new, LTS (>=24.14) node projects.
+> [!NOTE]
+> This template favors [pnpm](https://pnpm.io). All instructions assume pnpm. If you insist on npm or yarn, you're on your own.
+>
+> This template targets Node.js LTS (>=24).
 
 Uses:
 
@@ -11,6 +14,8 @@ Uses:
 - [husky](https://github.com/typicode/husky) for git hooks
 - [lint-staged](https://github.com/lint-staged/lint-staged) for checks on commit
 - [vitest](https://github.com/vitest-dev/vitest) for testing
+
+Subpath imports (`#/`) are used instead of relative paths, mapped in both `package.json` and `tsconfig.json`.
 
 ## running
 
@@ -28,11 +33,15 @@ Runs tests.
 
 ### `pnpm biome-fix`
 
-Runs biome in fix mode (only [safe fixes](https://biomejs.dev/linter/#safe-fixes)) to lint and format the project.
+Runs biome in fix mode to lint and format the project.
 
 ### `pnpm typecheck`
 
 Runs type checking using tsc.
+
+## ci
+
+GitHub Actions runs on pushes and pull requests to `main`, executing tsc, biome check, and tests.
 
 ## vscode
 
@@ -42,4 +51,4 @@ If you have been using eslint and prettier and their extensions, you might want 
 
 This is done by the `.vscode/settings.json` file.
 
-Debug configurations are also included (for source using tsx and for bundle using the generated source maps).
+Debug configuration is also included for running the source directly with node.
