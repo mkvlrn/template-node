@@ -1,21 +1,47 @@
 # template-node
 
-A sane, opinionated template for esm node projects written in typescript that doesn't rely on transpilation - typescript is ran directly by node.
+![Build Status](https://img.shields.io/github/actions/workflow/status/mkvlrn/template-node/checks.yml?branch=main)
+![License](https://img.shields.io/github/license/mkvlrn/template-node)
+[![Use this template](https://img.shields.io/badge/Generate-Use_this_template-2ea44f?style=flat&logo=github)](https://github.com/mkvlrn/template-node/generate)
 
-> [!NOTE]
-> This template favors [pnpm](https://pnpm.io). All instructions assume pnpm. If you insist on npm or yarn, you're on your own.
+A sane, opinionated template for esm node projects written in typescript that doesn't rely on transpilation - typescript is ran directly by node (v24+, as pinned in the mise config).
+
+> [!IMPORTANT]
+> This template requires **mise**. It automatically manages the correct versions of Node and pnpm so you don't have to.
 >
-> This template targets Node.js LTS (>=24).
+> Check https://mise.jdx.dev
 
 Uses:
 
+- [mise](https://mise.jdx.dev/) for reproducible tool versions (Node, pnpm, etc.)
 - [biome](https://github.com/biomejs/biome) for linting and formatting
 - [commitlint](https://github.com/conventional-changelog/commitlint) for linting commit messages
 - [husky](https://github.com/typicode/husky) for git hooks
 - [lint-staged](https://github.com/lint-staged/lint-staged) for checks on commit
 - [vitest](https://github.com/vitest-dev/vitest) for testing
 
+## setup
+
+This project requires [mise](https://mise.jdx.dev/) to ensure a reproducible environment.
+
+1. **Install mise**: https://mise.jdx.dev/getting-started.html#installing-mise-cli
+2. **Activate mise**: https://mise.jdx.dev/getting-started.html#activate-mise
+3. **Run setup**:
+   ```bash
+   mise setup
+   ```
+
+This task trusts the project config, installs CLI tools (Node, pnpm, ncu), and runs pnpm install. All other scripts are standard package.json commands.
+
+## subpath imports
+
 Subpath imports (`#/`) are used instead of relative paths, mapped in both `package.json` and `tsconfig.json`.
+
+**Example**:
+
+```ts
+import { add } from "#/math/basic"; // this points to ./src/math/basic.ts
+```
 
 ## running
 
@@ -39,6 +65,12 @@ Runs biome in fix mode to lint and format the project.
 
 Runs type checking using tsc.
 
+## npm-check-updates
+
+This global package is managed by mise as it is used as a global tool. Simply running `ncu` will list possible updates from `package.json`. `ncu -u` will set those versions in `package.json`, and `pnpm install` will upgrade them.
+
+For more info, https://github.com/raineorshine/npm-check-updates .
+
 ## ci
 
 GitHub Actions runs on pushes and pull requests to `main`, executing tsc, biome check, and tests.
@@ -52,3 +84,7 @@ If you have been using eslint and prettier and their extensions, you might want 
 This is done by the `.vscode/settings.json` file.
 
 Debug configuration is also included for running the source directly with node.
+
+## license
+
+MIT
