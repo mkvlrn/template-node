@@ -1,20 +1,19 @@
 # template-node
 
-![Build Status](https://img.shields.io/github/actions/workflow/status/mkvlrn/template-node/checks.yml?branch=main&style=flat&logo=github)
-[![Use this template](https://img.shields.io/badge/template-use_this_template-2ea44f?style=flat&logo=github)](https://github.com/mkvlrn/template-node/generate)
+![build](https://img.shields.io/github/actions/workflow/status/mkvlrn/template-node/checks.yml?branch=main&style=flat&logo=github)
+[![template](https://img.shields.io/badge/template-use_this_template-2ea44f?style=flat&logo=github)](https://github.com/mkvlrn/template-node/generate)
 [![mise](https://badgen.net/badge/mise/en-place/1c1614?icon=https://raw.githubusercontent.com/mkvlrn/template-node/refs/heads/main/.github/assets/mise-logo-dark.svg)](https://mise.jdx.dev)
-![License](https://img.shields.io/github/license/mkvlrn/template-node?style=flat)
+![license](https://img.shields.io/github/license/mkvlrn/template-node?style=flat)
 
 A sane, opinionated template for esm node projects written in typescript that doesn't rely on transpilation - typescript is ran directly by node (v24+, as pinned in the mise config).
 
 > [!IMPORTANT]
-> This template requires **mise**. It automatically manages the correct versions of Node and pnpm so you don't have to.
+> This template requires **mise**. It manages the correct versions of runtimes and tooling, such as Node itself, pnpm, and others.
 >
 > Check https://mise.jdx.dev
 
 Uses:
 
-- [mise](https://mise.jdx.dev/) for reproducible tool versions (Node, pnpm, etc.)
 - [biome](https://github.com/biomejs/biome) for linting and formatting
 - [commitlint](https://github.com/conventional-changelog/commitlint) for linting commit messages
 - [husky](https://github.com/typicode/husky) for git hooks
@@ -23,7 +22,7 @@ Uses:
 
 ## setup
 
-This project requires [mise](https://mise.jdx.dev/) to ensure a reproducible environment.
+To ensure a reproducible environment, [mise](https://mise.jdx.dev/) is used:
 
 1. **Install mise**: https://mise.jdx.dev/getting-started.html#installing-mise-cli
 2. **Activate mise**: https://mise.jdx.dev/getting-started.html#activate-mise
@@ -33,6 +32,9 @@ This project requires [mise](https://mise.jdx.dev/) to ensure a reproducible env
    ```
 
 This task trusts the project config, installs CLI tools (Node, pnpm, ncu), and runs pnpm install. All other scripts are standard package.json commands.
+
+> [!NOTE]
+> Git hooks are in place to make sure both the tooling managed by mise and the project dependencies are synced with each checkout and merge.
 
 ## subpath imports
 
