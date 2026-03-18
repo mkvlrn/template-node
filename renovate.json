@@ -14,5 +14,6 @@
       "matchManagers": ["github-actions"],
       "groupName": "GitHub Actions"
     }
-  ]
+  ],
+  "schedule": ["before 5am every weekday"]
 }
