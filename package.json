@@ -17,8 +17,8 @@
     "template"
   ],
   "engines": {
-    "node": "24",
-    "pnpm": "10"
+    "node": "24.14.0",
+    "pnpm": "10.32.1"
   },
   "imports": {
     "#/*": "./src/*.ts"
@@ -35,10 +35,10 @@
     "prepare": "husky"
   },
   "devDependencies": {
-    "@biomejs/biome": "^2.4.7",
+    "@biomejs/biome": "^2.4.8",
     "@commitlint/cli": "^20.5.0",
     "@commitlint/config-conventional": "^20.5.0",
-    "@mkvlrn/config": "^3.1.6",
+    "@mkvlrn/config": "^3.1.7",
     "@types/node": "^25.5.0",
     "@vitest/coverage-v8": "^4.1.0",
     "husky": "^9.1.7",
