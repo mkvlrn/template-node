@@ -16,11 +16,11 @@ run = "node --watch ./src/main.ts"
 description = "runs it for real"
 run = "node ./src/main.ts"
 [tasks.lint]
+description = "attempts to fix what is safe to do"
+run = "mise lint-check --write"
+[tasks.lint-check]
 description = "lint and format check with biome"
 run = "biome check --diagnostic-level=warn --no-errors-on-unmatched"
-[tasks.lint-fix]
-description = "attempts to fix what is safe to do"
-run = "mise lint --write"
 [tasks.typecheck]
 description = "checks entire project for type errors"
 run = "pnpm tsc"

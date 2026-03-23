@@ -26,5 +26,5 @@ jobs:
             ${{ runner.os }}-pnpm-store-
       - run: pnpm install --frozen-lockfile
       - run: mise typecheck
-      - run: mise lint
+      - run: mise lint-check
       - run: mise test-ci
