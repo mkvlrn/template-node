@@ -10,14 +10,16 @@ A sane, opinionated template for esm node projects written in typescript that do
 > [!IMPORTANT]
 > This template requires **mise**. It manages the correct versions of runtimes and tooling, such as Node itself, pnpm, and others.
 >
-> Check https://mise.jdx.dev
+> It is also the task manager for the project, so no `package.json` scripts.
+>
+> Check https://mise.jdx.dev for more details on **mise**, and the tasks section below (or the `.mise.toml` file) for the available tasks.
 
-Uses:
+Uses, among other tools/packages:
 
-- [biome](https://github.com/biomejs/biome) for linting and formatting
-- [commitlint](https://github.com/conventional-changelog/commitlint) for linting commit messages
-- [husky](https://github.com/typicode/husky) for git hooks
-- [lint-staged](https://github.com/lint-staged/lint-staged) for checks on commit
+- [pnpm](https://github.com/pnpm/pnpm) as package manager for node
+- [biome](https://github.com/biomejs/biome) for code linting and formatting
+- [lefthook](https://github.com/evilmartians/lefthook) for git hooks
+- [cocogitto](https://github.com/cocogitto/cocogitto) for commit message linting
 - [vitest](https://github.com/vitest-dev/vitest) for testing
 
 ## setup
@@ -31,7 +33,7 @@ To ensure a reproducible environment, [mise](https://mise.jdx.dev/) is used:
    mise setup
    ```
 
-This task trusts the project config, installs CLI tools (Node, pnpm, ncu), and runs pnpm install. All other scripts are standard package.json commands.
+This task trusts the project config, installs the toolchain, and install project dependencies.
 
 > [!NOTE]
 > Git hooks are in place to make sure both the tooling managed by mise and the project dependencies are synced with each checkout and merge.
@@ -48,23 +50,23 @@ import { add } from "#/math/basic"; // this points to ./src/math/basic.ts
 
 ## running
 
-### `pnpm dev`
+### `mise dev`
 
 Runs the project in watch mode.
 
-### `pnpm start`
+### `mise start`
 
 Runs the project.
 
-### `pnpm test`
+### `mise test`
 
 Runs tests.
 
-### `pnpm biome-fix`
+### `mise biome-fix`
 
 Runs biome in fix mode to lint and format the project.
 
-### `pnpm typecheck`
+### `mise typecheck`
 
 Runs type checking using tsc.
 
@@ -76,7 +78,7 @@ For more info, https://github.com/raineorshine/npm-check-updates .
 
 ## ci
 
-GitHub Actions runs on pushes and pull requests to `main`, executing tsc, biome check, and tests.
+GitHub Actions runs on pushes and pull requests to `main`, executing ci tasks.
 
 ## vscode
 
