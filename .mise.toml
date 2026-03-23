@@ -2,9 +2,9 @@
 node = "24.14.0"
 pnpm = "10.32.1"
 "npm:npm-check-updates" = "19.6.5"
-biome = "latest"
-lefthook = "latest"
-cocogitto = "latest"
+biome = "2.4.8"
+lefthook = "2.1.4"
+cocogitto = "7.0.0"
 
 [tasks.setup]
 description = "puts everything in its place"
