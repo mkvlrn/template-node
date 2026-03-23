@@ -17,7 +17,7 @@ description = "runs it for real"
 run = "node ./src/main.ts"
 [tasks.lint]
 description = "lint and format check with biome"
-run = "biome check --diagnostic-level=warn --no-errors-on-unmatched $@"
+run = "biome check --diagnostic-level=warn --no-errors-on-unmatched"
 [tasks.lint-fix]
 description = "attempts to fix what is safe to do"
 run = "mise lint --write"
@@ -26,13 +26,13 @@ description = "checks entire project for type errors"
 run = "pnpm tsc"
 [tasks.typecheck-staged]
 description = "checks passed/staged files for type errors"
-run = "pnpm tsc-files $@"
+run = "pnpm tsc-files"
 [tasks.test]
 description = "runs all tests"
 run = "pnpm vitest"
 [tasks.test-staged]
 description = "runs tests on passed/staged files"
-run = "pnpm vitest related --bail=1 --reporter=github-actions $@"
+run = "pnpm vitest related --bail=1 --reporter=github-actions"
 [tasks.test-ci]
 description = "runs tests silently with quick fail"
 run = "vitest --bail=1 --reporter=github-actions"
