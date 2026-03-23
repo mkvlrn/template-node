@@ -5,9 +5,9 @@ import { add } from "#/math/basic";
 
 const sum = add(1, 2);
 console.log(`1 + 2 = ${sum}`);
-const div = divide(4, 2);
+const div = divide(6, 2);
 if (div.isError) {
   console.error(div.error.message);
 } else {
-  console.log(`4 / 2 = ${div.value}`);
+  console.log(`6 / 2 = ${div.value}`);
 }
