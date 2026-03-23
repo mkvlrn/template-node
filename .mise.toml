@@ -35,7 +35,7 @@ description = "runs tests on passed/staged files"
 run = "pnpm vitest related --bail=1 --reporter=github-actions"
 [tasks.test-ci]
 description = "runs tests silently with quick fail"
-run = "vitest --bail=1 --reporter=github-actions"
+run = "pnpm vitest --bail=1 --reporter=github-actions"
 
 [settings]
 disable_backends = ["asdf"]
