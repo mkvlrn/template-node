@@ -12,9 +12,9 @@ lint = { run = "mise lint-check" }
 test = { run = "mise test-ci" }
 
 [post-checkout.commands]
-sync-mise = { run = "mise install -q" }
+sync-mise = { run = "mise install" }
 sync-pnpm = { run = "pnpm install --frozen-lockfile" }
 
 [post-merge.commands]
-sync-mise = { run = "mise install -q" }
+sync-mise = { run = "mise install" }
 sync-pnpm = { run = "pnpm install --frozen-lockfile" }
