@@ -12,11 +12,11 @@ lint = { run = "pnpm lint-check" }
 test = { run = "pnpm test-ci" }
 
 [post-checkout.commands]
-sync-mise = { run = "pnpm install" }
-clean-mise = { run = "pnpm prune -y" }
+sync-mise = { run = "mise install" }
+clean-mise = { run = "mise prune -y" }
 sync-pnpm = { run = "pnpm install --frozen-lockfile" }
 
 [post-merge.commands]
-sync-mise = { run = "pnpm install" }
-clean-mise = { run = "pnpm prune -y" }
+sync-mise = { run = "mise install" }
+clean-mise = { run = "mise prune -y" }
 sync-pnpm = { run = "pnpm install --frozen-lockfile" }
