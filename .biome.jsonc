@@ -1,5 +1,5 @@
 {
-  // "root": true,
+  "root": true,
   "files": {
     "ignoreUnknown": true,
     "includes": [
