@@ -12,7 +12,7 @@ A sane, opinionated template for esm node projects written in typescript that do
 
 Uses, among other tools/packages:
 
-- [pnpm](https://github.com/pnpm/pnpm) as package manager for node
+- [pnpm](https://github.com/pnpm/pnpm) as package manager for node dependencies
 - [biome](https://github.com/biomejs/biome) for code linting and formatting
 - [lefthook](https://github.com/evilmartians/lefthook) for git hooks
 - [commitlint](https://github.com/conventional-changelog/commitlint) for commit message linting
@@ -20,7 +20,14 @@ Uses, among other tools/packages:
 
 ## requirements and dependencies
 
-If you use mise and run `mise install` in the project root, you'll have the correct node and pnpm versions installed. If not, make sure you have **node v24+** and **pnpm 10+** installed.
+If you use [mise](https://mise.jdx.dev) and run `mise install` in the project root, you'll have the correct node and pnpm versions installed.
+
+This is _by far_ the easiest way to keep your environment consistent across different machines and team members, no matter the frequency of version updates. I'm not affiliated with mise but I wholeheartedly recommend it, so check it here: https://mise.jdx.dev.
+
+If not using mise, make sure you have:
+
+- node 24+ installed (v24.14.1 used)
+- pnpm 10+ installed (v10.33.0 used)
 
 Then, install dependencies with:
 
