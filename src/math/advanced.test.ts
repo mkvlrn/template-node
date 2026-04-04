@@ -14,12 +14,16 @@ describe("should multiply two numbers", () => {
 });
 
 describe("should divide two numbers", () => {
-  for (const { a, b, expected, display } of divideTestCases) {
-    test(`${a} ÷ ${b} = ${display}`, () => {
+  for (const { a, b, expected, errorMessage } of divideTestCases) {
+    test(`${a} ÷ ${b} = ${errorMessage ?? expected}`, () => {
       // act
-      const result = divide(a, b);
+      const act = () => divide(a, b);
       // assert
-      expect(result).toStrictEqual(expected);
+      if (typeof errorMessage === "string") {
+        expect(act).toThrow(errorMessage);
+      } else {
+        expect(act()).toStrictEqual(expected);
+      }
     });
   }
 });

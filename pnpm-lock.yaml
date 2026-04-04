@@ -7,10 +7,6 @@ settings:
 importers:
 
   .:
-    dependencies:
-      '@mkvlrn/result':
-        specifier: ^5.0.8
-        version: 5.0.8
     devDependencies:
       '@biomejs/biome':
         specifier: ^2.4.10
@@ -229,9 +225,6 @@ packages:
 
   '@mkvlrn/config@3.1.11':
     resolution: {integrity: sha512-p36jaVTrh+4tFH3AhW3fXCDh/T4Q7N8rraU2B3uF7Fn0rSaVUq4nbDwysWHvXk1xu62f9+sDbL1V1qrwFtp7gg==}
-
-  '@mkvlrn/result@5.0.8':
-    resolution: {integrity: sha512-UIMy4Qj+fatNlHeC6hYFT91FAFkyHYJI01B8eVqSdpXSBKDnNKcC+A+rfbuQlWO57F/HJcBpPzP2Wyg62Ed8Mg==}
 
   '@napi-rs/wasm-runtime@1.1.1':
     resolution: {integrity: sha512-p64ah1M1ld8xjWv3qbvFwHiFVWrq1yFvV4f7w+mzaqiR4IlSgkqhcRdHwsGgomwzBH51sRY4NEowLxnaBjcW/A==}
@@ -1199,8 +1192,6 @@ snapshots:
       '@jridgewell/sourcemap-codec': 1.5.5
 
   '@mkvlrn/config@3.1.11': {}
-
-  '@mkvlrn/result@5.0.8': {}
 
   '@napi-rs/wasm-runtime@1.1.1':
     dependencies:
