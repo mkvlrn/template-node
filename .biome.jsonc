@@ -10,5 +10,5 @@
       "!**/*.d.ts"
     ]
   },
-  "extends": ["@mkvlrn/config/biome"]
+  "extends": ["@mkvlrn/config/biome.json"]
 }

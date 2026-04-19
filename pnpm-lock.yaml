@@ -9,7 +9,7 @@ importers:
   .:
     devDependencies:
       '@biomejs/biome':
-        specifier: ^2.4.11
+        specifier: ^2.4.12
         version: 2.4.12
       '@commitlint/cli':
         specifier: ^20.5.0
@@ -18,8 +18,8 @@ importers:
         specifier: ^20.5.0
         version: 20.5.0
       '@mkvlrn/config':
-        specifier: ^3.1.12
-        version: 3.1.13
+        specifier: ^4.0.0
+        version: 4.0.0
       '@types/node':
         specifier: ^25.6.0
         version: 25.6.0
@@ -27,13 +27,13 @@ importers:
         specifier: ^4.1.4
         version: 4.1.4(vitest@4.1.4)
       lefthook:
-        specifier: ^2.1.5
+        specifier: ^2.1.6
         version: 2.1.6
       tsc-files:
         specifier: ^1.1.4
         version: 1.1.4(typescript@6.0.3)
       typescript:
-        specifier: ^6.0.2
+        specifier: ^6.0.3
         version: 6.0.3
       vitest:
         specifier: ^4.1.4
@@ -223,8 +223,8 @@ packages:
   '@jridgewell/trace-mapping@0.3.31':
     resolution: {integrity: sha512-zzNR+SdQSDJzc8joaeP8QQoCQr8NuYx2dIIytl1QeBEZHJ9uW6hebsrYgbz8hJwUQao3TWCMtmfV8Nu1twOLAw==}
 
-  '@mkvlrn/config@3.1.13':
-    resolution: {integrity: sha512-qO0XIJ1/R/54xNTuCcQAD/GqNbH+Kt7vIre9THvw5gfj7je+la20N+1PBSu9aKvbd3pKtdfRdZMfUZuqgOV0Ww==}
+  '@mkvlrn/config@4.0.0':
+    resolution: {integrity: sha512-D4ldDAK06/HE13IJNEEtnkVf/tzurYiuZ7eCEkcdSUrC3wzq6bVQzcX8J4utBtkofI9/STOu0RqezAuZ/egpqQ==}
 
   '@napi-rs/wasm-runtime@1.1.4':
     resolution: {integrity: sha512-3NQNNgA1YSlJb/kMH1ildASP9HW7/7kYnRI2szWJaofaS1hWmbGI4H+d3+22aGzXXN9IJ+n+GiFVcGipJP18ow==}
@@ -1208,7 +1208,7 @@ snapshots:
       '@jridgewell/resolve-uri': 3.1.2
       '@jridgewell/sourcemap-codec': 1.5.5
 
-  '@mkvlrn/config@3.1.13': {}
+  '@mkvlrn/config@4.0.0': {}
 
   '@napi-rs/wasm-runtime@1.1.4(@emnapi/core@1.9.1)(@emnapi/runtime@1.9.1)':
     dependencies:
