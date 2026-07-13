@@ -30,7 +30,7 @@
     "lint-check": "biome check --diagnostic-level=warn --no-errors-on-unmatched",
     "typecheck": "tsc",
     "typecheck-staged": "tsc-files",
-    "test": "vitest",
+    "test": "vitest --coverage",
     "test-staged": "vitest related --bail=1 --reporter=github-actions",
     "test-ci": "vitest --bail=1 --reporter=github-actions",
     "prepare": "lefthook install"
