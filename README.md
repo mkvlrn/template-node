@@ -45,7 +45,7 @@ Subpath imports (`#/`) are used instead of relative paths, mapped in both `packa
 **Example**:
 
 ```ts
-import { add } from "#/math/basic"; // this points to ./src/math/basic.ts
+import { add } from "#/lib/math"; // this points to ./src/lib/math.ts
 ```
 
 ## running
