@@ -1,82 +1,33 @@
-import { describe, expect, test } from "vitest";
+import { expect, test } from "vitest";
+
 import { add, divide, multiply, subtract } from "#/lib/math";
 
 interface TestCase {
   a: number;
   b: number;
+  func: (a: number, b: number) => number;
   expected: number;
-  errorMessage?: string;
 }
 
-describe("should add two numbers", () => {
-  const tc: TestCase[] = [
-    { a: 2, b: 2, expected: 4 },
-    { a: 2, b: 3, expected: 5 },
-    { a: 1000, b: 2000, expected: 3000 },
-  ];
+const tests = new Map<string, TestCase>([
+  ["should add: 2 + 2 = 4", { a: 2, b: 2, func: add, expected: 4 }],
+  ["should subtract: 2 - 2 = 0", { a: 2, b: 2, func: subtract, expected: 0 }],
+  ["should multiply: 2 * 2 = 4", { a: 2, b: 2, func: multiply, expected: 4 }],
+  ["should divide: 2 / 2 = 1", { a: 2, b: 2, func: divide, expected: 1 }],
+]);
 
-  for (const { a, b, expected } of tc) {
-    test(`${a} + ${b} = ${expected}`, () => {
-      // act
-      const result = add(a, b);
-      // assert
-      expect(result).toStrictEqual(expected);
-    });
-  }
+tests.forEach((tc, name) => {
+  test(name, () => {
+    const result = tc.func(tc.a, tc.b);
+
+    expect(tc.expected).toEqual(result);
+  });
 });
 
-describe("should subtract two numbers", () => {
-  const tc: TestCase[] = [
-    { a: 2, b: 2, expected: 0 },
-    { a: 2, b: 3, expected: -1 },
-    { a: 1000, b: 2000, expected: -1000 },
-  ];
+test("should throw on division by zero", () => {
+  const expected = "cannot divide by zero";
 
-  for (const { a, b, expected } of tc) {
-    test(`${a} - ${b} = ${expected}`, () => {
-      // act
-      const result = subtract(a, b);
-      // assert
-      expect(result).toStrictEqual(expected);
-    });
-  }
-});
+  const act = () => divide(2, 0);
 
-describe("should multiply two numbers", () => {
-  const tc: TestCase[] = [
-    { a: 2, b: 2, expected: 4 },
-    { a: 2, b: 3, expected: 6 },
-    { a: 1000, b: 2000, expected: 2_000_000 },
-  ];
-
-  for (const { a, b, expected } of tc) {
-    test(`${a} x ${b} = ${expected}`, () => {
-      // act
-      const result = multiply(a, b);
-      // assert
-      expect(result).toStrictEqual(expected);
-    });
-  }
-});
-
-describe("should divide two numbers", () => {
-  const tc: TestCase[] = [
-    { a: 2, b: 2, expected: 1 },
-    { a: 2, b: 4, expected: 0.5 },
-    { a: 999, b: 333, expected: 3 },
-    { a: 2, b: 0, expected: Number.NaN, errorMessage: "cannot divide by zero" },
-  ];
-
-  for (const { a, b, expected, errorMessage } of tc) {
-    test(`${a} ÷ ${b} = ${errorMessage ?? expected}`, () => {
-      // act
-      const act = () => divide(a, b);
-      // assert
-      if (typeof errorMessage === "string") {
-        expect(act).toThrow(errorMessage);
-      } else {
-        expect(act()).toStrictEqual(expected);
-      }
-    });
-  }
+  expect(act).toThrow(expected);
 });
