@@ -5,9 +5,8 @@ test("should output to console twice", async () => {
 
   await import("./main");
 
-  const lines = logSpy.mock.calls.map((call) => call.join(" "));
   expect(logSpy).toHaveBeenCalledTimes(2);
-  expect(lines).toEqual(["1 + 2 = 3", "10 / 2 = 5"]);
+  expect(logSpy.mock.calls).toEqual([["1 + 2 = 3"], ["10 / 2 = 5"]]);
 
   logSpy.mockRestore();
 });
