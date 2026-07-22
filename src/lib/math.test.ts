@@ -1,27 +1,15 @@
 import { expect, test } from "vitest";
-
 import { add, divide, multiply, subtract } from "#/lib/math";
 
-interface TestCase {
-  a: number;
-  b: number;
-  func: (a: number, b: number) => number;
-  expected: number;
-}
+test.each<{ a: number; b: number; op: (a: number, b: number) => number; expected: number }>([
+  { a: 2, b: 2, op: add, expected: 4 },
+  { a: 2, b: 2, op: subtract, expected: 0 },
+  { a: 2, b: 2, op: multiply, expected: 4 },
+  { a: 2, b: 2, op: divide, expected: 1 },
+])("should find: $op.name($a, $b) = $expected", ({ a, b, op, expected }) => {
+  const result = op(a, b);
 
-const tests = new Map<string, TestCase>([
-  ["should add: 2 + 2 = 4", { a: 2, b: 2, func: add, expected: 4 }],
-  ["should subtract: 2 - 2 = 0", { a: 2, b: 2, func: subtract, expected: 0 }],
-  ["should multiply: 2 * 2 = 4", { a: 2, b: 2, func: multiply, expected: 4 }],
-  ["should divide: 2 / 2 = 1", { a: 2, b: 2, func: divide, expected: 1 }],
-]);
-
-tests.forEach((tc, name) => {
-  test(name, () => {
-    const result = tc.func(tc.a, tc.b);
-
-    expect(tc.expected).toEqual(result);
-  });
+  expect(expected).toEqual(result);
 });
 
 test("should throw on division by zero", () => {
