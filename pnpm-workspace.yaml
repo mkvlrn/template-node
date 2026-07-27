@@ -23,4 +23,4 @@ minimumReleaseAgeExclude:
   - '@biomejs/cli-linux-x64@2.5.5'
   - '@biomejs/cli-win32-arm64@2.5.5'
   - '@biomejs/cli-win32-x64@2.5.5'
-  - '@jsr/mkvlrn__config@0.0.3'
+  - '@jsr/mkvlrn__config@0.0.3 || 0.1.9'
