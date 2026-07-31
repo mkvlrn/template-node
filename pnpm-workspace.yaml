@@ -1,7 +1,8 @@
+saveExact: true
 allowBuilds:
   lefthook: true
 minimumReleaseAgeExclude:
-  - '@types/node@25.9.1'
+  - "@types/node@25.9.1"
   - lefthook-darwin-arm64@2.1.8
   - lefthook-darwin-x64@2.1.8
   - lefthook-freebsd-arm64@2.1.8
@@ -13,14 +14,14 @@ minimumReleaseAgeExclude:
   - lefthook-windows-arm64@2.1.8
   - lefthook-windows-x64@2.1.8
   - lefthook@2.1.8
-  - '@mkvlrn/config@4.0.3 || 4.0.4'
-  - '@biomejs/biome@2.5.5'
-  - '@biomejs/cli-darwin-arm64@2.5.5'
-  - '@biomejs/cli-darwin-x64@2.5.5'
-  - '@biomejs/cli-linux-arm64-musl@2.5.5'
-  - '@biomejs/cli-linux-arm64@2.5.5'
-  - '@biomejs/cli-linux-x64-musl@2.5.5'
-  - '@biomejs/cli-linux-x64@2.5.5'
-  - '@biomejs/cli-win32-arm64@2.5.5'
-  - '@biomejs/cli-win32-x64@2.5.5'
-  - '@jsr/mkvlrn__config@0.0.3 || 0.1.9'
+  - "@mkvlrn/config@4.0.3 || 4.0.4"
+  - "@biomejs/biome@2.5.5"
+  - "@biomejs/cli-darwin-arm64@2.5.5"
+  - "@biomejs/cli-darwin-x64@2.5.5"
+  - "@biomejs/cli-linux-arm64-musl@2.5.5"
+  - "@biomejs/cli-linux-arm64@2.5.5"
+  - "@biomejs/cli-linux-x64-musl@2.5.5"
+  - "@biomejs/cli-linux-x64@2.5.5"
+  - "@biomejs/cli-win32-arm64@2.5.5"
+  - "@biomejs/cli-win32-x64@2.5.5"
+  - "@jsr/mkvlrn__config@0.0.3 || 0.1.9"
