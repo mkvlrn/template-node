@@ -11,6 +11,7 @@ _.path = ["./node_modules/.bin"]
 [settings]
 disable_backends = ["asdf"]
 use_versions_host = false
+minimum_release_age = "1d"
 
 [tasks.dev]
 description = "Dev mode"
