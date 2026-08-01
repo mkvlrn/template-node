@@ -16,9 +16,15 @@
     "esm",
     "template"
   ],
-  "engines": {
-    "node": "26",
-    "pnpm": "11"
+  "devEngines": {
+    "runtime": {
+      "name": "node",
+      "version": "24.18.1"
+    },
+    "packageManager": {
+      "name": "pnpm",
+      "version": "11.19.0"
+    }
   },
   "imports": {
     "#/*": "./src/*.ts"
@@ -29,21 +35,15 @@
     "lint": "pnpm lint-check --write",
     "lint-check": "biome check --diagnostic-level=warn --no-errors-on-unmatched",
     "typecheck": "tsc",
-    "typecheck-staged": "tsc-files",
     "test": "vitest --coverage",
     "test-staged": "vitest related --bail=1 --reporter=github-actions",
     "test-ci": "vitest --bail=1 --reporter=github-actions",
     "prepare": "lefthook install"
   },
   "devDependencies": {
-    "@biomejs/biome": "2.5.6",
-    "@commitlint/cli": "21.2.1",
-    "@commitlint/config-conventional": "21.2.0",
     "@mkvlrn/config": "npm:@jsr/mkvlrn__config@0.2.0",
     "@types/node": "26.1.2",
     "@vitest/coverage-v8": "4.1.10",
-    "lefthook": "2.1.10",
-    "tsc-files": "1.1.4",
     "typescript": "7.0.2",
     "vitest": "4.1.10"
   }
