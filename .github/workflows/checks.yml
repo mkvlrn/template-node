@@ -18,5 +18,5 @@ jobs:
 
       - run: pnpm install --frozen-lockfile
       - run: mise typecheck
-      - run: mise lint-check
+      - run: mise lint
       - run: mise test-ci
