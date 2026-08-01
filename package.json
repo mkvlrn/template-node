@@ -30,14 +30,6 @@
     "#/*": "./src/*.ts"
   },
   "scripts": {
-    "dev": "node --watch ./src/main.ts",
-    "start": "node ./src/main.ts",
-    "lint": "pnpm lint-check --write",
-    "lint-check": "biome check --diagnostic-level=warn --no-errors-on-unmatched",
-    "typecheck": "tsc",
-    "test": "vitest --coverage",
-    "test-staged": "vitest related --bail=1 --reporter=github-actions",
-    "test-ci": "vitest --bail=1 --reporter=github-actions",
     "prepare": "lefthook install"
   },
   "devDependencies": {
