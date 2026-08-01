@@ -1,1 +1,3 @@
+minimumReleaseAgeExclude:
+  - '@jsr/mkvlrn__config@0.2.1'
 saveExact: true
