@@ -11,6 +11,8 @@ A sane, opinionated template for esm node projects written in typescript that do
 > This template use [mise](https://mise.jdx.dev) as tool manager and task runner.
 >
 > You _**need to have it [installed](https://mise.jdx.dev/installing-mise.html)**_, so everything is in sync correctly and development runs smoothly. Start [here](https://mise.jdx.dev/getting-started.html) if you don't know what this means.
+>
+> If you're looking for something not as opinionated, there are plenty of other templates around. This is about tight tool integration and good defaults.
 
 Uses, among other tools/packages:
 
