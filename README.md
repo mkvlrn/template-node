@@ -8,11 +8,9 @@
 A sane, opinionated template for esm node projects written in typescript that doesn't rely on transpilation - typescript is executed directly by node.
 
 > [!CAUTION]
-> This template uses [mise](https://mise.jdx.dev) as a tool manager and task runner.
+> This template requires [mise](https://mise.jdx.dev) to manage runtimes, tools, and tasks in a single workflow, providing a lightweight alternative to devcontainers.
 >
-> You _**need to have it [installed](https://mise.jdx.dev/installing-mise.html)**_ to manage tools runtimes and/or tooling so everything stays synced. Start [here](https://mise.jdx.dev/getting-started.html) if you don't know what this means.
->
-> If you're looking for something not as opinionated, there are plenty of other templates around. This is about tight tool integration and good defaults.
+> You must [install mise](https://mise.jdx.dev/installing-mise.html) before starting. If you prefer a less opinionated setup, this template isn't for you.
 
 Uses, among other tools/packages:
 
@@ -28,11 +26,7 @@ As noted at the top, you need [mise](https://mise.jdx.dev) to get started with t
 
 This is _by far_ the easiest way to keep your environment consistent across different machines and team members, no matter the frequency of version updates.
 
-Once the tooling is installed, you can install the Node dependencies with pnpm:
-
-```bash
-pnpm install
-```
+Once the tooling is installed, you can install the Node dependencies with `pnpm install`.
 
 > [!NOTE]
 > Git hooks are in place to make sure both the tooling managed by mise and the project dependencies are synced with each checkout and merge.
