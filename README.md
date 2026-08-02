@@ -5,12 +5,12 @@
 [![mise](https://mise-versions.jdx.dev/badge.svg)](https://mise.jdx.dev)
 ![license](https://img.shields.io/github/license/mkvlrn/template-node?style=flat)
 
-A sane, opinionated template for esm node projects written in typescript that doesn't rely on transpilation - typescript is ran directly by node.
+A sane, opinionated template for esm node projects written in typescript that doesn't rely on transpilation - typescript is executed directly by node.
 
 > [!CAUTION]
-> This template use [mise](https://mise.jdx.dev) as tool manager and task runner.
+> This template uses [mise](https://mise.jdx.dev) as a tool manager and task runner.
 >
-> You _**need to have it [installed](https://mise.jdx.dev/installing-mise.html)**_, so everything is in sync correctly and development runs smoothly. Start [here](https://mise.jdx.dev/getting-started.html) if you don't know what this means.
+> You _**need to have it [installed](https://mise.jdx.dev/installing-mise.html)**_ to manage tools runtimes and/or tooling so everything stays synced. Start [here](https://mise.jdx.dev/getting-started.html) if you don't know what this means.
 >
 > If you're looking for something not as opinionated, there are plenty of other templates around. This is about tight tool integration and good defaults.
 
@@ -24,11 +24,11 @@ Uses, among other tools/packages:
 
 ## requirements and dependencies
 
-As noted at the top, you need [mise](https://mise.jdx.dev) to get started with this template. Run `mise install` in the project root, you'll have the correct versions of various tools in the repository directory.
+As noted at the top, you need [mise](https://mise.jdx.dev) to get started with this template. Run `mise install` in the project root to fetch the pinned versions of Node and other tools locally.
 
 This is _by far_ the easiest way to keep your environment consistent across different machines and team members, no matter the frequency of version updates.
 
-Once the tooling is installed, you can install the node dependencies with pnpm:
+Once the tooling is installed, you can install the Node dependencies with pnpm:
 
 ```bash
 pnpm install
@@ -39,7 +39,7 @@ pnpm install
 
 ## subpath imports
 
-Subpath imports (`#/`) are used instead of relative paths, mapped in both `package.json` and `tsconfig.json`.
+Subpath imports (`#/`) are used instead of relative paths, mapped via the `imports` field in `package.json` (allowing native Node resolution at runtime without extra build tools) and mirrored in `tsconfig.json` for IDE support.
 
 **Example**:
 
