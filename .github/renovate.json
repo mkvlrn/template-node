@@ -25,8 +25,8 @@
       "groupName": "GitHub Actions"
     },
     {
-      "matchPackageNames": ["@jsr/*", "@jsr/**"],
-      "homepage": "https://jsr.io/{{{replace '@jsr/' '' packageNames}}}"
+      "matchDatasources": ["jsr"],
+      "sourceUrl": "https://jsr.io/{{{packageName}}}"
     }
   ],
   "customManagers": [
