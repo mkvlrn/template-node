@@ -18,14 +18,6 @@
       "groupSlug": "mise"
     }
   ],
-  "customManagers": [
-    {
-      "customType": "regex",
-      "managerFilePatterns": ["/(^|/|\\.)mise\\.toml$/"],
-      "matchStrings": ["\"github:(?<packageName>[^\"]+)\"\\s*=\\s*\"(?<currentValue>[^\"]+)\""],
-      "datasourceTemplate": "github-releases"
-    }
-  ],
   "minimumReleaseAge": "1 day",
   "prHourlyLimit": 0,
   "prConcurrentLimit": 0,
