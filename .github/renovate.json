@@ -16,16 +16,29 @@
       "matchManagers": ["mise"],
       "groupName": "mise tools",
       "groupSlug": "mise"
+    },
+    {
+      "matchPackageNames": ["node", "pnpm", "bun"],
+      "groupName": "mise tools",
+      "groupSlug": "mise"
+    },
+    {
+      "matchManagers": ["custom"],
+      "matchDatasources": ["node-version", "npm"],
+      "matchPackageNames": ["node", "pnpm", "bun"],
+      "groupName": "mise tools",
+      "groupSlug": "mise"
     }
   ],
   "customManagers": [
     {
+      // this updates versions in package.json's devEngines
       "customType": "jsonata",
       "fileFormat": "json",
       "managerFilePatterns": ["/package.json/"],
       "matchStrings": [
-        "devEngines.runtime ? [{ \"depName\": devEngines.runtime.name, \"currentValue\": devEngines.runtime.version, \"datasource\": devEngines.runtime.name = \"node\" ? \"node-version\" : devEngines.runtime.name = \"deno\" ? \"deno\" : devEngines.runtime.name = \"bun\" ? \"npm\" : \"npm\", \"versioning\": devEngines.runtime.name = \"node\" ? \"node\" : \"npm\" }] : []",
-        "devEngines.packageManager ? [{ \"depName\": devEngines.packageManager.name = \"yarn\" ? \"@yarnpkg/cli\" : devEngines.packageManager.name, \"currentValue\": devEngines.packageManager.version, \"datasource\": devEngines.packageManager.name = \"bun\" ? \"npm\" : \"npm\", \"versioning\": \"npm\" }] : []"
+        "devEngines.runtime ? [{ \"depName\": devEngines.runtime.name, \"currentValue\": devEngines.runtime.version, \"datasource\": devEngines.runtime.name = \"node\" ? \"node-version\" : \"npm\", \"versioning\": devEngines.runtime.name = \"node\" ? \"node\" : \"npm\" }] : []",
+        "devEngines.packageManager ? [{ \"depName\": devEngines.packageManager.name, \"currentValue\": devEngines.packageManager.version, \"datasource\": \"npm\", \"versioning\": \"npm\" }] : []"
       ]
     }
   ],
