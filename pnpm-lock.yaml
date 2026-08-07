@@ -208,8 +208,8 @@ importers:
   .:
     devDependencies:
       '@mkvlrn/config':
-        specifier: npm:@jsr/mkvlrn__config@0.3.1
-        version: '@jsr/mkvlrn__config@0.3.1'
+        specifier: npm:@jsr/mkvlrn__config@0.4.1
+        version: '@jsr/mkvlrn__config@0.4.1(@types/node@26.1.2)(@vitest/coverage-v8@4.1.10)(vite@8.2.0(@types/node@26.1.2))'
       '@types/node':
         specifier: 26.1.2
         version: 26.1.2
@@ -256,8 +256,8 @@ packages:
   '@jridgewell/trace-mapping@0.3.31':
     resolution: {integrity: sha512-zzNR+SdQSDJzc8joaeP8QQoCQr8NuYx2dIIytl1QeBEZHJ9uW6hebsrYgbz8hJwUQao3TWCMtmfV8Nu1twOLAw==}
 
-  '@jsr/mkvlrn__config@0.3.1':
-    resolution: {integrity: sha512-G5K8meXpuDVhS6M6dWYMPiNt4AXU327ESW//hSuDWvlaJ9L7DAprGpJM0JvPEp6K95kuWyy1DOo0PnwHCQgMTA==, tarball: https://npm.jsr.io/~/11/@jsr/mkvlrn__config/0.3.1.tgz}
+  '@jsr/mkvlrn__config@0.4.1':
+    resolution: {integrity: sha512-OteCCG/zv92Z7Ven0sSLLxbdC7YthsQIEH3YZh16nWw7e2fDz/+fQskKrSGLGTKSi5AlEGu8Wd9UT+2N5XpI1Q==, tarball: https://npm.jsr.io/~/11/@jsr/mkvlrn__config/0.4.1.tgz}
 
   '@oxc-project/types@0.143.0':
     resolution: {integrity: sha512-u6JZdLBTLotrNC9Vd6vPssINdzcCzleKAH6EJKImQb7GtYvX5keN2dxkoK44stCc4tffE6QQRtZTXVSzsLUlWA==}
@@ -864,7 +864,23 @@ snapshots:
       '@jridgewell/resolve-uri': 3.1.2
       '@jridgewell/sourcemap-codec': 1.5.5
 
-  '@jsr/mkvlrn__config@0.3.1': {}
+  '@jsr/mkvlrn__config@0.4.1(@types/node@26.1.2)(@vitest/coverage-v8@4.1.10)(vite@8.2.0(@types/node@26.1.2))':
+    dependencies:
+      vitest: 4.1.10(@types/node@26.1.2)(@vitest/coverage-v8@4.1.10)(vite@8.2.0(@types/node@26.1.2))
+    transitivePeerDependencies:
+      - '@edge-runtime/vm'
+      - '@opentelemetry/api'
+      - '@types/node'
+      - '@vitest/browser-playwright'
+      - '@vitest/browser-preview'
+      - '@vitest/browser-webdriverio'
+      - '@vitest/coverage-istanbul'
+      - '@vitest/coverage-v8'
+      - '@vitest/ui'
+      - happy-dom
+      - jsdom
+      - msw
+      - vite
 
   '@oxc-project/types@0.143.0': {}
 
