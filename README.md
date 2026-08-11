@@ -7,10 +7,10 @@
 
 A sane, opinionated template for esm node projects written in typescript that doesn't rely on transpilation - typescript is executed directly by node.
 
-> [!CAUTION]
-> This template requires [mise](https://mise.jdx.dev) to manage runtimes, tools, and tasks in a single workflow, providing a lightweight alternative to devcontainers.
+> [!NOTE]
+> This template uses [arch-devcontainer](https://github.com/mkvlrn/arch-devcontainer) to provide a consistent development environment with Arch Linux and [mise](https://mise.jdx.dev) preconfigured.
 >
-> You must [install mise](https://mise.jdx.dev/installing-mise.html) before starting. If you prefer a less opinionated setup, this template isn't for you.
+> You can use the template directly with a devcontainer-compatible editor such as VS Code, or start it from the command line with `./.devcontainer/start.sh`.
 
 Uses, among other tools/packages:
 
@@ -22,11 +22,11 @@ Uses, among other tools/packages:
 
 ## requirements and dependencies
 
-As noted at the top, you need [mise](https://mise.jdx.dev) to get started with this template. Run `mise install` in the project root to fetch the pinned versions of Node and other tools locally.
+You need [Docker](https://www.docker.com/) and a devcontainer-compatible editor or the [Dev Container CLI](https://github.com/devcontainers/cli) to get started.
 
-This is _by far_ the easiest way to keep your environment consistent across different machines and team members, no matter the frequency of version updates.
+The development environment is provided by [arch-devcontainer](https://github.com/mkvlrn/arch-devcontainer), which includes mise, which will be managing most of the tooling in this template.
 
-Once the tooling is installed, you can install the Node dependencies with `pnpm install`.
+Once the devcontainer is running, you can install the Node dependencies with `pnpm install`.
 
 > [!NOTE]
 > Git hooks are in place to make sure both the tooling managed by mise and the project dependencies are synced with each checkout and merge.
