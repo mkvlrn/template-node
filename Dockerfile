@@ -4,10 +4,9 @@ WORKDIR /app
 ENV NODE_ENV=production
 
 COPY package.json ./
-RUN npm i -g corepack
-RUN corepack enable && corepack prepare --activate
-COPY pnpm-*.yaml ./
-RUN pnpm install --frozen-lockfile --prod --ignore-scripts
+RUN npm i -g bun
+COPY bun.lock bunfig.toml ./
+RUN bun install --frozen-lockfile --production --ignore-scripts
 COPY src/ ./src/
 USER node
 

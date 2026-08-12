@@ -14,7 +14,7 @@ A sane, opinionated template for esm node projects written in typescript that do
 
 Uses, among other tools/packages:
 
-- [pnpm](https://github.com/pnpm/pnpm) as package manager for node dependencies
+- [bun](https://github.com/oven-sh/bun) as package manager for node dependencies
 - [biome](https://github.com/biomejs/biome) for code linting and formatting
 - [lefthook](https://github.com/evilmartians/lefthook) for git hooks
 - [cocogitto](https://github.com/cocogitto/cocogitto) for commit message linting
@@ -26,7 +26,7 @@ You need [Docker](https://www.docker.com/) and a devcontainer-compatible editor 
 
 The development environment is provided by [arch-devcontainer](https://github.com/mkvlrn/arch-devcontainer), which includes mise, which will be managing most of the tooling in this template.
 
-Once the devcontainer is running, you can install the Node dependencies with `pnpm install`.
+Once the devcontainer is running, you can install the Node dependencies with `bun install`.
 
 > [!NOTE]
 > Git hooks are in place to make sure both the tooling managed by mise and the project dependencies are synced with each checkout and merge.
