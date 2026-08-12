@@ -1,6 +1,6 @@
 {
   "name": "devcontainer-${localWorkspaceFolderBasename}",
-  "image": "mkvlrn/arch-devcontainer:current@sha256:ec21629520e61ae7911a86e3750a6cf924aeb1fb06ca19bede37678e34bc260d",
+  "image": "mkvlrn/arch-devcontainer:current@sha256:71ee5dcb0f9e66f89f83f12f588b9f40550fa2ead3aa349dd85bed3391673754",
   "containerUser": "root",
   "remoteUser": "dev",
   "updateRemoteUserUID": true,
