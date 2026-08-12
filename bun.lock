@@ -5,7 +5,7 @@
     "": {
       "name": "template-node",
       "devDependencies": {
-        "@mkvlrn/config": "0.4.6",
+        "@mkvlrn/config": "0.4.7",
         "@types/node": "26.2.0",
         "@vitest/coverage-v8": "4.1.10",
         "typescript": "7.0.2",
@@ -30,7 +30,7 @@
 
     "@jridgewell/trace-mapping": ["@jridgewell/trace-mapping@0.3.31", "", { "dependencies": { "@jridgewell/resolve-uri": "^3.1.0", "@jridgewell/sourcemap-codec": "^1.4.14" } }, "sha512-zzNR+SdQSDJzc8joaeP8QQoCQr8NuYx2dIIytl1QeBEZHJ9uW6hebsrYgbz8hJwUQao3TWCMtmfV8Nu1twOLAw=="],
 
-    "@mkvlrn/config": ["@mkvlrn/config@0.4.6", "", {}, "sha512-EF5+m/D3QxeSLhZUvxFYrzV1sH3Xd1rrVR2giNnis0tG8TsevUhu76oa3XXBXq3LkPOaMqVItDacETqYNmv9pQ=="],
+    "@mkvlrn/config": ["@mkvlrn/config@0.4.7", "", {}, "sha512-5zDi7V1pYfZkUx5WxYvhux6s3lJO2tjeWQvIs1adtbKWDEL2kthzrv81gbIBVUnwBCQOJYfL5gCy4SeCFIfDUg=="],
 
     "@oxc-project/types": ["@oxc-project/types@0.143.0", "", {}, "sha512-u6JZdLBTLotrNC9Vd6vPssINdzcCzleKAH6EJKImQb7GtYvX5keN2dxkoK44stCc4tffE6QQRtZTXVSzsLUlWA=="],
 
