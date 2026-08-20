@@ -5,12 +5,14 @@
 [![mise](https://mise-versions.jdx.dev/badge.svg)](https://mise.jdx.dev)
 ![license](https://img.shields.io/github/license/mkvlrn/template-node?style=flat)
 
-A sane, opinionated template for esm node projects written in typescript that doesn't rely on transpilation - typescript is executed directly by node.
+A sane, opinionated template for esm node projects written in typescript that doesn't rely on transpilation - typescript is ran directly by node.
 
-> [!NOTE]
-> This template uses [arch-devcontainer](https://github.com/mkvlrn/arch-devcontainer) to provide a consistent development environment with Arch Linux and [mise](https://mise.jdx.dev) preconfigured.
+> [!CAUTION]
+> This template use [mise](https://mise.jdx.dev) as tool manager and task runner.
 >
-> You can use the template directly with a devcontainer-compatible editor such as VS Code, or start it from the command line with `./.devcontainer/start.sh`.
+> You _**need to have it [installed](https://mise.jdx.dev/installing-mise.html)**_, so everything is in sync correctly and development runs smoothly. Start [here](https://mise.jdx.dev/getting-started.html) if you don't know what this means.
+>
+> If you're looking for something not as opinionated, there are plenty of other templates around. This is about tight tool integration and good defaults.
 
 Uses, among other tools/packages:
 
@@ -22,18 +24,22 @@ Uses, among other tools/packages:
 
 ## requirements and dependencies
 
-You need [Docker](https://www.docker.com/) and a devcontainer-compatible editor or the [Dev Container CLI](https://github.com/devcontainers/cli) to get started.
+As noted at the top, you need [mise](https://mise.jdx.dev) to get started with this template. Run `mise install` in the project root, you'll have the correct versions of various tools in the repository directory.
 
-The development environment is provided by [arch-devcontainer](https://github.com/mkvlrn/arch-devcontainer), which includes mise, which will be managing most of the tooling in this template.
+This is _by far_ the easiest way to keep your environment consistent across different machines and team members, no matter the frequency of version updates.
 
-Once the devcontainer is running, you can install the Node dependencies with `bun install`.
+Once the tooling is installed, you can install the node dependencies with bun:
+
+```bash
+bun install
+```
 
 > [!NOTE]
 > Git hooks are in place to make sure both the tooling managed by mise and the project dependencies are synced with each checkout and merge.
 
 ## subpath imports
 
-Subpath imports (`#/`) are used instead of relative paths, mapped via the `imports` field in `package.json` (allowing native Node resolution at runtime without extra build tools) and mirrored in `tsconfig.json` for IDE support.
+Subpath imports (`#/`) are used instead of relative paths, mapped in both `package.json` and `tsconfig.json`.
 
 **Example**:
 
