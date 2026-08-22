@@ -1,5 +1,5 @@
 {
-  "extends": ["@mkvlrn/config/tsconfig"],
+  "extends": ["@mkvlrn/config-test/tsconfig.json"],
   "compilerOptions": {
     "noEmit": true,
     "paths": {

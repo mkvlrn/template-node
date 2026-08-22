@@ -22,8 +22,8 @@
       "version": "26.7.0"
     },
     "packageManager": {
-      "name": "bun",
-      "version": "1.4.0"
+      "name": "pnpm",
+      "version": "11.22.0"
     }
   },
   "imports": {
@@ -31,6 +31,7 @@
   },
   "devDependencies": {
     "@mkvlrn/config": "0.4.7",
+    "@mkvlrn/config-test": "mkvlrn/config-test#2026.8.2",
     "@types/node": "26.2.0",
     "@vitest/coverage-v8": "4.1.11",
     "typescript": "7.0.2",
