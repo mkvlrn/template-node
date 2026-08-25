@@ -11,9 +11,6 @@ importers:
       '@mkvlrn/config':
         specifier: 0.5.1
         version: 0.5.1
-      '@mkvlrn/config-test':
-        specifier: mkvlrn/config-test#2026.8.2
-        version: https://codeload.github.com/mkvlrn/config-test/tar.gz/90c5da099c01b53127cf8b034abe68bcb94bbdce
       '@types/node':
         specifier: 26.2.0
         version: 26.2.0
@@ -59,10 +56,6 @@ packages:
 
   '@jridgewell/trace-mapping@0.3.31':
     resolution: {integrity: sha512-zzNR+SdQSDJzc8joaeP8QQoCQr8NuYx2dIIytl1QeBEZHJ9uW6hebsrYgbz8hJwUQao3TWCMtmfV8Nu1twOLAw==}
-
-  '@mkvlrn/config-test@https://codeload.github.com/mkvlrn/config-test/tar.gz/90c5da099c01b53127cf8b034abe68bcb94bbdce':
-    resolution: {gitHosted: true, integrity: sha512-C+OuWOpYZR6exTxpm2iwYkH66fT/i53974NnFG7gwP+SlFYPn2sz6G4SgzvhcZQyRM0ndwZ6vQdcmpXJDPtu1A==, tarball: https://codeload.github.com/mkvlrn/config-test/tar.gz/90c5da099c01b53127cf8b034abe68bcb94bbdce}
-    version: 0.0.0
 
   '@mkvlrn/config@0.5.1':
     resolution: {integrity: sha512-ltbSjkMxhRQB7p1IuOPmtJG+ZG4V+Y2LrP1vnMQBE1jlvBI3QMP52cUBf0RL0TIiPurC8xxoSeiAW4k7ArDS9w==}
@@ -677,8 +670,6 @@ snapshots:
     dependencies:
       '@jridgewell/resolve-uri': 3.1.2
       '@jridgewell/sourcemap-codec': 1.5.5
-
-  '@mkvlrn/config-test@https://codeload.github.com/mkvlrn/config-test/tar.gz/90c5da099c01b53127cf8b034abe68bcb94bbdce': {}
 
   '@mkvlrn/config@0.5.1': {}
 
