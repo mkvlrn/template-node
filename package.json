@@ -30,8 +30,7 @@
     "#/*": "./src/*.ts"
   },
   "devDependencies": {
-    "@mkvlrn/config": "0.4.7",
-    "@mkvlrn/config-test": "mkvlrn/config-test#2026.8.2",
+    "@mkvlrn/config": "0.5.1",
     "@types/node": "26.2.0",
     "@vitest/coverage-v8": "4.1.11",
     "typescript": "7.0.2",

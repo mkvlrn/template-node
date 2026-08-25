@@ -9,8 +9,8 @@ importers:
   .:
     devDependencies:
       '@mkvlrn/config':
-        specifier: 0.4.7
-        version: 0.4.7
+        specifier: 0.5.1
+        version: 0.5.1
       '@mkvlrn/config-test':
         specifier: mkvlrn/config-test#2026.8.2
         version: https://codeload.github.com/mkvlrn/config-test/tar.gz/90c5da099c01b53127cf8b034abe68bcb94bbdce
@@ -61,11 +61,11 @@ packages:
     resolution: {integrity: sha512-zzNR+SdQSDJzc8joaeP8QQoCQr8NuYx2dIIytl1QeBEZHJ9uW6hebsrYgbz8hJwUQao3TWCMtmfV8Nu1twOLAw==}
 
   '@mkvlrn/config-test@https://codeload.github.com/mkvlrn/config-test/tar.gz/90c5da099c01b53127cf8b034abe68bcb94bbdce':
-    resolution: {gitHosted: true, tarball: https://codeload.github.com/mkvlrn/config-test/tar.gz/90c5da099c01b53127cf8b034abe68bcb94bbdce}
+    resolution: {gitHosted: true, integrity: sha512-C+OuWOpYZR6exTxpm2iwYkH66fT/i53974NnFG7gwP+SlFYPn2sz6G4SgzvhcZQyRM0ndwZ6vQdcmpXJDPtu1A==, tarball: https://codeload.github.com/mkvlrn/config-test/tar.gz/90c5da099c01b53127cf8b034abe68bcb94bbdce}
     version: 0.0.0
 
-  '@mkvlrn/config@0.4.7':
-    resolution: {integrity: sha512-5zDi7V1pYfZkUx5WxYvhux6s3lJO2tjeWQvIs1adtbKWDEL2kthzrv81gbIBVUnwBCQOJYfL5gCy4SeCFIfDUg==}
+  '@mkvlrn/config@0.5.1':
+    resolution: {integrity: sha512-ltbSjkMxhRQB7p1IuOPmtJG+ZG4V+Y2LrP1vnMQBE1jlvBI3QMP52cUBf0RL0TIiPurC8xxoSeiAW4k7ArDS9w==}
 
   '@oxc-project/types@0.146.0':
     resolution: {integrity: sha512-XC0QsnnhVe7sLIWmYmdPw7x5P0h4W8vUU3Nv1ySgWXtvCz8NizoAEpGXA0sOYoJQV2Rl13LgURAHQ5cI5ILCSA==}
@@ -680,7 +680,7 @@ snapshots:
 
   '@mkvlrn/config-test@https://codeload.github.com/mkvlrn/config-test/tar.gz/90c5da099c01b53127cf8b034abe68bcb94bbdce': {}
 
-  '@mkvlrn/config@0.4.7': {}
+  '@mkvlrn/config@0.5.1': {}
 
   '@oxc-project/types@0.146.0': {}
 
