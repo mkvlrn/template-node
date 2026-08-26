@@ -3,7 +3,7 @@ biome = "2.5.10"
 cocogitto = "7.0.0"
 lefthook = "2.1.11"
 node = "26.7.0"
-pnpm = "11.23.0"
+pnpm = "11.24.0"
 
 [hooks]
 postinstall = "lefthook install"
