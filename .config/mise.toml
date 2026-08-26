@@ -39,4 +39,4 @@ description = "Run vitest in ci mode"
 run = "vitest --bail=1 --reporter=github-actions"
 [tasks.sync-branch]
 description = "Sync package manager deps"
-run = '[ -n "$CI" ] ||mise install && mise prune -y && pnpm install --frozen-lockfile && lefthook install"'
+run = "mise install && mise prune -y && pnpm install --frozen-lockfile && lefthook install"
