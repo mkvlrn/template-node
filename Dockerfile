@@ -1,12 +1,12 @@
-FROM node:24.19.0-alpine@sha256:d32cdf619f63fe0471182d08996dd516c6275bb5fd31ae06e55a570bd9e1ad43
+FROM node:26.8.1-alpine@sha256:50c3b2f6988dfc307b86e5301d69611af31f4789bdf232863b07d3b02fe55ae0
 
 WORKDIR /app
 ENV NODE_ENV=production
 
 COPY package.json ./
-RUN npm i -g bun
-COPY bun.lock bunfig.toml ./
-RUN bun install --frozen-lockfile --production --ignore-scripts
+RUN npm i -g pnpm
+COPY pnpm-*.yaml ./
+RUN pnpm install --frozen-lockfile --prod --ignore-scripts
 COPY src/ ./src/
 USER node
 
