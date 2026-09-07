@@ -69,16 +69,6 @@ It automates:
 - **Type Checking**: Running TypeScript type checking.
 - **Testing**: Running Vitest, halting the workflow at the first test failure.
 
-## vscode
-
-You might want to install the recommended extensions in vscode. Search for **@recommended** in the extensions tab, they'll show up as _"workspace recommendations"_.
-
-If you have been using eslint and prettier and their extensions, you might want to disable eslint entirely and keep prettier as the formatter only for certain types of files.
-
-This is done by the `.vscode/settings.json` file.
-
-Debug configuration is also included for running the source directly with node.
-
 ## license
 
 [MIT](https://github.com/mkvlrn/template-node?tab=MIT-1-ov-file#)
