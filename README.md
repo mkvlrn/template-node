@@ -1,9 +1,9 @@
 # template-node
 
-![ci](https://img.shields.io/github/actions/workflow/status/mkvlrn/template-node/checks.yml?branch=main&style=flat&logo=github)
+[![ci](https://img.shields.io/github/actions/workflow/status/mkvlrn/template-node/checks.yml?branch=main&style=flat&logo=github&label=ci)](https://github.com/mkvlrn/template-node/actions/workflows/checks.yml?query=branch%3Amain)
 [![template](https://img.shields.io/badge/template-use_this_template-2ea44f?style=flat&logo=github)](https://github.com/mkvlrn/template-node/generate)
 [![mise](https://mise-versions.jdx.dev/badge.svg)](https://mise.jdx.dev)
-![license](https://img.shields.io/github/license/mkvlrn/template-node?style=flat)
+[![license](https://img.shields.io/github/license/mkvlrn/template-node?style=flat)](https://github.com/mkvlrn/template-node?tab=MIT-1-ov-file#)
 
 A sane, opinionated template for esm node projects written in typescript that doesn't rely on transpilation - typescript is executed directly by node.
 
@@ -81,4 +81,4 @@ Debug configuration is also included for running the source directly with node.
 
 ## license
 
-MIT
+[MIT](https://github.com/mkvlrn/template-node?tab=MIT-1-ov-file#)
