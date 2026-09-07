@@ -3,42 +3,54 @@
 [![ci](https://img.shields.io/github/actions/workflow/status/mkvlrn/template-node/checks.yml?branch=main&style=flat&logo=github&label=ci)](https://github.com/mkvlrn/template-node/actions/workflows/checks.yml?query=branch%3Amain)
 [![template](https://img.shields.io/badge/template-use_this_template-2ea44f?style=flat&logo=github)](https://github.com/mkvlrn/template-node/generate)
 [![mise](https://mise-versions.jdx.dev/badge.svg)](https://mise.jdx.dev)
-[![license](https://img.shields.io/github/license/mkvlrn/template-node?style=flat)](https://github.com/mkvlrn/template-node?tab=MIT-1-ov-file#)
+[![license](https://img.shields.io/github/license/mkvlrn/template-node?style=flat)](https://github.com/mkvlrn/template-node/blob/main/LICENSE)
 
-A sane, opinionated template for esm node projects written in typescript that doesn't rely on transpilation - typescript is executed directly by node.
+A sane, opinionated template for ESM Node.js projects written in TypeScript without a transpilation step — TypeScript is executed directly by Node.js.
 
 > [!NOTE]
-> This template uses [arch-devcontainer](https://github.com/mkvlrn/arch-devcontainer) to provide a consistent development environment with Arch Linux and [mise](https://mise.jdx.dev) preconfigured.
+> This template includes an Arch Linux Dev Container based on [mise-devcontainers](https://github.com/mkvlrn/mise-devcontainers), providing a consistent development environment with [mise](https://mise.jdx.dev) preconfigured.
 >
-> You can use the template directly with a devcontainer-compatible editor such as VS Code, or start it from the command line with `./.devcontainer/start.sh`.
+> `mise` manages the project-specific runtimes, tools, and tasks inside the container, so it does not need to be installed on the host.
 
 Uses, among other tools/packages:
 
-- [pnpm](https://github.com/pnpm/pnpm) as package manager for node dependencies
-- [biome](https://github.com/biomejs/biome) for code linting and formatting
-- [lefthook](https://github.com/evilmartians/lefthook) for git hooks
-- [cocogitto](https://github.com/cocogitto/cocogitto) for commit message linting
-- [vitest](https://github.com/vitest-dev/vitest) for testing
+- [pnpm](https://github.com/pnpm/pnpm) as package manager
+- [Biome](https://github.com/biomejs/biome) for linting and formatting
+- [Lefthook](https://github.com/evilmartians/lefthook) for Git hooks
+- [Cocogitto](https://github.com/cocogitto/cocogitto) for commit message linting
+- [Vitest](https://github.com/vitest-dev/vitest) for testing
 
 ## requirements and dependencies
 
-You need [Docker](https://www.docker.com/) and a devcontainer-compatible editor or the [Dev Container CLI](https://github.com/devcontainers/cli) to get started.
+To use the included Dev Container you need:
 
-The development environment is provided by [arch-devcontainer](https://github.com/mkvlrn/arch-devcontainer), which includes mise, which will be managing most of the tooling in this template.
+- Docker or a compatible container runtime
+- a Dev Container-compatible editor or the [Dev Container CLI](https://github.com/devcontainers/cli)
+- an SSH agent exposed through `SSH_AUTH_SOCK` with at least one key loaded
 
-Once the devcontainer is running, you can install the Node dependencies with `pnpm install`.
+The SSH agent is forwarded into the container for Git authentication and commit signing. Private keys remain on the host.
+
+Once inside the container, install the project dependencies:
+
+```sh
+pnpm install
+```
+
+The project-specific runtimes and development tools are managed by `mise`.
+
+If you prefer not to use the Dev Container, install [mise](https://mise.jdx.dev) locally and run `mise install` before installing the project dependencies.
 
 > [!NOTE]
-> Git hooks are in place to make sure both the tooling managed by mise and the project dependencies are synced with each checkout and merge.
+> Git hooks keep the tooling managed by mise and the project dependencies synchronized after checkouts and merges.
 
 ## subpath imports
 
-Subpath imports (`#/`) are used instead of relative paths, mapped via the `imports` field in `package.json` (allowing native Node resolution at runtime without extra build tools) and mirrored in `tsconfig.json` for IDE support.
+Subpath imports (`#/`) are used instead of relative paths. They are mapped through the `imports` field in `package.json`, allowing native Node.js resolution at runtime without additional build tooling, and mirrored in `tsconfig.json` for editor support.
 
-**Example**:
+Example:
 
 ```ts
-import { add } from "#/lib/math"; // this points to ./src/lib/math.ts
+import { add } from "#/lib/math"; // ./src/lib/math.ts
 ```
 
 ## running
@@ -49,26 +61,26 @@ Runs the project in watch mode.
 
 ### `mise test`
 
-Runs tests.
+Runs the tests.
 
 ### `mise lint-fix`
 
-Runs biome in fix mode to lint and format the project.
+Runs Biome in fix mode to lint and format the project.
 
 ### `mise typecheck`
 
-Runs type checking using tsc.
+Runs TypeScript type checking.
 
 ## ci
 
-This repository uses GitHub Actions for CI. The workflow is defined in `.github/workflows/checks.yml`.
+CI is provided by GitHub Actions through [`.github/workflows/checks.yml`](https://github.com/mkvlrn/template-node/blob/main/.github/workflows/checks.yml).
 
-It automates:
+It runs:
 
-- **Linting & Formatting**: Running Biome.
-- **Type Checking**: Running TypeScript type checking.
-- **Testing**: Running Vitest, halting the workflow at the first test failure.
+- Biome linting and formatting checks
+- TypeScript type checking
+- Vitest tests
 
 ## license
 
-[MIT](https://github.com/mkvlrn/template-node?tab=MIT-1-ov-file#)
+[MIT](https://github.com/mkvlrn/template-node/blob/main/LICENSE)
