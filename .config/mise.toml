@@ -22,32 +22,32 @@ run = "node --watch src/main.ts"
 
 [tasks.lint]
 description = "Check files with biome"
-run = "biome check --diagnostic-level=warn --no-errors-on-unmatched"
+run = "mise exec -- biome check --no-errors-on-unmatched"
 
 [tasks.lint-fix]
 description = "Fix files with biome"
-run = "biome check --diagnostic-level=warn --no-errors-on-unmatched --write"
+run = "mise exec -- biome check --no-errors-on-unmatched --write"
 
 [tasks.typecheck]
 description = "Run tsc"
-run = "tsc"
+run = "mise exec -- tsc"
 
 [tasks.test]
 description = "Run vitest"
-run = "vitest --coverage"
+run = "mise exec -- vitest --coverage"
 
 [tasks.test-staged]
 description = "Run vitest on staged files"
-run = "vitest related --bail=1 --reporter=github-actions"
+run = "mise exec -- vitest related --bail=1 --reporter=github-actions"
 
 [tasks.test-ci]
 description = "Run vitest in ci mode"
-run = "vitest --bail=1 --reporter=github-actions"
+run = "mise exec -- vitest --bail=1 --reporter=github-actions"
 
 [tasks.sync-branch]
 description = "Sync package manager deps"
 run = """
 mise install
 mise prune -y
-pnpm install --frozen-lockfile
+mise exec -- pnpm install --frozen-lockfile
 """
