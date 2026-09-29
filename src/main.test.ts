@@ -1,12 +1,24 @@
-import { expect, test, vi } from "vitest";
+import { describe, expect, test, vi } from "vitest";
+import { main } from "#/main";
 
-test("should output to console twice", async () => {
-  const logSpy = vi.spyOn(console, "log").mockImplementation(() => ({}));
+describe("main", () => {
+  test("should output the calculation result", () => {
+    const logSpy = vi.spyOn(console, "log").mockImplementation(() => ({}));
 
-  await import("./main");
+    main(["bun", "src/main.ts", "2 + 2"]);
 
-  expect(logSpy).toHaveBeenCalledTimes(2);
-  expect(logSpy.mock.calls).toEqual([["1 + 2 = 3"], ["10 / 2 = 5"]]);
+    expect(logSpy.mock.calls).toEqual([["Calculating: 2 + 2"], ["Result: 4"]]);
 
-  logSpy.mockRestore();
+    logSpy.mockRestore();
+  });
+
+  test("should output an error for an invalid expression", () => {
+    const errorSpy = vi.spyOn(console, "error").mockImplementation(() => ({}));
+
+    main(["bun", "src/main.ts", "2 +"]);
+
+    expect(errorSpy).toHaveBeenCalledWith("Error: Invalid expression: 2 +");
+
+    errorSpy.mockRestore();
+  });
 });
