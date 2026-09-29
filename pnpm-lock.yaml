@@ -18,8 +18,8 @@ importers:
         specifier: 21.2.3
         version: 21.2.3
       '@mkvlrn/config':
-        specifier: 0.8.0
-        version: 0.8.0
+        specifier: 0.9.0
+        version: 0.9.0
       '@types/node':
         specifier: 26.6.3
         version: 26.6.3
@@ -215,8 +215,8 @@ packages:
   '@jridgewell/trace-mapping@0.3.31':
     resolution: {integrity: sha512-zzNR+SdQSDJzc8joaeP8QQoCQr8NuYx2dIIytl1QeBEZHJ9uW6hebsrYgbz8hJwUQao3TWCMtmfV8Nu1twOLAw==}
 
-  '@mkvlrn/config@0.8.0':
-    resolution: {integrity: sha512-0dGNewnlv9vnTxWLBEmkmrYWiJTWJ83t7gcaS884mDbLyLhhASLJ7J2rkWlsLAtdpp3zTM4ogKaLeOF0eCi0Sg==}
+  '@mkvlrn/config@0.9.0':
+    resolution: {integrity: sha512-XwpSme82appTU0+qummQA4Fl1nElMCy3F99fU46QvQZZuQYMfJtabnHlAIEfbS9Bc5ZwzqYQji3L3uwBWiJpfg==}
 
   '@oxc-project/types@0.151.0':
     resolution: {integrity: sha512-J1yXrIlNDZVzE3ada310xeAw7nH8yCAyLPuUIsjKatFPmfn5bS1oW+cM+QsGOtVWd5nhSpbwZWx/rue+r5Z+PA==}
@@ -1177,7 +1177,7 @@ snapshots:
       '@jridgewell/resolve-uri': 3.1.2
       '@jridgewell/sourcemap-codec': 1.6.0
 
-  '@mkvlrn/config@0.8.0': {}
+  '@mkvlrn/config@0.9.0': {}
 
   '@oxc-project/types@0.151.0': {}
 
