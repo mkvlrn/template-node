@@ -30,9 +30,13 @@
     "#/*": "./src/*.ts"
   },
   "devDependencies": {
-    "@mkvlrn/config": "0.7.0",
+    "@biomejs/biome": "2.5.14",
+    "@commitlint/cli": "21.2.3",
+    "@commitlint/config-conventional": "21.2.3",
+    "@mkvlrn/config": "0.8.0",
     "@types/node": "26.6.3",
     "@vitest/coverage-v8": "5.0.2",
+    "lefthook": "2.1.14",
     "typescript": "7.0.2",
     "vitest": "5.0.2"
   }
