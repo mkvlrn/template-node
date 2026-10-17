@@ -19,8 +19,8 @@ suite("calculator success", () => {
   const testCases: TestCase[] = [
     { expected: 4, expression: "2 + 2" },
     { expected: 2, expression: "5 - 3" },
-    { expected: 12, expression: "4 * 3" },
-    { expected: -5, expression: "10 / -2" },
+    { expected: 12, expression: "4* 3" },
+    { expected: -5, expression: "10 /-2" },
     { expected: 1, expression: "2.5 + -1.5" },
     { expected: 4.7, expression: "3.5 - -1.2" },
     { expected: -10, expression: "2.5 * -4" },

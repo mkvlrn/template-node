@@ -1,27 +1,28 @@
 import * as math from "#/lib/math";
 
-const OPERATORS = ["+", "-", "*", "/"] as const;
+type Operator = "+" | "-" | "*" | "/";
 
-type Operator = (typeof OPERATORS)[number];
+// Grammar: <number> <operator> <number>, where a number may have a leading sign and decimals.
+const NUMBER = String.raw`[+-]?(?:\d+(?:\.\d*)?|\.\d+)`;
+const EXPRESSION_REGEX = new RegExp(
+  `^(?<left>${NUMBER})\\s*(?<operator>[+\\-*/])\\s*(?<right>${NUMBER})$`,
+  "u",
+);
 
 function parseExpression(expression: string): [number, Operator, number] {
-  const expressionRegex =
-    /^(?<left>[+-]?(?:\d+(?:\.\d*)?|\.\d+))\s*(?<operator>[+\-*/])\s*(?<right>[+-]?(?:\d+(?:\.\d*)?|\.\d+))$/u;
-  const match = expressionRegex.exec(expression.trim());
+  const match = EXPRESSION_REGEX.exec(expression.trim());
   if (!match || !match.groups) {
     throw new TypeError(`Invalid expression: ${expression}`);
   }
 
   const { left, operator, right } = match.groups;
-  const op = OPERATORS.find((opString) => opString === operator);
-  if (left === undefined || op === undefined || right === undefined) {
-    throw new TypeError(`Invalid expression: ${expression}`);
-  }
 
-  return [Number(left), op, Number(right)];
+  // The regex's character class guarantees the operator is one of the four below.
+  // oxlint-disable-next-line typescript/no-unsafe-type-assertion
+  return [Number(left), operator as Operator, Number(right)];
 }
 
-export function calculate(expression: string): number {
+function calculate(expression: string): number {
   const operations: Record<Operator, (left: number, right: number) => number> = {
     "*": math.multiply,
     "+": math.add,
@@ -32,3 +33,5 @@ export function calculate(expression: string): number {
 
   return operations[operator](left, right);
 }
+
+export { calculate };
