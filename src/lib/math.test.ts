@@ -1,34 +1,44 @@
-import { describe, expect, test } from "vitest";
+import { describe, expect, it, vi } from "vite-plus/test";
 import * as math from "#/lib/math";
 
 interface TestCase {
-  a: number;
-  b: number;
-  op: (a: number, b: number) => number;
+  left: number;
+  right: number;
+  op: (left: number, right: number) => number;
   expected: number;
 }
 
+vi.setConfig({
+  testTimeout: 1000,
+});
+
 describe("math success", () => {
   const testCases: TestCase[] = [
-    { a: 2, b: 2, op: math.add, expected: 4 },
-    { a: 2, b: 2, op: math.subtract, expected: 0 },
-    { a: 2, b: 2, op: math.multiply, expected: 4 },
-    { a: 2, b: 2, op: math.divide, expected: 1 },
+    { expected: 4, left: 2, op: math.add, right: 2 },
+    { expected: 0, left: 2, op: math.subtract, right: 2 },
+    { expected: 4, left: 2, op: math.multiply, right: 2 },
+    { expected: 1, left: 2, op: math.divide, right: 2 },
   ];
 
-  test.each(testCases)("$op.name($a, $b) should return $expected", ({ a, b, op, expected }) => {
-    const result = op(a, b);
+  it.each(testCases)(
+    "$op.name($left, $right) should return $expected",
+    ({ left, right, op, expected }) => {
+      expect.hasAssertions();
 
-    expect(expected).toEqual(result);
-  });
+      const result = op(left, right);
+
+      expect(expected).toStrictEqual(result);
+    },
+  );
 });
 
 describe("math failure", () => {
-  test("division by zero should thrown an error", () => {
+  it("division by zero should thrown an error", () => {
+    expect.hasAssertions();
     const expected = new Error("cannot divide by zero");
 
-    const act = () => math.divide(2, 0);
+    const { left, right } = { left: 2, right: 0 };
 
-    expect(act).toThrow(expected);
+    expect(() => math.divide(left, right)).toThrow(expected);
   });
 });

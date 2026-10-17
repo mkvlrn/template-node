@@ -1,19 +1,25 @@
-import { describe, expect, test, vi } from "vitest";
+import { describe, expect, it, vi } from "vite-plus/test";
 import { main } from "#/main";
 
-describe("main", () => {
-  test("should output the calculation result", () => {
-    const logSpy = vi.spyOn(console, "log").mockImplementation(() => ({}));
+vi.setConfig({
+  testTimeout: 1000,
+});
+
+describe("main function", () => {
+  it("should output the calculation result", () => {
+    expect.hasAssertions();
+    const logSpy = vi.spyOn(console, "info").mockReturnValue(undefined);
 
     main(["node", "src/main.ts", "2 + 2"]);
 
-    expect(logSpy.mock.calls).toEqual([["Calculating: 2 + 2"], ["Result: 4"]]);
+    expect(logSpy.mock.calls).toStrictEqual([["Calculating: 2 + 2"], ["Result: 4"]]);
 
     logSpy.mockRestore();
   });
 
-  test("should output an error for an invalid expression", () => {
-    const errorSpy = vi.spyOn(console, "error").mockImplementation(() => ({}));
+  it("should output an error for an invalid expression", () => {
+    expect.hasAssertions();
+    const errorSpy = vi.spyOn(console, "error").mockReturnValue(undefined);
 
     main(["node", "src/main.ts", "2 +"]);
 

@@ -15,10 +15,10 @@ A sane, opinionated template for ESM Node.js projects written in TypeScript with
 Uses, among other tools/packages:
 
 - [pnpm](https://github.com/pnpm/pnpm) as package manager
-- [Biome](https://github.com/biomejs/biome) for linting and formatting
+- [Vite+](https://github.com/voidzero-dev/vite-plus) (`vp`) for linting, formatting, and testing
 - [Lefthook](https://github.com/evilmartians/lefthook) for Git hooks
-- [Commitlint](https://commitlint.js.org) with [config-conventional](https://github.com/conventional-changelog/commitlint/tree/master/@commitlint/config-conventional) for commit message linting
-- [Vitest](https://github.com/vitest-dev/vitest) for testing
+- [Commitlint](https://github.com/conventional-changelog/commitlint) with [config-conventional](https://github.com/conventional-changelog/commitlint/tree/master/@commitlint/config-conventional) for commit message linting
+- [Vitest](https://github.com/vitest-dev/vitest) (through Vite+) for testing
 
 ## requirements and dependencies
 
@@ -66,15 +66,29 @@ Runs the project in watch mode.
 
 ### `mise run test`
 
-Runs the tests.
+Runs the tests with coverage.
 
-### `mise run lint-fix`
+Options:
 
-Runs Biome in fix mode to lint and format the project.
+- `--ci`: runs without coverage, bails on the first failure, and uses the GitHub Actions reporter
+- `--staged`: runs only the tests related to staged files, with the same bail and reporter settings
 
-### `mise run typecheck`
+```sh
+mise run test -- --ci
+```
 
-Runs TypeScript type checking.
+### `mise run check`
+
+Runs Vite+ checks (`vp check`) over the project, or over the given file paths.
+
+Options:
+
+- `--fix`: applies fixes and formatting in place
+- file paths: limits the check to those files
+
+```sh
+mise run check -- --fix src/main.ts
+```
 
 ## ci
 
@@ -82,9 +96,8 @@ CI is provided by GitHub Actions through [`.github/workflows/checks.yml`](https:
 
 It runs:
 
-- Biome linting and formatting checks
-- TypeScript type checking
-- Vitest tests
+- Vite+ checks (`mise run check`)
+- Vitest tests in CI mode (`mise run test -- --ci`)
 
 ## license
 

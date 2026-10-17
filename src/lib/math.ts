@@ -1,19 +1,23 @@
-export function add(a: number, b: number): number {
-  return a + b;
+const ZERO = 0;
+
+function add(left: number, right: number): number {
+  return left + right;
 }
 
-export function subtract(a: number, b: number): number {
-  return a - b;
+function subtract(left: number, right: number): number {
+  return left - right;
 }
 
-export function multiply(a: number, b: number): number {
-  return a * b;
+function multiply(left: number, right: number): number {
+  return left * right;
 }
 
-export function divide(a: number, b: number): number {
-  if (b === 0) {
+function divide(left: number, right: number): number {
+  if (right === ZERO) {
     throw new Error("cannot divide by zero");
   }
 
-  return a / b;
+  return left / right;
 }
+
+export { add, subtract, multiply, divide };

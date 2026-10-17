@@ -1,34 +1,34 @@
 import * as math from "#/lib/math";
 
-type Operator = "+" | "-" | "*" | "/";
+const OPERATORS = ["+", "-", "*", "/"] as const;
 
-const EXPRESSION_RE =
-  /^([+-]?(?:\d+(?:\.\d*)?|\.\d+))\s*([+\-*/])\s*([+-]?(?:\d+(?:\.\d*)?|\.\d+))$/;
-
-export function calculate(expression: string): number {
-  const [left, operator, right] = parseExpression(expression);
-
-  // biome-ignore lint/style/useDefaultSwitchClause: regex ensures that the operator is valid andone of the four supported operators
-  switch (operator) {
-    case "+":
-      return math.add(left, right);
-    case "-":
-      return math.subtract(left, right);
-    case "*":
-      return math.multiply(left, right);
-    case "/":
-      return math.divide(left, right);
-  }
-}
+type Operator = (typeof OPERATORS)[number];
 
 function parseExpression(expression: string): [number, Operator, number] {
-  const match = expression.match(EXPRESSION_RE);
-  if (!match) {
-    throw new Error(`Invalid expression: ${expression}`);
+  const expressionRegex =
+    /^(?<left>[+-]?(?:\d+(?:\.\d*)?|\.\d+))\s*(?<operator>[+\-*/])\s*(?<right>[+-]?(?:\d+(?:\.\d*)?|\.\d+))$/u;
+  const match = expressionRegex.exec(expression.trim());
+  if (!match || !match.groups) {
+    throw new TypeError(`Invalid expression: ${expression}`);
   }
 
-  const [, left, operator, right] = match;
+  const { left, operator, right } = match.groups;
+  const op = OPERATORS.find((opString) => opString === operator);
+  if (left === undefined || op === undefined || right === undefined) {
+    throw new TypeError(`Invalid expression: ${expression}`);
+  }
 
-  // biome-ignore lint/style/noNonNullAssertion: regex match ensures all values are present and valid
-  return [Number.parseFloat(left!), operator as Operator, Number.parseFloat(right!)];
+  return [Number(left), op, Number(right)];
+}
+
+export function calculate(expression: string): number {
+  const operations: Record<Operator, (left: number, right: number) => number> = {
+    "*": math.multiply,
+    "+": math.add,
+    "-": math.subtract,
+    "/": math.divide,
+  };
+  const [left, operator, right] = parseExpression(expression);
+
+  return operations[operator](left, right);
 }

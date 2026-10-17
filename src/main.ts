@@ -1,20 +1,25 @@
-/** biome-ignore-all lint/suspicious/noConsole: needed, yo */
-
+// oxlint-disable no-console
 import process from "node:process";
 import * as calculator from "#/lib/calculator";
 
-export function main(argv: readonly string[] = process.argv): void {
-  const expression = argv[2] ?? "2 + 2";
+const EXPRESSION_INDEX = 2;
 
-  console.log(`Calculating: ${expression}`);
+function main(argv: readonly string[] = process.argv): void {
+  const expression = argv[EXPRESSION_INDEX] ?? "2 + 2";
+
+  console.info(`Calculating: ${expression}`);
 
   try {
-    console.log(`Result: ${calculator.calculate(expression)}`);
+    console.info(`Result: ${calculator.calculate(expression)}`);
   } catch (error) {
-    console.error(`Error: ${(error as Error).message}`);
+    if (error instanceof Error) {
+      console.error(`Error: ${error.message}`);
+    }
   }
 }
 
 if (import.meta.main) {
   main();
 }
+
+export { main };
