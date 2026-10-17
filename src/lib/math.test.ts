@@ -24,7 +24,7 @@ describe("math success", () => {
 });
 
 describe("math failure", () => {
-  test("division by zshould throw an errorould", () => {
+  test("division by zero should thrown an error", () => {
     const expected = new Error("cannot divide by zero");
 
     const act = () => math.divide(2, 0);
