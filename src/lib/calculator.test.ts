@@ -1,8 +1,18 @@
 import { describe, expect, test } from "vitest";
-import { calculate } from "#/lib/calculator";
+import * as calculator from "#/lib/calculator";
+
+interface TestCase {
+  expression: string;
+  expected: number;
+}
+
+interface ErrorTestCase {
+  expression: string;
+  errorMessage: string;
+}
 
 describe("calculator success", () => {
-  const testCases: { expression: string; expected: number }[] = [
+  const testCases: TestCase[] = [
     { expression: "2 + 2", expected: 4 },
     { expression: "5 - 3", expected: 2 },
     { expression: "4 * 3", expected: 12 },
@@ -17,14 +27,14 @@ describe("calculator success", () => {
     // biome-ignore lint/security/noSecrets: false positive
     "calculate($expression) should return $expected",
     ({ expression, expected }) => {
-      const result = calculate(expression);
+      const result = calculator.calculate(expression);
       expect(result).toBe(expected);
     },
   );
 });
 
 describe("calculator failure", () => {
-  const testCases: { expression: string; errorMessage: string }[] = [
+  const testCases: ErrorTestCase[] = [
     { expression: "2 +", errorMessage: "Invalid expression: 2 +" },
     { expression: "+ 2", errorMessage: "Invalid expression: + 2" },
     { expression: "2 / 0", errorMessage: "cannot divide by zero" },
@@ -37,8 +47,8 @@ describe("calculator failure", () => {
     // biome-ignore lint/security/noSecrets: false positive
     "calculate($expression) should throw an error",
     ({ expression, errorMessage }) => {
-      expect(() => calculate(expression)).toThrow();
-      expect(() => calculate(expression)).toThrowError(errorMessage);
+      expect(() => calculator.calculate(expression)).toThrow();
+      expect(() => calculator.calculate(expression)).toThrow(errorMessage);
     },
   );
 });
