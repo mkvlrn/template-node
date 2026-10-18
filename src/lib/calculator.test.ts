@@ -1,4 +1,4 @@
-import { describe, expect, it, suite, vi } from "vite-plus/test";
+import { describe, expect, it, vi } from "vite-plus/test";
 import * as calculator from "#/lib/calculator";
 
 interface TestCase {
@@ -15,7 +15,7 @@ vi.setConfig({
   testTimeout: 1000,
 });
 
-suite("calculator success", () => {
+describe("calculator success", () => {
   const testCases: TestCase[] = [
     { expected: 4, expression: "2 + 2" },
     { expected: 2, expression: "5 - 3" },

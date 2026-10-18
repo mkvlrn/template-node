@@ -30,8 +30,9 @@ function calculate(expression: string): number {
     "/": math.divide,
   };
   const [left, operator, right] = parseExpression(expression);
+  const operation = operations[operator];
 
-  return operations[operator](left, right);
+  return operation(left, right);
 }
 
 export { calculate };
