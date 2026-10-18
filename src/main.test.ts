@@ -23,7 +23,10 @@ describe("main function", () => {
 
     main(["node", "src/main.ts", "2 +"]);
 
-    expect(errorSpy).toHaveBeenCalledWith("Error: Invalid expression: 2 +");
+    expect(errorSpy.mock.calls).toStrictEqual([
+      ["Calculating: 2 +"],
+      ["Error: Invalid expression: 2 +"],
+    ]);
 
     errorSpy.mockRestore();
   });
