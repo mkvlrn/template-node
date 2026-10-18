@@ -35,7 +35,7 @@ describe("math success", () => {
 describe("math failure", () => {
   it("division by zero should thrown an error", () => {
     expect.hasAssertions();
-    const expected = new Error("cannot divide by zero");
+    const expected = new Error("Cannot divide by zero");
 
     const { left, right } = { left: 2, right: 0 };
 

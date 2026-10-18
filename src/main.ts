@@ -13,7 +13,7 @@ function main(argv: readonly string[] = process.argv): void {
     console.info(`Result: ${calculator.calculate(expression)}`);
   } catch (error) {
     if (error instanceof Error) {
-      console.error(`Error: ${error.message}`);
+      console.info(`Error: ${error.message}`);
     }
   }
 }

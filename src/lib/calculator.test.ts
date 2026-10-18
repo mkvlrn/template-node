@@ -42,7 +42,7 @@ describe("calculator failure", () => {
   const testCases: ErrorTestCase[] = [
     { errorMessage: "Invalid expression: 2 +", expression: "2 +" },
     { errorMessage: "Invalid expression: + 2", expression: "+ 2" },
-    { errorMessage: "cannot divide by zero", expression: "2 / 0" },
+    { errorMessage: "Cannot divide by zero", expression: "2 / 0" },
     { errorMessage: "Invalid expression: 2 ^ 3", expression: "2 ^ 3" },
     { errorMessage: "Invalid expression: abc + 1", expression: "abc + 1" },
     { errorMessage: "Invalid expression: 1 + abc", expression: "1 + abc" },

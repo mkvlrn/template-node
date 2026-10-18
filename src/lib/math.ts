@@ -14,7 +14,7 @@ function multiply(left: number, right: number): number {
 
 function divide(left: number, right: number): number {
   if (right === ZERO) {
-    throw new Error("cannot divide by zero");
+    throw new Error("Cannot divide by zero");
   }
 
   return left / right;

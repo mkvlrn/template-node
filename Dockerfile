@@ -1,13 +1,32 @@
-FROM node:26.11.1-alpine@sha256:143494b1da2945f061539253adc65e4f1569ddf07da2d384c022c791a9d90a4a
+# syntax=docker/dockerfile:1
+
+# build: installs mise, then the toolchain pinned in .config/mise.toml, and runs the `build` task
+FROM debian:trixie-slim@sha256:918311b7b6c4c6f68b232ba516584925f6c78ad82b6fd534b98979df6438e483 AS build
+
+RUN apt-get update \
+  && apt-get install -y --no-install-recommends ca-certificates curl libatomic1 \
+  && rm -rf /var/lib/apt/lists/* \
+  && curl -fsSL https://mise.run | sh
+ENV PATH="/root/.local/bin:/root/.local/share/mise/shims:${PATH}"
+ENV MISE_YES=1
+ENV MISE_TRUSTED_CONFIG_PATHS=/app
 
 WORKDIR /app
-ENV NODE_ENV=production
+COPY .config/ ./.config/
+COPY package.json pnpm-lock.yaml pnpm-workspace.yaml tsconfig.json ./
+RUN mise install
 
-COPY package.json ./
-RUN npm i -g pnpm
-COPY pnpm-*.yaml ./
-RUN pnpm install --frozen-lockfile --prod --ignore-scripts
 COPY src/ ./src/
-USER node
+RUN mise run build
 
-CMD ["node", "src/main.ts"]
+# runtime: same Debian base as the build stage, so the glibc-linked executable runs as built
+FROM debian:trixie-slim@sha256:918311b7b6c4c6f68b232ba516584925f6c78ad82b6fd534b98979df6438e483 AS runtime
+
+RUN useradd --system --uid 10001 --no-create-home app
+
+WORKDIR /app
+COPY --from=build --chown=app:app /app/bin/template-node ./template-node
+
+USER app
+
+ENTRYPOINT ["./template-node"]
