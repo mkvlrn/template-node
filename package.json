@@ -20,14 +20,14 @@
     "#/*": "./src/*.ts"
   },
   "devDependencies": {
-    "@commitlint/cli": "21.2.3",
-    "@commitlint/config-conventional": "21.2.3",
+    "@commitlint/cli": "21.2.4",
+    "@commitlint/config-conventional": "21.2.4",
     "@mkvlrn/config": "0.11.3",
     "@types/node": "26.6.5",
     "@vitest/coverage-v8": "5.0.5",
     "lefthook": "2.2.2",
     "typescript": "7.0.2",
-    "vite-plus": "1.3.0"
+    "vite-plus": "1.4.0"
   },
   "devEngines": {
     "packageManager": {
